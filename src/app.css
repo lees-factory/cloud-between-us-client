@@ -1,0 +1,29 @@
+/* Cloud Between Us — Brand CSS Variables */
+:root {
+	/* Primary: 감정의 공기 */
+	--sky-blue: #a7d8f5;
+
+	/* Accent: 연애의 온기 */
+	--warm-peach: #ffc6a8;
+
+	/* Background: 부드러운 공간감 */
+	--off-white: #fafaf8;
+
+	/* Text */
+	--text-dark: #111827;
+	--text-gray: #6b7280;
+
+	/* Border / subtle */
+	--border-light: #e8e8e6;
+
+	/* UI */
+	--radius-sm: 16px;
+	--radius-md: 24px;
+	--radius-lg: 32px;
+
+	/* Shadow */
+	--shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.06);
+
+	/* Animation */
+	--transition-smooth: 0.3s ease-out;
+}

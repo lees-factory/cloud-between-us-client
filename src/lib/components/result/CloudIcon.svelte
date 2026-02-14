@@ -1,0 +1,339 @@
+<script lang="ts">
+	import type { CloudType } from '$lib/types/cloud';
+
+	interface Props {
+		type: CloudType;
+		size?: number;
+		class?: string;
+	}
+
+	let { type, size = 120, class: className = '' }: Props = $props();
+</script>
+
+{#if type === 'sunlit'}
+	<svg
+		width={size}
+		height={size}
+		viewBox="0 0 120 120"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+		class={className}
+		aria-hidden="true"
+	>
+		<circle cx="60" cy="60" r="50" fill="#FFD70010" />
+		<path
+			d="M60 10 L60 20 M60 100 L60 110 M10 60 L20 60 M100 60 L110 60 M25 25 L32 32 M88 88 L95 95 M25 95 L32 88 M88 32 L95 25"
+			stroke="#FFD700"
+			stroke-width="3"
+			stroke-linecap="round"
+		/>
+		<ellipse cx="45" cy="65" rx="18" ry="16" fill="#FFF4E0" />
+		<ellipse cx="60" cy="58" rx="22" ry="20" fill="#FFF8E8" />
+		<ellipse cx="75" cy="65" rx="18" ry="16" fill="#FFF4E0" />
+		<rect x="45" y="65" width="30" height="10" fill="#FFF4E0" />
+		<ellipse cx="60" cy="62" rx="30" ry="25" fill="#FFD70020" />
+		<circle cx="52" cy="62" r="3" fill="#FFB700" />
+		<circle cx="68" cy="62" r="3" fill="#FFB700" />
+		<path
+			d="M 50 70 Q 60 75 70 70"
+			stroke="#FFB700"
+			stroke-width="2.5"
+			fill="none"
+			stroke-linecap="round"
+		/>
+	</svg>
+{:else if type === 'mist'}
+	<svg
+		width={size}
+		height={size}
+		viewBox="0 0 120 120"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+		class={className}
+		aria-hidden="true"
+	>
+		<circle cx="30" cy="45" r="2" fill="#B0C4DE40" />
+		<circle cx="45" cy="38" r="1.5" fill="#B0C4DE40" />
+		<circle cx="75" cy="40" r="2" fill="#B0C4DE40" />
+		<circle cx="90" cy="48" r="1.5" fill="#B0C4DE40" />
+		<circle cx="38" cy="55" r="1" fill="#B0C4DE40" />
+		<circle cx="82" cy="52" r="1" fill="#B0C4DE40" />
+		<ellipse cx="45" cy="65" rx="18" ry="16" fill="#E6F0F5" opacity="0.9" />
+		<ellipse cx="60" cy="58" rx="22" ry="20" fill="#E6F0F5" opacity="0.95" />
+		<ellipse cx="75" cy="65" rx="18" ry="16" fill="#E6F0F5" opacity="0.9" />
+		<rect x="45" y="65" width="30" height="10" fill="#E6F0F5" opacity="0.9" />
+		<ellipse cx="60" cy="62" rx="35" ry="28" fill="#B0C4DE15" />
+		<circle cx="52" cy="62" r="2.5" fill="#7B9DB5" />
+		<circle cx="68" cy="62" r="2.5" fill="#7B9DB5" />
+		<path
+			d="M 52 70 Q 60 72 68 70"
+			stroke="#7B9DB5"
+			stroke-width="2"
+			fill="none"
+			stroke-linecap="round"
+		/>
+		<ellipse cx="48" cy="58" rx="1.5" ry="2.5" fill="#B0C4DE60" />
+	</svg>
+{:else if type === 'storm'}
+	<svg
+		width={size}
+		height={size}
+		viewBox="0 0 120 120"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+		class={className}
+		aria-hidden="true"
+	>
+		<path
+			d="M 55 80 L 50 92 L 57 92 L 52 105"
+			stroke="#E6C84D"
+			stroke-width="3"
+			fill="#FFF59D"
+			stroke-linejoin="bevel"
+		/>
+		<path
+			d="M 70 82 L 67 95 L 73 95 L 68 107"
+			stroke="#E6C84D"
+			stroke-width="2.5"
+			fill="#FFF59D"
+			stroke-linejoin="bevel"
+		/>
+		<circle cx="40" cy="55" r="1.5" fill="#E6C84D" />
+		<circle cx="80" cy="58" r="1.5" fill="#E6C84D" />
+		<ellipse cx="45" cy="60" rx="18" ry="16" fill="#6B5B8E" />
+		<ellipse cx="60" cy="53" rx="22" ry="20" fill="#8B7DB8" />
+		<ellipse cx="75" cy="60" rx="18" ry="16" fill="#6B5B8E" />
+		<rect x="45" y="60" width="30" height="10" fill="#6B5B8E" />
+		<ellipse cx="60" cy="57" rx="32" ry="26" fill="#9D8FC940" />
+		<circle cx="52" cy="57" r="3" fill="#FFF59D" />
+		<circle cx="68" cy="57" r="3" fill="#FFF59D" />
+		<path d="M 50 65 L 70 65" stroke="#FFF59D" stroke-width="2.5" stroke-linecap="round" />
+		<path d="M 48 52 L 56 53" stroke="#E6C84D" stroke-width="2" stroke-linecap="round" />
+		<path d="M 72 52 L 64 53" stroke="#E6C84D" stroke-width="2" stroke-linecap="round" />
+	</svg>
+{:else if type === 'dawn'}
+	<!-- drift SVG: gentle wind, peaceful cloud -->
+	<svg
+		width={size}
+		height={size}
+		viewBox="0 0 120 120"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+		class={className}
+		aria-hidden="true"
+	>
+		<path
+			d="M 20 50 Q 30 48 40 50"
+			stroke="#87CEEB60"
+			stroke-width="2"
+			stroke-linecap="round"
+			fill="none"
+		/>
+		<path
+			d="M 80 52 Q 90 50 100 52"
+			stroke="#87CEEB60"
+			stroke-width="2"
+			stroke-linecap="round"
+			fill="none"
+		/>
+		<path
+			d="M 25 65 Q 32 64 38 65"
+			stroke="#87CEEB60"
+			stroke-width="1.5"
+			stroke-linecap="round"
+			fill="none"
+		/>
+		<ellipse cx="45" cy="65" rx="18" ry="16" fill="#D6EFFA" />
+		<ellipse cx="60" cy="58" rx="22" ry="20" fill="#E5F5FC" />
+		<ellipse cx="75" cy="65" rx="18" ry="16" fill="#D6EFFA" />
+		<rect x="45" y="65" width="30" height="10" fill="#D6EFFA" />
+		<ellipse cx="60" cy="62" rx="33" ry="27" fill="#87CEEB10" />
+		<path
+			d="M 50 62 Q 52 60 54 62"
+			stroke="#5AACCE"
+			stroke-width="2"
+			fill="none"
+			stroke-linecap="round"
+		/>
+		<path
+			d="M 66 62 Q 68 60 70 62"
+			stroke="#5AACCE"
+			stroke-width="2"
+			fill="none"
+			stroke-linecap="round"
+		/>
+		<path
+			d="M 52 70 Q 60 72 68 70"
+			stroke="#5AACCE"
+			stroke-width="2"
+			fill="none"
+			stroke-linecap="round"
+		/>
+	</svg>
+{:else if type === 'wild'}
+	<svg
+		width={size}
+		height={size}
+		viewBox="0 0 120 120"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+		class={className}
+		aria-hidden="true"
+	>
+		<path
+			d="M 75 35 Q 85 25 95 30"
+			stroke="#D8BFD8"
+			stroke-width="2.5"
+			stroke-linecap="round"
+			fill="none"
+		/>
+		<path
+			d="M 80 40 Q 88 35 92 42"
+			stroke="#D8BFD8"
+			stroke-width="2"
+			stroke-linecap="round"
+			fill="none"
+		/>
+		<path
+			d="M 25 45 Q 20 35 15 40"
+			stroke="#D8BFD8"
+			stroke-width="2.5"
+			stroke-linecap="round"
+			fill="none"
+		/>
+		<path
+			d="M 35 35 L 35 30 M 35 35 L 40 35 M 35 35 L 30 35 M 35 35 L 35 40"
+			stroke="#E6C3E6"
+			stroke-width="1.5"
+			stroke-linecap="round"
+		/>
+		<path
+			d="M 88 50 L 88 47 M 88 50 L 91 50 M 88 50 L 85 50 M 88 50 L 88 53"
+			stroke="#E6C3E6"
+			stroke-width="1.3"
+			stroke-linecap="round"
+		/>
+		<g transform="rotate(-5 60 62)">
+			<ellipse cx="45" cy="65" rx="18" ry="16" fill="#F3E5F5" />
+			<ellipse cx="60" cy="58" rx="22" ry="20" fill="#F8EFF8" />
+			<ellipse cx="75" cy="65" rx="18" ry="16" fill="#F3E5F5" />
+			<rect x="45" y="65" width="30" height="10" fill="#F3E5F5" />
+		</g>
+		<circle cx="52" cy="60" r="3" fill="#C084C0" />
+		<circle cx="68" cy="60" r="3" fill="#C084C0" />
+		<path
+			d="M 50 68 Q 60 73 70 68"
+			stroke="#C084C0"
+			stroke-width="2.5"
+			fill="none"
+			stroke-linecap="round"
+		/>
+		<path
+			d="M 50 60 Q 52 62 54 60"
+			stroke="#C084C0"
+			stroke-width="2"
+			fill="none"
+			stroke-linecap="round"
+		/>
+	</svg>
+{:else if type === 'shade'}
+	<!-- silver SVG: gray cloud, silver lining -->
+	<svg
+		width={size}
+		height={size}
+		viewBox="0 0 120 120"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+		class={className}
+		aria-hidden="true"
+	>
+		<g opacity="0.6">
+			<path d="M60 25 L60 35" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round" />
+			<path d="M80 35 L75 42" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round" />
+			<path d="M90 50 L83 52" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round" />
+			<path d="M40 35 L45 42" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round" />
+			<path d="M30 50 L37 52" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round" />
+		</g>
+		<circle cx="60" cy="45" r="25" fill="#FFD70015" />
+		<circle cx="60" cy="45" r="18" fill="#FFF5E620" />
+		<ellipse cx="45" cy="65" rx="18" ry="16" fill="#9B9B9F" />
+		<ellipse cx="60" cy="58" rx="22" ry="20" fill="#AEAEB2" />
+		<ellipse cx="75" cy="65" rx="18" ry="16" fill="#9B9B9F" />
+		<rect x="45" y="65" width="30" height="10" fill="#9B9B9F" />
+		<ellipse
+			cx="45"
+			cy="65"
+			rx="19"
+			ry="17"
+			fill="none"
+			stroke="#E8D7A8"
+			stroke-width="2"
+			opacity="0.7"
+		/>
+		<ellipse
+			cx="60"
+			cy="58"
+			rx="23"
+			ry="21"
+			fill="none"
+			stroke="#F5E6B3"
+			stroke-width="2.5"
+			opacity="0.8"
+		/>
+		<ellipse
+			cx="75"
+			cy="65"
+			rx="19"
+			ry="17"
+			fill="none"
+			stroke="#E8D7A8"
+			stroke-width="2"
+			opacity="0.7"
+		/>
+		<path
+			d="M 42 52 Q 50 48 58 50"
+			stroke="#FFF9E0"
+			stroke-width="2"
+			stroke-linecap="round"
+			opacity="0.9"
+		/>
+		<path
+			d="M 62 50 Q 70 48 78 52"
+			stroke="#FFF9E0"
+			stroke-width="2"
+			stroke-linecap="round"
+			opacity="0.9"
+		/>
+		<circle cx="52" cy="62" r="2.5" fill="#5A5A5E" />
+		<circle cx="68" cy="62" r="2.5" fill="#5A5A5E" />
+		<path
+			d="M 52 69 Q 60 72 68 69"
+			stroke="#5A5A5E"
+			stroke-width="2"
+			fill="none"
+			stroke-linecap="round"
+		/>
+		<path
+			d="M 60 48 L 60 44 M 60 48 L 64 48 M 60 48 L 56 48 M 60 48 L 60 52"
+			stroke="#FFE066"
+			stroke-width="1.5"
+			stroke-linecap="round"
+			opacity="0.8"
+		/>
+	</svg>
+{:else}
+	<svg
+		width={size}
+		height={size}
+		viewBox="0 0 120 120"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+		class={className}
+		aria-hidden="true"
+	>
+		<ellipse cx="45" cy="65" rx="18" ry="16" fill="#E5F5FC" />
+		<ellipse cx="60" cy="58" rx="22" ry="20" fill="#E5F5FC" />
+		<ellipse cx="75" cy="65" rx="18" ry="16" fill="#E5F5FC" />
+		<rect x="45" y="65" width="30" height="10" fill="#E5F5FC" />
+	</svg>
+{/if}
