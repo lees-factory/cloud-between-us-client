@@ -1,5 +1,19 @@
-/* Cloud Between Us — Brand CSS Variables */
+/* Cloud Between Us — Brand CSS Variables & Font */
+@font-face {
+	font-family: 'Pretendard Variable';
+	src: url('/PretendardVariable.woff2') format('woff2');
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme {
+	--font-sans: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
 :root {
+	--font-sans: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
 	/* Primary: 감정의 공기 */
 	--sky-blue: #a7d8f5;
 
@@ -26,4 +40,11 @@
 
 	/* Animation */
 	--transition-smooth: 0.3s ease-out;
+}
+
+@layer base {
+	html,
+	body {
+		font-family: var(--font-sans);
+	}
 }

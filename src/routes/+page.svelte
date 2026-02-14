@@ -58,12 +58,7 @@
 	</div>
 
 	<!-- 스크롤 유도 화살표 -->
-	<button
-		type="button"
-		aria-label="Scroll down"
-		class="scroll-hint"
-		onclick={scrollToNext}
-	>
+	<button type="button" aria-label="Scroll down" class="scroll-hint" onclick={scrollToNext}>
 		<ChevronDown size={28} strokeWidth={2} />
 	</button>
 </section>
@@ -90,7 +85,8 @@
 <section class="clouds-section">
 	<div class="mx-auto max-w-3xl space-y-10 text-center">
 		<h2 class="clouds-title">
-			{t('home.clouds.title')}
+			<Cloud size={48} strokeWidth={1.5} color="var(--sky-blue)" aria-hidden="true" />
+			<span class="sr-only">{t('home.clouds.title')}</span>
 		</h2>
 		<ul class="grid grid-cols-2 gap-6 sm:grid-cols-3 md:gap-8">
 			{#each names as name, i}
@@ -264,14 +260,23 @@
 		background: linear-gradient(180deg, var(--off-white) 0%, #f5fafd 100%);
 	}
 	.clouds-title {
-		font-size: 1.5rem;
-		font-weight: 300;
-		color: var(--text-dark);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.25rem;
+		margin: 0;
 	}
-	@media (min-width: 768px) {
-		.clouds-title {
-			font-size: 1.875rem;
-		}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
 	}
 	.cloud-icon-wrap {
 		display: flex;
