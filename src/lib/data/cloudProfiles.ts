@@ -125,7 +125,8 @@ export const CLOUD_PROFILES: Record<string, CloudProfile> = {
 };
 
 /** English cloud profiles. */
-const CLOUD_PROFILES_EN: Record<string, CloudProfile> = {
+/** English cloud profiles. */
+export const CLOUD_PROFILES_EN: Record<string, CloudProfile> = {
 	sunlit: {
 		type: 'sunlit',
 		emoji: '☀️',

@@ -1,20 +1,157 @@
 import type { CloudType, CoupleChemistry, WeatherPhenomenon } from '$lib/types/cloud';
+import { buildPremiumReport } from '$lib/utils/premium/build-premium-report';
 
 type ChemistryKey = `${CloudType}-${CloudType}`;
 
-export const CHEMISTRY_MATRIX: Record<
-	ChemistryKey,
-	Omit<CoupleChemistry, 'user' | 'partner'>
+export const CHEMISTRY_MATRIX: Partial<
+	Record<ChemistryKey, Omit<CoupleChemistry, 'user' | 'partner'>>
 > = {
 	'sunlit-mist': {
 		skyName: 'Morning Light Through Fog',
+		skyNameKo: '아침 안개 속의 햇살',
 		phenomenon: 'glow',
 		narrative: `
       햇살의 따뜻한 빛이 안개의 감정을 천천히 녹인다.
       안개는 이해받는다고 느끼고,
       햇살은 보호하고 싶어진다.
     `,
-		warning: '빛이 너무 강하면 안개는 사라진다.'
+		warning: '빛이 너무 강하면 안개는 사라진다.',
+		premium: {
+			ko: {
+				fullStory: `
+이른 아침, 햇살이 안개를 만날 때 세상은 부드러워집니다.
+안개가 걷혀서가 아니라, 빛이 그 곁에 머물기로 선택했기 때문입니다.
+
+당신의 사랑은 방향성이 있습니다.
+온기와 확신을 향해 빠르게 나아갑니다. 마음속에 불안이나 의문이 생기면, 즉시 상황을 투명하게 만들고 싶어 합니다.
+
+반면, 그 사람의 사랑은 깊이를 가집니다.
+그들은 말을 꺼내기 전에 공기의 온도를 먼저 느낍니다. 때로는 그들의 침묵이 거리감처럼 느껴질 수 있지만, 사실 그것은 마음속에서 감정의 형태를 빚어내고 있는 시간입니다.
+
+처음에는 당신의 빠른 걸음이 안개를 몰아붙이는 것 같고, 그 사람의 고요함이 당신의 빛을 가리는 것처럼 느낄 수 있습니다. 하지만 이것이 두 사람만의 고요하고 강력한 시너지입니다.
+
+당신은 이 관계에 온기를 불어넣고, 그 사람은 이 관계의 분위기를 깊게 만듭니다.
+
+당신이 없다면 이 하늘은 차갑게 가라앉을 것이고, 그 사람이 없다면 너무 눈부셔 쉴 곳이 없었을 것입니다. 당신의 빛이 안개를 몰아붙이지 않고, 안개가 당신의 빛을 밀어내지 않을 때, 이 하늘은 가장 아름답게 빛납니다.
+
+어떤 하늘은 금세 흩어지지만, 당신들의 하늘은 오래도록 머무릅니다.
+        `.trim(),
+				conflict: {
+					userTendency:
+						'문제를 재빨리 해결하고 싶어 합니다. "빨리 풀자"는 생각에 해결사 모드가 켜지며, 감정이 명확하게 정리되지 않고 길어지는 것을 견디기 힘들어합니다.',
+					partnerTendency:
+						'입을 열기 전 자신의 감정을 정리할 시간이 필요합니다. 당신의 빠른 해결책과 속도에 압도당한다고 느끼며, 침묵으로 숨어버릴 수 있습니다.',
+					tip: '침묵을 대화의 일부로 두세요. 무언가를 제안하기 전에 "지금은 내 위로가 필요해, 아니면 해결 방법이 필요해?"라고 물어보며 속도를 맞춰주세요.'
+				},
+				shelter: {
+					partnerNeeds: [
+						'재촉 없이 감정을 느낄 수 있는 여유',
+						'침묵이 존중받는다는 것을 아는 것',
+						'조용히 하는 작은 행동들을 알아차려주는 것'
+					],
+					userNeeds: [
+						'관계가 앞으로 나아가고 있다는 확신',
+						'망설임 없이 "나 여기 있어"라는 말을 듣는 것',
+						'가끔은 리드해도 된다는 신뢰'
+					],
+					closingLine: '안전함은 요란하지 않습니다. 꾸준한 것입니다.'
+				},
+				shadows: {
+					userShadows: [
+						'앞으로 나아가느라 상대의 조용한 필요를 놓칠 수 있습니다',
+						'모든 것을 밝히려는 마음이 쉴 그늘을 남기지 않을 수 있습니다'
+					],
+					partnerShadows: [
+						'너무 많은 감정을 흡수해 자신의 형태를 잃을 수 있습니다',
+						'침묵이 창이 아닌 벽이 될 수 있습니다'
+					]
+				},
+				actions: [
+					{
+						title: '고마움을 소리 내어 말하기',
+						desc: '안개 구름은 관계를 깊게 느끼지만 확신이 필요할 때가 많습니다. 구체적인 순간을 짚어 소리 내어 말해주세요.'
+					},
+					{
+						title: '감정의 속도 늦추어주기',
+						desc: '모든 침묵이 거리를 뜻하는 것은 아닙니다. 상처 주지 않기 위해 마음을 정돈하는 시간임을 이해하고 기다려주세요.'
+					},
+					{
+						title: '둘만의 작은 의식 만들기',
+						desc: '함께 커피 내리기, 산책하기 등 반복되는 작은 의식들이 모여 변덕스러운 날씨를 안정적인 기후로 만들어줍니다.'
+					}
+				],
+				shareCard: {
+					phrase:
+						'당신은 온기를 주고, 그 사람은 깊이를 더합니다. 함께할 때 세상은 더 부드러워집니다.',
+					caption: '둘 사이의 하늘을 발견해봐 — Cloud Between Us'
+				}
+			},
+			en: {
+				fullStory: `
+In the early morning, when sunlight meets mist, the world feels softer — not because it is simple, but because light chooses to stay.
+
+You love with direction. You move toward clarity, warmth, momentum. When something feels uncertain, you try to steady it.
+
+They love through depth. They feel the air before they speak. Sometimes their silence isn't distance — it's emotion forming shape.
+
+At first, you may wonder why they don't move as quickly. They may wonder why you move before fully feeling. But here is your quiet strength:
+
+You bring warmth. They bring atmosphere.
+
+Without you, the sky might stay hidden. Without them, it might feel too exposed. Together, you create something rare — light that doesn't rush the fog, and fog that doesn't resist the light.
+
+Some skies are fleeting. Yours lingers.
+        `.trim(),
+				conflict: {
+					userTendency:
+						'You try to solve issues quickly and move into "fix it" mode. You feel uneasy when emotions linger without clear resolution.',
+					partnerTendency:
+						'They need time before speaking and feel overwhelmed by fast solutions. They may retreat into silence when misunderstood.',
+					tip: 'Pause before solving. Ask, "Do you want comfort or clarity?" Let silence be part of the conversation.'
+				},
+				shelter: {
+					partnerNeeds: [
+						'having space to feel without being rushed',
+						'knowing their silence is respected, not punished',
+						'being noticed for the small things they do quietly'
+					],
+					userNeeds: [
+						'knowing the relationship has direction',
+						"hearing \"I'm here\" without hesitation",
+						'being trusted to lead sometimes'
+					],
+					closingLine: "Safety isn't loud. It's consistent."
+				},
+				shadows: {
+					userShadows: [
+						"may overlook a partner's quiet needs while steering forward",
+						'the desire to brighten everything can leave no room for shade'
+					],
+					partnerShadows: [
+						'may absorb too many emotions and lose their own shape',
+						'silence can become a wall instead of a window'
+					]
+				},
+				actions: [
+					{
+						title: 'Say appreciation out loud',
+						desc: 'Mist clouds feel deeply but need to know you notice. Be specific about what you value in them.'
+					},
+					{
+						title: 'Slow the emotional pace',
+						desc: "Not every pause is distance. Sometimes it is care forming quietly. Don't rush their processing time."
+					},
+					{
+						title: 'Create a shared ritual',
+						desc: 'Rituals like morning coffee or a weekly walk turn unpredictable weather into a stable, shared climate.'
+					}
+				],
+				shareCard: {
+					phrase: 'You bring warmth. They bring depth. Together, you soften the world.',
+					caption: 'Discover the sky between you — Cloud Between Us'
+				}
+			}
+		}
 	},
 	'sunlit-storm': {
 		skyName: 'Lightning at Noon',
@@ -191,9 +328,25 @@ export function getChemistry(user: CloudType, partner: CloudType): CoupleChemist
 		throw new Error(`Chemistry data not found for ${user} and ${partner}`);
 	}
 
+	// 1. 기본적으로 규칙 엔진으로 생성
+	const generatedKo = buildPremiumReport(user, partner, 'ko');
+	const generatedEn = buildPremiumReport(user, partner, 'en');
+
+	// 2. 수동 override가 있으면 병합 (하드코딩된 내용 우선, 없는 필드는 자동 생성값 사용)
+	const premium = data.premium
+		? {
+				ko: { ...generatedKo, ...data.premium.ko },
+				en: { ...generatedEn, ...data.premium.en }
+			}
+		: {
+				ko: generatedKo,
+				en: generatedEn
+			};
+
 	return {
 		user,
 		partner,
-		...data
+		...data,
+		premium
 	};
 }

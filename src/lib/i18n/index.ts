@@ -1,5 +1,4 @@
-import { get } from 'svelte/store';
-import { locale } from './locale';
+import { locale } from './locale.svelte';
 import { translations } from './translations';
 import type { Locale } from './translations';
 import type { RequestEvent } from '@sveltejs/kit';
@@ -34,6 +33,8 @@ export type TranslationKey =
 	| 'result.skyStoryTitle'
 	| 'result.emotionalTrigger'
 	| 'result.emotionalTrigger2'
+	| 'result.conflictPreviewTitle'
+	| 'result.conflictPreviewLockedTip'
 	| 'result.paywallFightTitle'
 	| 'result.paywallFightPreview'
 	| 'result.paywallSafeTitle'
@@ -43,14 +44,8 @@ export type TranslationKey =
 	| 'result.paywallBrighterTitle'
 	| 'result.paywallBrighterPreview'
 	| 'result.paywallHeadline'
-	| 'result.paywallBullet1'
-	| 'result.paywallBullet2'
-	| 'result.paywallBullet3'
-	| 'result.paywallBullet4'
-	| 'result.paywallBtn'
 	| 'result.paywallSub'
 	| 'result.unlockTitle'
-	| 'result.unlockBtn'
 	| 'result.unlockSub'
 	| 'result.longTermTitle'
 	| 'result.watchForTitle'
@@ -65,10 +60,49 @@ export type TranslationKey =
 	| 'result.linkCopied'
 	| 'result.shareTitle'
 	| 'result.shareText'
+	| 'result.shareModalTitle'
+	| 'result.copyLink'
 	| 'result.hint'
 	| 'result.hintLine2'
+	| 'result.watchForDesc'
+	| 'result.premiumShelterTitle'
+	| 'result.premiumShelterPartner'
+	| 'result.premiumShelterUser'
+	| 'result.premiumShadowsTitle'
+	| 'result.premiumShadowsUser'
+	| 'result.premiumShadowsPartner'
+	| 'result.seasonsTitle'
+	| 'result.seasonFirstMeet'
+	| 'result.seasonSettling'
+	| 'result.seasonLongTerm'
+	| 'result.dangerPhrasesTitle'
+	| 'result.dangerPhrasesSubtitle'
+	| 'result.dangerBad'
+	| 'result.dangerBetter'
+	| 'result.dangerForYou'
+	| 'result.dangerForThem'
+	| 'result.loveLanguageTitle'
+	| 'result.loveYourWay'
+	| 'result.loveTheirWay'
+	| 'result.misreadingTitle'
+	| 'result.misreadingSignal'
+	| 'result.misreadingRead'
+	| 'result.myNamePlaceholder'
+	| 'result.partnerNamePlaceholder'
 	| 'lang.ko'
-	| 'lang.en';
+	| 'lang.en'
+	| 'auth.login'
+	| 'auth.signup'
+	| 'auth.email'
+	| 'auth.password'
+	| 'auth.confirmPassword'
+	| 'auth.noAccount'
+	| 'auth.hasAccount'
+	| 'auth.loginAction'
+	| 'auth.signupAction'
+	| 'auth.logout'
+	| 'auth.welcome'
+	| 'auth.createAccount';
 
 function getNested(obj: Record<string, unknown>, path: string): unknown {
 	return path
@@ -78,7 +112,7 @@ function getNested(obj: Record<string, unknown>, path: string): unknown {
 
 /** 현재 locale에 맞는 번역 문자열 반환. \n은 줄바꿈으로 유지됨. */
 export function t(key: TranslationKey, lang?: Locale): string {
-	const loc = lang ?? get(locale);
+	const loc = lang ?? locale.current;
 	const value = getNested(translations[loc] as Record<string, unknown>, key);
 	if (typeof value === 'string') return value;
 	const fallback = getNested(translations.en as Record<string, unknown>, key);
@@ -87,7 +121,7 @@ export function t(key: TranslationKey, lang?: Locale): string {
 
 /** 현재 locale의 cloud names 배열 (6개). */
 export function cloudNames(lang?: Locale): string[] {
-	const loc = lang ?? get(locale);
+	const loc = lang ?? locale.current;
 	const names = (translations[loc] as { home: { clouds: { names: readonly string[] } } }).home
 		?.clouds?.names;
 	const fallback = (translations.en as { home: { clouds: { names: readonly string[] } } }).home
@@ -106,6 +140,6 @@ export function getLocaleFromEvent(event: RequestEvent): Locale {
 	return 'en';
 }
 
-export { locale } from './locale';
+export { locale } from './locale.svelte';
 export { translations } from './translations';
 export type { Locale } from './translations';

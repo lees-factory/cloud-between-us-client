@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { fly, fade } from 'svelte/transition';
 	import { t } from '$lib/i18n';
+	import { stepThemes } from '$lib/data/themes';
 	import { ChevronLeft, ChevronRight } from 'lucide-svelte';
 
 	let { data } = $props();
@@ -10,6 +12,7 @@
 	let direction = $state<1 | -1>(1);
 
 	const step = $derived(data.steps[currentStep]);
+	const theme = $derived(step ? (stepThemes[step.id] ?? stepThemes[1]) : stepThemes[1]);
 	const progress = $derived(((currentStep + 1) / data.steps.length) * 100);
 	const isLastStep = $derived(currentStep === data.steps.length - 1);
 	const hasAnswer = $derived(step !== undefined && answers[step.question.id] !== undefined);
@@ -42,170 +45,147 @@
 	<title>{t('test.pageTitle')}</title>
 </svelte:head>
 
-<div class="test-page">
-	<!-- Progress Bar -->
-	<div class="progress-track">
-		<div class="progress-fill" style="width: {progress}%"></div>
-	</div>
+<main
+	class="sky-wrapper"
+	style:--sky-bg={theme.bg}
+	style:--sky-gradient={theme.sky}
+	style:--accent={theme.accent}
+>
+	<div class="atmosphere" style:opacity={theme.cloudOpacity} aria-hidden="true"></div>
 
-	<!-- Content -->
-	<div class="test-content">
-		<div class="test-inner">
-			<!-- Step Counter -->
-			<div class="step-counter">
-				{currentStep + 1} / {data.steps.length}
+	<div class="content-container">
+		<div class="progress-section">
+			<div class="bar-container">
+				<div class="bar-fill" style="width: {progress}%"></div>
 			</div>
+			<p class="step-counter">STEP {currentStep + 1} / {data.steps.length}</p>
+		</div>
 
-			{#if step}
-				{#key currentStep}
-					<div
-						class="step-block"
-						class:slide-in-right={direction === 1}
-						class:slide-in-left={direction === -1}
-					>
-						<!-- Step Header -->
-						<div class="step-header">
-							<span class="step-emoji">{step.emoji}</span>
-							<h2 class="step-title">{step.title}</h2>
-						</div>
+		{#if step}
+			{#key step.question.id}
+				<section
+					class="question-box"
+					in:fly={{ y: 20, duration: 600, delay: 200 }}
+					out:fade={{ duration: 200 }}
+				>
+					<span class="emoji-indicator">{step.emoji}</span>
+					<h2 class="step-title">{step.title}</h2>
+					<h1 class="question-text">{step.question.text}</h1>
 
-						<!-- Question Text -->
-						<p class="question-text">
-							{step.question.text}
-						</p>
-
-						<!-- Options -->
-						<div class="options-list">
-							{#each step.question.options as option, index}
-								<button
-									type="button"
-									onclick={() => handleAnswer(index)}
-									class="option-btn"
-									class:selected={answers[step.question.id] === index}
-								>
-									{option.text}
-								</button>
-							{/each}
-						</div>
+					<div class="options-grid">
+						{#each step.question.options as option, index}
+							<button
+								type="button"
+								class="option-btn"
+								class:selected={answers[step.question.id] === index}
+								onclick={() => handleAnswer(index)}
+							>
+								{option.text}
+							</button>
+						{/each}
 					</div>
-				{/key}
-			{/if}
+				</section>
+			{/key}
+		{/if}
 
-			<!-- Navigation -->
-			<div class="nav-row">
-				<button
-					type="button"
-					onclick={handleBack}
-					disabled={currentStep === 0}
-					class="nav-btn nav-back"
-				>
-					<ChevronLeft size={20} />
-					{t('test.back')}
-				</button>
+		<div class="nav-row">
+			<button
+				type="button"
+				onclick={handleBack}
+				disabled={currentStep === 0}
+				class="nav-btn nav-back"
+			>
+				<ChevronLeft size={20} />
+				{t('test.back')}
+			</button>
 
-				<button
-					type="button"
-					onclick={handleNext}
-					disabled={!hasAnswer}
-					class="nav-btn nav-next"
-					class:disabled={!hasAnswer}
-				>
-					{isLastStep ? t('test.seeResult') : t('test.next')}
-					<ChevronRight size={20} />
-				</button>
-			</div>
+			<button
+				type="button"
+				onclick={handleNext}
+				disabled={!hasAnswer}
+				class="nav-btn nav-next"
+				class:disabled={!hasAnswer}
+			>
+				{isLastStep ? t('test.seeResult') : t('test.next')}
+				<ChevronRight size={20} />
+			</button>
 		</div>
 	</div>
-</div>
+</main>
 
 <style>
-	.test-page {
-		display: flex;
+	:global(html),
+	:global(body) {
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE/Edge */
+	}
+
+	:global(html::-webkit-scrollbar),
+	:global(body::-webkit-scrollbar) {
+		display: none; /* Chrome, Safari, Opera */
+	}
+
+	.sky-wrapper {
+		position: relative;
 		min-height: 100vh;
-		flex-direction: column;
-		background-color: var(--off-white);
-	}
-
-	.progress-track {
-		height: 6px;
 		width: 100%;
-		background-color: var(--border-light);
-		position: sticky;
-		top: 0;
-		z-index: 10;
-	}
-
-	.progress-fill {
-		height: 100%;
-		background: linear-gradient(to right, var(--sky-blue), var(--warm-peach));
-		transition: width var(--transition-smooth);
-	}
-
-	.test-content {
+		background-color: var(--sky-bg);
+		background: var(--sky-gradient);
+		transition: background 1.5s ease;
 		display: flex;
-		flex: 1;
-		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		overflow: hidden;
+	}
+
+	.atmosphere {
+		position: absolute;
+		inset: 0;
+		background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+		pointer-events: none;
+		transition: opacity 2s ease;
+	}
+
+	.content-container {
+		position: relative;
+		z-index: 10;
+		width: 100%;
+		max-width: 500px;
 		padding: 2rem 1rem;
 	}
 
-	.test-inner {
-		width: 100%;
-		max-width: 560px;
+	.progress-section {
+		margin-bottom: 3rem;
+		text-align: center;
+	}
+
+	.bar-container {
+		height: 6px;
+		background: rgba(0, 0, 0, 0.05);
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	.bar-fill {
+		height: 100%;
+		background: var(--accent);
+		transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 	}
 
 	.step-counter {
-		text-align: center;
-		font-size: 0.8rem;
-		color: var(--text-gray);
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
+		font-size: 0.75rem;
+		margin-top: 0.75rem;
+		letter-spacing: 0.1em;
+		color: var(--accent);
+		font-weight: 600;
+		opacity: 0.7;
+	}
+
+	.question-box {
 		margin-bottom: 2rem;
 	}
 
-	.step-block {
-		animation-duration: 0.4s;
-		animation-timing-function: ease-out;
-		animation-fill-mode: both;
-	}
-
-	.slide-in-right {
-		animation-name: slideInRight;
-	}
-
-	.slide-in-left {
-		animation-name: slideInLeft;
-	}
-
-	@keyframes slideInRight {
-		from {
-			opacity: 0;
-			transform: translateX(40px);
-		}
-		to {
-			opacity: 1;
-			transform: translateX(0);
-		}
-	}
-
-	@keyframes slideInLeft {
-		from {
-			opacity: 0;
-			transform: translateX(-40px);
-		}
-		to {
-			opacity: 1;
-			transform: translateX(0);
-		}
-	}
-
-	.step-header {
-		text-align: center;
-		margin-bottom: 2rem;
-	}
-
-	.step-emoji {
+	.emoji-indicator {
 		font-size: 2.5rem;
 		display: block;
 		margin-bottom: 0.5rem;
@@ -216,15 +196,16 @@
 		font-weight: 500;
 		color: var(--text-gray);
 		letter-spacing: 0.04em;
+		margin-bottom: 1rem;
 	}
 
 	.question-text {
-		text-align: center;
-		font-size: 1.375rem;
-		font-weight: 500;
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 1.4;
 		color: var(--text-dark);
-		line-height: 1.6;
-		margin-bottom: 2rem;
+		margin-bottom: 2.5rem;
+		word-break: keep-all;
 	}
 
 	@media (min-width: 768px) {
@@ -233,35 +214,42 @@
 		}
 	}
 
-	.options-list {
+	.options-grid {
 		display: flex;
 		flex-direction: column;
 		gap: 0.75rem;
 	}
 
 	.option-btn {
-		width: 100%;
-		padding: 1rem 1.25rem;
+		background: rgba(255, 255, 255, 0.7);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		padding: 1.2rem 1.5rem;
+		border-radius: 1.25rem;
 		text-align: left;
-		border-radius: var(--radius-sm);
-		border: 2px solid var(--border-light);
-		background: white;
-		color: var(--text-gray);
 		font-size: 1rem;
 		line-height: 1.4;
+		color: var(--text-gray);
+		transition: all 0.2s ease;
 		cursor: pointer;
-		transition: all var(--transition-smooth);
 	}
 
 	.option-btn:hover {
-		border-color: var(--sky-blue);
-		transform: translateY(-1px);
-		box-shadow: var(--shadow-soft);
+		background: rgba(255, 255, 255, 0.95);
+		transform: translateY(-3px);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+		border-color: var(--accent);
+		color: var(--text-dark);
+	}
+
+	.option-btn:active {
+		transform: scale(0.98);
 	}
 
 	.option-btn.selected {
-		background: var(--sky-blue);
-		border-color: var(--sky-blue);
+		background: color-mix(in srgb, var(--accent) 18%, white);
+		border-color: var(--accent);
 		color: var(--text-dark);
 		font-weight: 500;
 	}
@@ -270,7 +258,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding-top: 2.5rem;
+		padding-top: 2rem;
 	}
 
 	.nav-btn {
@@ -296,13 +284,13 @@
 
 	.nav-next {
 		padding: 0.75rem 1.5rem;
-		background: var(--sky-blue);
+		background: var(--accent);
 		color: var(--text-dark);
 		font-weight: 500;
 		border: none;
 	}
 
-	.nav-next:hover:not(:disabled) {
+	.nav-next:hover:not(:disabled):not(.disabled) {
 		transform: scale(1.05);
 		box-shadow: var(--shadow-soft);
 	}

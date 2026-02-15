@@ -29,7 +29,7 @@
 	<div class="cloud-layer cloud-layer--2" aria-hidden="true"></div>
 	<div class="cloud-layer cloud-layer--3" aria-hidden="true"></div>
 
-	<div class="relative z-10 w-full max-w-2xl space-y-6 text-center md:space-y-8">
+	<div class="hero-content-width relative z-10 w-full max-w-2xl space-y-6 text-center md:space-y-8">
 		<h1 class="hero-headline">
 			{t('home.hero.headline')}
 		</h1>
@@ -144,6 +144,15 @@
 		padding: 0 1rem;
 		background: linear-gradient(180deg, #e8f4fc 0%, #f5fafd 50%, var(--off-white) 100%);
 	}
+
+	.hero-content-width {
+		max-width: 42rem;
+	}
+	@media (min-width: 1024px) {
+		.hero-content-width {
+			max-width: 64rem;
+		}
+	}
 	.hero-headline {
 		font-size: 2.25rem;
 		font-weight: 300;
@@ -158,6 +167,7 @@
 	@media (min-width: 1024px) {
 		.hero-headline {
 			font-size: 3.75rem;
+			white-space: nowrap;
 		}
 	}
 	.hero-headline2 {

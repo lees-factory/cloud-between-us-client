@@ -44,7 +44,7 @@
 		</blockquote>
 
 		<p class="chemistry-hint">
-			"{$locale && t('result.hint')}<br />{t('result.hintLine2')}"
+			"{locale.current && t('result.hint')}<br />{t('result.hintLine2')}"
 		</p>
 	{/if}
 </section>

@@ -1,0 +1,279 @@
+import type { CloudType } from '$lib/types/cloud';
+
+type PairKey = `${CloudType}-${CloudType}`;
+
+export interface PairMetaOverride {
+	phenomenonName: { en: string; ko: string };
+	vibeTags?: { en: string[]; ko: string[] };
+	storyBeats?: Partial<{
+		openingImage: { en: string; ko: string };
+		emotionalDynamic: { en: string; ko: string };
+		hiddenStrength: { en: string; ko: string };
+		growthArc: { en: string; ko: string };
+	}>;
+	fightOverride?: Partial<{
+		frictionTruth: { en: string; ko: string };
+		tryThisInstead: { en: string; ko: string };
+	}>;
+}
+
+/**
+ * 36조합 메타데이터.
+ * S-tier 12개는 storyBeats 수동 보강.
+ * 나머지는 phenomenonName만.
+ */
+export const PAIR_META: Partial<Record<PairKey, PairMetaOverride>> = {
+	// ─── S-TIER: 수동 보강 12개 ───
+
+	'sunlit-mist': {
+		phenomenonName: { en: 'Morning Light Through Fog', ko: '아침 안개 속의 햇살' },
+		vibeTags: { en: ['tender', 'patient', 'luminous'], ko: ['부드러운', '인내하는', '빛나는'] },
+		storyBeats: {
+			openingImage: {
+				en: 'In the early morning, when sunlight meets mist, the world grows softer — not because it is simple, but because light chooses to stay.',
+				ko: '이른 아침, 햇살이 안개를 만날 때 세상은 부드러워집니다 — 단순해서가 아니라, 빛이 머물기로 선택했기 때문입니다.'
+			},
+			emotionalDynamic: {
+				en: 'You move toward clarity. They feel the air before they speak. Sometimes your speed looks like pressure; sometimes their quiet looks like distance.',
+				ko: '당신은 확신을 향해 나아갑니다. 그 사람은 말하기 전에 공기를 느낍니다. 때로 당신의 속도는 압박처럼, 그 사람의 고요함은 거리감처럼 보일 수 있습니다.'
+			},
+			hiddenStrength: {
+				en: "You bring warmth. They bring atmosphere. Together, you create light that doesn't rush the fog, and fog that doesn't resist the light.",
+				ko: '당신은 온기를 주고, 그 사람은 분위기를 만듭니다. 함께할 때, 안개를 재촉하지 않는 빛과 빛을 밀어내지 않는 안개가 됩니다.'
+			},
+			growthArc: {
+				en: 'Some skies are fleeting. Yours lingers.',
+				ko: '어떤 하늘은 금세 흩어지지만, 당신들의 하늘은 오래도록 머무릅니다.'
+			}
+		}
+	},
+
+	'mist-sunlit': {
+		phenomenonName: { en: 'Fog Welcoming the Sun', ko: '빛을 맞이하는 안개' },
+		vibeTags: { en: ['receptive', 'warming', 'gradual'], ko: ['수용하는', '따뜻해지는', '점진적'] },
+		storyBeats: {
+			openingImage: {
+				en: 'You were there first — quiet, hovering close to the ground. Then their light arrived, not to burn through you, but to stay beside you.',
+				ko: '당신이 먼저 있었습니다 — 고요히, 낮은 곳에 머물며. 그리고 그 사람의 빛이 왔습니다. 당신을 태우러 온 것이 아니라 곁에 머물기 위해.'
+			},
+			hiddenStrength: {
+				en: 'You give depth to their warmth. Without you, their light would have nowhere to rest.',
+				ko: '당신은 그 사람의 온기에 깊이를 줍니다. 당신이 없다면 그 빛은 쉴 곳이 없었을 것입니다.'
+			}
+		}
+	},
+
+	'sunlit-storm': {
+		phenomenonName: { en: 'Lightning at Noon', ko: '한낮의 번개' },
+		vibeTags: { en: ['electric', 'bold', 'clashing'], ko: ['전기적', '대담한', '부딪치는'] },
+		storyBeats: {
+			openingImage: {
+				en: 'Two forces that refuse to dim. When sunlight meets storm, the sky cracks open — vivid, loud, unforgettable.',
+				ko: '사그라들기를 거부하는 두 힘. 햇살이 천둥을 만나면 하늘이 열립니다 — 선명하고, 요란하고, 잊히지 않는.'
+			},
+			emotionalDynamic: {
+				en: "You steer. They strike. You want to hold a direction; they want to release what's been held too long. The tension is real — and so is the spark.",
+				ko: '당신은 방향을 잡고, 그 사람은 내리칩니다. 당신은 방향을 지키고 싶고, 그 사람은 너무 오래 참아온 것을 해방하고 싶습니다.'
+			},
+			hiddenStrength: {
+				en: 'When you stop trying to lead the storm and they stop trying to break the calm, something rare appears — a sky that holds both light and thunder.',
+				ko: '당신이 천둥을 이끌려 하지 않고, 그 사람이 고요를 깨려 하지 않을 때, 드문 하늘이 나타납니다 — 빛과 천둥이 공존하는 하늘.'
+			}
+		}
+	},
+
+	'storm-sunlit': {
+		phenomenonName: { en: 'Thunder Reaching Light', ko: '빛을 향한 천둥' },
+		storyBeats: {
+			openingImage: {
+				en: 'You arrive like weather — sudden, honest, impossible to ignore. And they stand there, steady, bright, unshaken.',
+				ko: '당신은 날씨처럼 옵니다 — 갑작스럽고, 솔직하고, 무시할 수 없이. 그리고 그 사람은 거기 서 있습니다, 흔들리지 않고 밝게.'
+			}
+		}
+	},
+
+	'mist-storm': {
+		phenomenonName: { en: 'After the Thunder', ko: '천둥이 지나간 뒤' },
+		vibeTags: { en: ['healing', 'contrast', 'aftermath'], ko: ['치유의', '대조적', '잔향'] },
+		storyBeats: {
+			openingImage: {
+				en: 'After the thunder passes, mist rises from the ground. The sky quiets. Something new begins to form in the damp air.',
+				ko: '천둥이 지나간 뒤, 안개가 땅에서 피어오릅니다. 하늘이 고요해지고, 축축한 공기 속에서 무언가 새로운 것이 만들어지기 시작합니다.'
+			},
+			hiddenStrength: {
+				en: 'They release what they feel; you hold what remains. Together, you turn every storm into a landscape.',
+				ko: '그 사람은 느끼는 것을 쏟아내고, 당신은 남는 것을 품습니다. 함께, 모든 폭풍을 풍경으로 바꿉니다.'
+			}
+		}
+	},
+
+	'storm-mist': {
+		phenomenonName: { en: 'Lightning Over the Mist', ko: '안개 위의 번개' },
+		storyBeats: {
+			openingImage: {
+				en: 'You flash, and they absorb. Your honesty cuts through; their quiet catches what falls.',
+				ko: '당신이 번쩍이면, 그 사람은 흡수합니다. 당신의 솔직함이 관통하고, 그 사람의 고요함이 떨어지는 것을 받아냅니다.'
+			}
+		}
+	},
+
+	'dawn-storm': {
+		phenomenonName: { en: 'Storm Before Dawn', ko: '새벽 전의 폭풍' },
+		vibeTags: { en: ['transformative', 'raw', 'hopeful'], ko: ['변화하는', '날것의', '희망찬'] },
+		storyBeats: {
+			openingImage: {
+				en: 'Before the light arrives, the sky shakes. The storm is not the end — it is what clears the path for morning.',
+				ko: '빛이 오기 전, 하늘이 흔들립니다. 폭풍은 끝이 아닙니다 — 아침을 위해 길을 여는 것입니다.'
+			},
+			hiddenStrength: {
+				en: "Your patience doesn't weaken the storm — it gives it somewhere to land. Their intensity doesn't break your calm — it makes the dawn feel earned.",
+				ko: '당신의 인내가 폭풍을 약하게 하는 것이 아닙니다 — 내려앉을 곳을 줍니다. 그 사람의 강렬함이 당신의 고요를 깨는 것이 아닙니다 — 새벽이 그만한 가치가 있다고 느끼게 합니다.'
+			}
+		}
+	},
+
+	'wild-shade': {
+		phenomenonName: { en: 'Breeze in the Shade', ko: '그늘 속의 바람' },
+		vibeTags: { en: ['balanced', 'playful', 'grounding'], ko: ['균형잡힌', '장난스러운', '안정적'] },
+		storyBeats: {
+			openingImage: {
+				en: "The wind doesn't stop — but it slows when it finds shade. Not because it has to. Because it wants to.",
+				ko: '바람은 멈추지 않습니다 — 하지만 그늘을 만나면 느려집니다. 그래야 해서가 아니라, 그러고 싶어서.'
+			},
+			hiddenStrength: {
+				en: 'You bring movement; they bring rest. The world needs both — and so does this sky.',
+				ko: '당신은 움직임을 가져오고, 그 사람은 쉼을 줍니다. 세상에는 둘 다 필요합니다 — 이 하늘도 마찬가지입니다.'
+			}
+		}
+	},
+
+	'shade-wild': {
+		phenomenonName: { en: 'Shade Touched by Wind', ko: '바람이 스치는 그늘' },
+		storyBeats: {
+			openingImage: {
+				en: 'You were still, content in your quiet. Then they arrived — not to disrupt, but to remind you the air can move.',
+				ko: '당신은 고요 속에 만족하며 가만히 있었습니다. 그리고 그 사람이 왔습니다 — 흐트러뜨리기 위해서가 아니라, 공기도 움직일 수 있다는 것을 알려주기 위해.'
+			}
+		}
+	},
+
+	'sunlit-dawn': {
+		phenomenonName: { en: 'First Light', ko: '첫 번째 빛' },
+		vibeTags: { en: ['gentle', 'warm', 'synchronized'], ko: ['부드러운', '따뜻한', '조화로운'] },
+		storyBeats: {
+			openingImage: {
+				en: 'The sun rises, and the dawn has been waiting. This is not coincidence — it is the most natural meeting in any sky.',
+				ko: '해가 뜨고, 여명은 기다리고 있었습니다. 우연이 아닙니다 — 어떤 하늘에서든 가장 자연스러운 만남입니다.'
+			},
+			hiddenStrength: {
+				en: 'Your warmth rewards their patience. Their quiet faith steadies your glow.',
+				ko: '당신의 따뜻함이 그 사람의 인내에 보답합니다. 그 사람의 고요한 믿음이 당신의 빛을 안정시킵니다.'
+			}
+		}
+	},
+
+	'dawn-mist': {
+		phenomenonName: { en: 'Dawn Mist', ko: '새벽 안개' },
+		vibeTags: { en: ['silent', 'intuitive', 'tender'], ko: ['고요한', '직관적', '다정한'] },
+		storyBeats: {
+			openingImage: {
+				en: 'Two quiet presences meeting before the world wakes. No words needed — just the shared stillness of early air.',
+				ko: '세상이 깨기 전에 만나는 두 개의 고요한 존재. 말이 필요 없습니다 — 이른 공기의 공유된 정적만으로 충분합니다.'
+			},
+			hiddenStrength: {
+				en: 'You both understand what most people miss: that silence can be the most honest conversation.',
+				ko: '당신들은 대부분의 사람이 놓치는 것을 압니다: 침묵이 가장 솔직한 대화가 될 수 있다는 것을.'
+			}
+		}
+	},
+
+	'storm-storm': {
+		phenomenonName: { en: 'Thunder and Lightning', ko: '천둥과 번개' },
+		vibeTags: { en: ['explosive', 'raw', 'unfiltered'], ko: ['폭발적', '날것의', '무필터'] },
+		storyBeats: {
+			openingImage: {
+				en: "Two storms meeting is not destruction — it's a sky that has nothing to hide. Every flash is honest. Every rumble is real.",
+				ko: '두 폭풍의 만남은 파괴가 아닙니다 — 숨길 것이 없는 하늘입니다. 모든 섬광은 솔직하고, 모든 울림은 진짜입니다.'
+			},
+			hiddenStrength: {
+				en: "No one else can match your intensity. That's not chaos — it's a language only you two speak.",
+				ko: '다른 누구도 당신들의 강렬함을 맞출 수 없습니다. 혼란이 아닙니다 — 당신들만 쓰는 언어입니다.'
+			}
+		}
+	},
+
+	// ─── B-TIER: phenomenonName 위주 ───
+
+	'sunlit-wild': {
+		phenomenonName: { en: 'Wind in the Sun', ko: '햇살 속의 바람' }
+	},
+	'wild-sunlit': {
+		phenomenonName: { en: 'Sunlit Wind', ko: '햇살을 탄 바람' }
+	},
+	'sunlit-shade': {
+		phenomenonName: { en: 'Sun and Shadow', ko: '빛과 그늘' }
+	},
+	'shade-sunlit': {
+		phenomenonName: { en: 'Shadow Under Sunlight', ko: '햇살 아래 그늘' }
+	},
+	'mist-dawn': {
+		phenomenonName: { en: 'Dawn Mist', ko: '새벽 안개' }
+	},
+	'mist-wild': {
+		phenomenonName: { en: 'Mist in the Wind', ko: '바람 속 안개' }
+	},
+	'wild-mist': {
+		phenomenonName: { en: 'Wind Parting the Mist', ko: '안개를 가르는 바람' }
+	},
+	'mist-shade': {
+		phenomenonName: { en: 'Quiet Sky', ko: '고요한 하늘' }
+	},
+	'shade-mist': {
+		phenomenonName: { en: 'Shade Embracing Mist', ko: '안개를 품은 그늘' }
+	},
+	'mist-mist': {
+		phenomenonName: { en: 'Deep Fog', ko: '깊은 안개' }
+	},
+	'storm-dawn': {
+		phenomenonName: { en: 'Thunder Before Morning', ko: '아침 전의 천둥' }
+	},
+	'storm-wild': {
+		phenomenonName: { en: 'Thunderstorm', ko: '뇌우' }
+	},
+	'wild-storm': {
+		phenomenonName: { en: 'Wind Chasing Thunder', ko: '천둥을 쫓는 바람' }
+	},
+	'storm-shade': {
+		phenomenonName: { en: 'Shelter from the Storm', ko: '폭풍의 쉼터' }
+	},
+	'shade-storm': {
+		phenomenonName: { en: 'Shade After Thunder', ko: '천둥 뒤의 그늘' }
+	},
+	'dawn-sunlit': {
+		phenomenonName: { en: 'Morning Arriving', ko: '도착하는 아침' }
+	},
+	'dawn-wild': {
+		phenomenonName: { en: 'Wind at Dawn', ko: '새벽의 바람' }
+	},
+	'wild-dawn': {
+		phenomenonName: { en: 'Breeze Before Sunrise', ko: '해 뜨기 전 산들바람' }
+	},
+	'dawn-shade': {
+		phenomenonName: { en: 'Soft Morning', ko: '부드러운 아침' }
+	},
+	'shade-dawn': {
+		phenomenonName: { en: 'Shade Welcoming Dawn', ko: '여명을 맞이하는 그늘' }
+	},
+	'dawn-dawn': {
+		phenomenonName: { en: 'Eternal Dawn', ko: '영원한 새벽' }
+	},
+	'sunlit-sunlit': {
+		phenomenonName: { en: 'Double Sun', ko: '두 개의 태양' }
+	},
+	'wild-wild': {
+		phenomenonName: { en: 'Hurricane', ko: '허리케인' }
+	},
+	'shade-shade': {
+		phenomenonName: { en: 'Deep Shade', ko: '깊은 그늘' }
+	}
+};

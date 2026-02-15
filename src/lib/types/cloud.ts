@@ -21,13 +21,58 @@ export interface CloudProfile {
 	};
 }
 
+export interface PremiumContent {
+	fullStory: string;
+	conflict: {
+		userTendency: string;
+		partnerTendency: string;
+		tip: string;
+	};
+	shelter: {
+		partnerNeeds: string[];
+		userNeeds: string[];
+		closingLine: string;
+	};
+	shadows: {
+		userShadows: string[];
+		partnerShadows: string[];
+	};
+	actions: Array<{
+		title: string;
+		desc: string;
+	}>;
+	seasons: {
+		firstMeet: string;
+		settling: string;
+		longTerm: string;
+	};
+	dangerPhrases: {
+		userPhrases: Array<{ bad: string; better: string }>;
+		partnerPhrases: Array<{ bad: string; better: string }>;
+	};
+	loveLanguage: {
+		userExpression: string;
+		partnerExpression: string;
+		misreadings: Array<{ signal: string; misread: string }>;
+	};
+	shareCard: {
+		phrase: string;
+		caption: string;
+	};
+}
+
 export interface CoupleChemistry {
 	user: CloudType;
 	partner: CloudType;
 	skyName: string;
+	skyNameKo?: string;
 	phenomenon: WeatherPhenomenon;
 	narrative: string;
 	warning: string | null;
+	premium?: {
+		ko: PremiumContent;
+		en: PremiumContent;
+	};
 }
 
 export interface TestQuestion {
