@@ -36,6 +36,7 @@
 	import { auth } from '$lib/firebase';
 	import { onAuthStateChanged, signOut, type User } from 'firebase/auth';
 	import PayPalButton from '$lib/components/payment/PayPalButton.svelte';
+	import { trackEvent } from '$lib/utils/analytics';
 
 	const CLOUD_TYPES: CloudType[] = ['sunlit', 'mist', 'storm', 'dawn', 'wild', 'shade'];
 
@@ -57,6 +58,13 @@
 	const myType = $derived(myCloud.type);
 	const profiles = $derived(locale.current === 'ko' ? CLOUD_PROFILES : CLOUD_PROFILES_EN);
 	const initialPartner = $derived(data.initialPartner ?? null);
+
+	$effect(() => {
+		trackEvent('view_result', {
+			cloud_type: myType,
+			locale: locale.current
+		});
+	});
 
 	let userPartner = $state<CloudType | null>(null);
 	const partnerType = $derived(userPartner ?? initialPartner);
@@ -107,6 +115,11 @@
 
 	function handleUnlock() {
 		isPremium = true;
+		trackEvent('unlock_premium', {
+			currency: 'USD',
+			value: 2.99,
+			cloud_type: myType
+		});
 	}
 
 	function goToLogin() {
@@ -137,6 +150,8 @@
 		const title = t('result.shareTitle');
 		const text = t('result.shareText').replace('{cloudName}', myCloud.name);
 
+		trackEvent('share', { method: 'navigator_share', cloud_type: myType });
+
 		if (typeof navigator !== 'undefined' && navigator.share) {
 			try {
 				await navigator.share({ title, text, url });
@@ -150,6 +165,7 @@
 
 	async function copyShareLink() {
 		const url = getShareUrl();
+		trackEvent('share', { method: 'copy_link', cloud_type: myType });
 		try {
 			await navigator.clipboard.writeText(url);
 			shareCopied = true;
@@ -188,6 +204,7 @@
 
 	/** 이미지 다운로드 */
 	async function handleDownloadCard() {
+		trackEvent('share', { method: 'download_card', cloud_type: myType });
 		const dataUrl = await captureCard();
 		if (!dataUrl) return;
 
@@ -199,6 +216,7 @@
 
 	/** 인스타그램 공유 (Web Share API 활용) */
 	async function handleInstagramShare() {
+		trackEvent('share', { method: 'instagram', cloud_type: myType });
 		const dataUrl = await captureCard();
 		if (!dataUrl) return;
 
@@ -432,7 +450,9 @@
 							<p>{conflictPreview()!.userTendency}</p>
 						</div>
 						<div class="conflict-preview-card">
-							<span class="conflict-preview-label">{locale.current === 'ko' ? '상대' : 'Partner'}</span>
+							<span class="conflict-preview-label"
+								>{locale.current === 'ko' ? '상대' : 'Partner'}</span
+							>
 							<p>{conflictPreview()!.partnerTendency}</p>
 						</div>
 					</div>
@@ -1930,7 +1950,12 @@
 		top: 0.75rem;
 		bottom: 0.75rem;
 		width: 2px;
-		background: linear-gradient(to bottom, var(--warm-peach), var(--sky-blue), color-mix(in srgb, var(--sky-blue) 40%, var(--text-gray)));
+		background: linear-gradient(
+			to bottom,
+			var(--warm-peach),
+			var(--sky-blue),
+			color-mix(in srgb, var(--sky-blue) 40%, var(--text-gray))
+		);
 	}
 
 	.season-card {
@@ -2221,7 +2246,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		transition: transform 0.2s ease, opacity 0.2s ease;
+		transition:
+			transform 0.2s ease,
+			opacity 0.2s ease;
 		box-shadow: 0 4px 12px rgba(0, 112, 186, 0.2);
 	}
 

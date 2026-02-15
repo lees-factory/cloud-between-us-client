@@ -17,6 +17,7 @@ export interface CloudProfile {
 	lore: string;
 	traits: {
 		strengths: string[];
+		inLove: string[];
 		shadows: string[];
 	};
 }

@@ -9,11 +9,11 @@ export interface QuestionOption {
 }
 
 export interface Question {
-	ID: number;
-	StepID: number;
-	QuestionText: string;
-	Options: QuestionOption[];
-	OrderIndex: number;
+	id: number;
+	stepId: number;
+	questionText: string;
+	options: QuestionOption[];
+	orderIndex: number;
 }
 
 export async function getQuestions(locale: Locale = 'ko'): Promise<Question[]> {

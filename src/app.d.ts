@@ -1,6 +1,11 @@
-import type { User } from "firebase/auth";
+import type { User } from 'firebase/auth';
 
 declare global {
+	interface Window {
+		dataLayer: any[];
+		gtag: (...args: any[]) => void;
+	}
+
 	namespace App {
 		interface Locals {
 			user: User | null;

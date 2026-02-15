@@ -50,10 +50,7 @@
 	<!-- Keywords -->
 	<div class="cloud-card-keywords">
 		{#each cloud.keywords as keyword}
-			<span
-				class="cloud-card-pill"
-				style="background-color: {pillBg}; color: var(--text-dark)"
-			>
+			<span class="cloud-card-pill" style="background-color: {pillBg}; color: var(--text-dark)">
 				{keyword}
 			</span>
 		{/each}
@@ -69,7 +66,7 @@
 		<div class="cloud-card-section">
 			<h4 class="cloud-card-section-label">In Love</h4>
 			<ul class="cloud-card-list">
-				{#each cloud.traits.strengths as style}
+				{#each cloud.traits.inLove as style}
 					<li class="cloud-card-list-item">
 						<span class="cloud-card-bullet" style="color: {color}">•</span>
 						<span>{style}</span>

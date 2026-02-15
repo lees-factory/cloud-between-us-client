@@ -103,7 +103,13 @@ export type TranslationKey =
 	| 'auth.logout'
 	| 'auth.welcome'
 	| 'auth.createAccount'
-	| 'auth.loginToUnlock';
+	| 'auth.loginToUnlock'
+	| 'footer.terms'
+	| 'footer.privacy'
+	| 'footer.contact'
+	| 'footer.disclaimer'
+	| 'footer.copyright'
+	| 'footer.team';
 
 function getNested(obj: Record<string, unknown>, path: string): unknown {
 	return path

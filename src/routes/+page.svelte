@@ -28,6 +28,9 @@
 	<div class="cloud-layer cloud-layer--1" aria-hidden="true"></div>
 	<div class="cloud-layer cloud-layer--2" aria-hidden="true"></div>
 	<div class="cloud-layer cloud-layer--3" aria-hidden="true"></div>
+	<div class="cloud-layer cloud-layer--4" aria-hidden="true"></div>
+	<div class="cloud-layer cloud-layer--5" aria-hidden="true"></div>
+	<div class="cloud-layer cloud-layer--6" aria-hidden="true"></div>
 
 	<div class="hero-content-width relative z-10 w-full max-w-2xl space-y-6 text-center md:space-y-8">
 		<h1 class="hero-headline">
@@ -351,31 +354,61 @@
 	.cloud-layer {
 		position: absolute;
 		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.7);
+		background: #ffffff;
 		pointer-events: none;
+		filter: blur(5px);
+		box-shadow: 0 8px 32px rgba(147, 197, 253, 0.1);
+		opacity: 0.9;
 	}
 	.cloud-layer--1 {
-		width: 120px;
-		height: 50px;
+		width: 180px;
+		height: 60px;
 		top: 15%;
 		left: -60px;
 		animation: drift 45s linear infinite;
 	}
 	.cloud-layer--2 {
-		width: 180px;
-		height: 70px;
+		width: 220px;
+		height: 100px;
 		top: 35%;
 		right: -90px;
 		animation: drift 55s linear infinite reverse;
 		animation-delay: -10s;
 	}
 	.cloud-layer--3 {
-		width: 100px;
-		height: 40px;
+		width: 140px;
+		height: 60px;
 		bottom: 25%;
 		left: 20%;
 		animation: drift 50s linear infinite;
 		animation-delay: -25s;
+	}
+	.cloud-layer--4 {
+		width: 200px;
+		height: 90px;
+		top: 10%;
+		right: 15%;
+		animation: drift 60s linear infinite reverse;
+		animation-delay: -5s;
+		opacity: 0.8;
+	}
+	.cloud-layer--5 {
+		width: 120px;
+		height: 50px;
+		bottom: 15%;
+		right: 25%;
+		animation: drift 40s linear infinite;
+		animation-delay: -35s;
+		opacity: 0.7;
+	}
+	.cloud-layer--6 {
+		width: 250px;
+		height: 120px;
+		top: 50%;
+		left: -100px;
+		animation: drift 70s linear infinite;
+		animation-delay: -20s;
+		opacity: 0.6;
 	}
 	@keyframes drift {
 		from {

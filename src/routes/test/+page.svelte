@@ -4,12 +4,23 @@
 	import { t } from '$lib/i18n';
 	import { stepThemes } from '$lib/data/themes';
 	import { ChevronLeft, ChevronRight } from 'lucide-svelte';
+	import { analyzeDiagnosis } from '$lib/api/diagnosis/analyze';
+	import { trackEvent } from '$lib/utils/analytics';
 
 	let { data } = $props();
 
 	let currentStep = $state(0);
 	let answers = $state<Record<string, string>>({});
 	let direction = $state<1 | -1>(1);
+	let isAnalyzing = $state(false);
+	let stepStartTime = $state(Date.now());
+
+	$effect(() => {
+		if (currentStep === 0) {
+			trackEvent('test_start');
+			stepStartTime = Date.now();
+		}
+	});
 
 	const step = $derived(data.steps[currentStep]);
 	const theme = $derived(step ? (stepThemes[step.id] ?? stepThemes[1]) : stepThemes[1]);
@@ -22,14 +33,55 @@
 		answers = { ...answers, [step.question.id]: option.cloudType };
 	}
 
-	function handleNext() {
-		if (!step || !hasAnswer) return;
+	function trackStepCompletion() {
+		if (!step) return;
+		const answer = answers[step.question.id];
+		const option = step.question.options.find((o) => o.cloudType === answer);
+
+		trackEvent('question_answered', {
+			step: currentStep + 1,
+			question_id: step.question.id,
+			answer_cloud: answer,
+			answer_text: option?.text,
+			duration_ms: Date.now() - stepStartTime
+		});
+	}
+
+	async function handleNext() {
+		if (!step || !hasAnswer || isAnalyzing) return;
+
+		trackStepCompletion();
+
 		if (isLastStep) {
-			const answersParam = encodeURIComponent(JSON.stringify(answers));
-			goto(`/result?answers=${answersParam}`);
+			isAnalyzing = true;
+			try {
+				// Convert answers map to array for API
+				const payload = Object.entries(answers).map(([key, value]) => ({
+					questionId: parseInt(key) || 0,
+					cloudType: value
+				}));
+
+				const result = await analyzeDiagnosis(payload);
+				trackEvent('test_complete', {
+					result_type: result.personaType,
+					method: 'api'
+				});
+				goto(`/result?type=${result.personaType}`);
+			} catch (error) {
+				console.error('Analysis API failed, falling back to local calculation:', error);
+				// Fallback to client-side calc using answers param
+				const answersParam = encodeURIComponent(JSON.stringify(answers));
+				trackEvent('test_complete', {
+					method: 'fallback'
+				});
+				goto(`/result?answers=${answersParam}`);
+			} finally {
+				isAnalyzing = false;
+			}
 		} else {
 			direction = 1;
 			currentStep += 1;
+			stepStartTime = Date.now();
 		}
 	}
 
@@ -37,6 +89,7 @@
 		if (currentStep > 0) {
 			direction = -1;
 			currentStep -= 1;
+			stepStartTime = Date.now();
 		}
 	}
 </script>
@@ -102,12 +155,18 @@
 			<button
 				type="button"
 				onclick={handleNext}
-				disabled={!hasAnswer}
+				disabled={!hasAnswer || isAnalyzing}
 				class="nav-btn nav-next"
-				class:disabled={!hasAnswer}
+				class:disabled={!hasAnswer || isAnalyzing}
 			>
-				{isLastStep ? t('test.seeResult') : t('test.next')}
-				<ChevronRight size={20} />
+				{#if isAnalyzing}
+					Running...
+				{:else}
+					{isLastStep ? t('test.seeResult') : t('test.next')}
+				{/if}
+				{#if !isAnalyzing}
+					<ChevronRight size={20} />
+				{/if}
 			</button>
 		</div>
 	</div>

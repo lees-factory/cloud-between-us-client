@@ -121,6 +121,15 @@ export const translations = {
 			welcome: 'Welcome back',
 			createAccount: 'Create your sky account',
 			loginToUnlock: 'Log in to unlock full sky'
+		},
+		footer: {
+			terms: 'Terms of Service',
+			privacy: 'Privacy Policy',
+			contact: 'Contact',
+			disclaimer:
+				'This service is provided for entertainment purposes only and is not a substitute for professional psychological counseling.',
+			copyright: 'Cloud Between Us. All rights reserved.',
+			team: 'Cloud Between Us Team'
 		}
 	},
 	ko: {
@@ -245,6 +254,15 @@ export const translations = {
 			welcome: '반가워요!',
 			createAccount: '하늘 계정 만들기',
 			loginToUnlock: '로그인하고 전체 하늘 열기'
+		},
+		footer: {
+			terms: '이용약관',
+			privacy: '개인정보처리방침',
+			contact: '문의하기',
+			disclaimer:
+				'본 서비스는 엔터테인먼트 목적으로 제공되며, 전문적인 심리 상담을 대체할 수 없습니다.',
+			copyright: 'Cloud Between Us. All rights reserved.',
+			team: 'Cloud Between Us 팀'
 		}
 	}
 } as const;

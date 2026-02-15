@@ -20,9 +20,9 @@ export const load: PageServerLoad = async (event) => {
 				title: localStep.title,
 				emoji: localStep.emoji,
 				question: {
-					id: q.ID,
-					text: q.QuestionText,
-					options: q.Options.map((opt) => ({
+					id: q.id,
+					text: q.questionText,
+					options: q.options.map((opt) => ({
 						text: opt.text,
 						cloudType: opt.personaType
 					}))

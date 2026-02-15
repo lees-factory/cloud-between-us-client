@@ -17,10 +17,11 @@ export const CLOUD_PROFILES: Record<string, CloudProfile> = {
       관계를 앞으로 움직이게 만든다.
     `,
 		traits: {
-			strengths: [
-				'고백을 먼저 하는 구름',
-				'미래를 그리는 구름',
-				'"우리"라는 말을 자주 쓰는 구름'
+			strengths: ['솔직함', '추진력', '밝은 에너지'],
+			inLove: [
+				'재지 않고 직진한다',
+				'우리의 미래를 자주 이야기한다',
+				'사랑하는 사람을 자랑하고 싶어한다'
 			],
 			shadows: [
 				'빛이 강해질수록 상대의 그림자를 보지 못할 수 있다',
@@ -42,10 +43,11 @@ export const CLOUD_PROFILES: Record<string, CloudProfile> = {
       눈빛과 공기의 온도다.
     `,
 		traits: {
-			strengths: [
-				'작은 변화도 알아차린다',
-				'말 대신 표정을 읽는다',
-				'깊이 연결되길 원한다'
+			strengths: ['공감 능력', '직관', '세심함'],
+			inLove: [
+				'상대의 기분을 누구보다 먼저 알아챈다',
+				'둘만의 깊은 세계를 만든다',
+				'섬세하게 배려한다'
 			],
 			shadows: ['감정을 너무 많이 흡수해 스스로 흐려질 수 있다']
 		}
@@ -64,7 +66,8 @@ export const CLOUD_PROFILES: Record<string, CloudProfile> = {
       진실은 때로 요란하다.
     `,
 		traits: {
-			strengths: ['솔직하게 말한다', '결정이 빠르다', '열정이 크다'],
+			strengths: ['솔직함', '열정', '결단력'],
+			inLove: ['한순간에 강렬하게 빠져든다', '밀당 없이 감정을 표현한다', '거짓 없는 사랑을 한다'],
 			shadows: ['감정이 폭발하면 상대를 놀라게 할 수 있다']
 		}
 	},
@@ -82,7 +85,12 @@ export const CLOUD_PROFILES: Record<string, CloudProfile> = {
       기다리는 것만으로도 관계는 변한다.
     `,
 		traits: {
-			strengths: ['인내심이 있다', '변화를 두려워하지 않는다', '희망을 준다'],
+			strengths: ['인내심', '희망', '포용력'],
+			inLove: [
+				'서두르지 않고 스며든다',
+				'상대가 준비될 때까지 기다려준다',
+				'한결같은 마음을 보여준다'
+			],
 			shadows: ['너무 기다리기만 해 타이밍을 놓칠 수 있다']
 		}
 	},
@@ -100,7 +108,12 @@ export const CLOUD_PROFILES: Record<string, CloudProfile> = {
       새로움을 잃지 않으려 한다.
     `,
 		traits: {
-			strengths: ['즉흥적이다', '새 경험을 두려워하지 않는다', '에너지가 넘친다'],
+			strengths: ['자유로움', '유연성', '도전 정신'],
+			inLove: [
+				'함께 새로운 것을 경험하길 원한다',
+				'구속받지 않는 사랑을 꿈꾼다',
+				'지루할 틈을 주지 않는다'
+			],
 			shadows: ['한곳에 묶이면 숨이 막힐 수 있다']
 		}
 	},
@@ -118,13 +131,17 @@ export const CLOUD_PROFILES: Record<string, CloudProfile> = {
       함께 조용히 있어도 된다.
     `,
 		traits: {
-			strengths: ['안정감을 준다', '말보다 존재로 보여준다', '쉼이 된다'],
+			strengths: ['안정감', '신뢰', '차분함'],
+			inLove: [
+				'말보다 행동으로 챙겨준다',
+				'힘들 때 조용히 쉴 곳이 되어준다',
+				'변함없이 그 자리에 있는다'
+			],
 			shadows: ['너무 조용해 상대가 답답해할 수 있다']
 		}
 	}
 };
 
-/** English cloud profiles. */
 /** English cloud profiles. */
 export const CLOUD_PROFILES_EN: Record<string, CloudProfile> = {
 	sunlit: {
@@ -141,13 +158,14 @@ export const CLOUD_PROFILES_EN: Record<string, CloudProfile> = {
       It makes the relationship move forward.
     `,
 		traits: {
-			strengths: [
-				'The cloud that confesses first',
-				'The cloud that paints the future',
-				'The cloud that says "us" the most'
+			strengths: ['Honesty', 'Drive', 'Bright Energy'],
+			inLove: [
+				'Straightforward in love, no games',
+				'Talks often about "our" future',
+				'Loves to show off their partner'
 			],
 			shadows: [
-				'The stronger the light, the harder it is to see your partner\'s shadow',
+				"The stronger the light, the harder it is to see your partner's shadow",
 				'The desire to lead may become a need to control'
 			]
 		}
@@ -166,10 +184,11 @@ export const CLOUD_PROFILES_EN: Record<string, CloudProfile> = {
       It's in the gaze and the temperature of the air.
     `,
 		traits: {
-			strengths: [
-				'Notices even the smallest changes',
-				'Reads expressions instead of words',
-				'Wants to connect deeply'
+			strengths: ['Empathy', 'Intuition', 'Attentiveness'],
+			inLove: [
+				"Notices partner's mood first",
+				'Creates a deep, private world',
+				'Cares delicately for others'
 			],
 			shadows: ['May absorb too many emotions and lose clarity']
 		}
@@ -188,7 +207,12 @@ export const CLOUD_PROFILES_EN: Record<string, CloudProfile> = {
       Truth is sometimes loud.
     `,
 		traits: {
-			strengths: ['Speaks honestly', 'Decides quickly', 'Loves passionately'],
+			strengths: ['Honesty', 'Passion', 'Decisiveness'],
+			inLove: [
+				'Falls in love intensely',
+				'Expresses feelings without holding back',
+				'Loves without lies'
+			],
 			shadows: ['An emotional outburst may startle the other person']
 		}
 	},
@@ -206,10 +230,11 @@ export const CLOUD_PROFILES_EN: Record<string, CloudProfile> = {
       Sometimes, just waiting is enough to change a relationship.
     `,
 		traits: {
-			strengths: [
-				'Patient',
-				'Unafraid of change',
-				'Gives hope'
+			strengths: ['Patience', 'Hope', 'Inclusiveness'],
+			inLove: [
+				'Permeates slowly without rushing',
+				'Waits until the partner is ready',
+				'Shows a consistent heart'
 			],
 			shadows: ['May wait too long and miss the moment']
 		}
@@ -228,10 +253,11 @@ export const CLOUD_PROFILES_EN: Record<string, CloudProfile> = {
       It never wants to lose the newness.
     `,
 		traits: {
-			strengths: [
-				'Spontaneous',
-				'Unafraid of new experiences',
-				'Full of energy'
+			strengths: ['Freedom', 'Flexibility', 'Adventurous Spirit'],
+			inLove: [
+				'Wants to experience new things together',
+				'Dreams of love without restrictions',
+				'Never leaves room for boredom'
 			],
 			shadows: ['May feel suffocated when tied down']
 		}
@@ -250,10 +276,11 @@ export const CLOUD_PROFILES_EN: Record<string, CloudProfile> = {
       It's okay to be quiet together.
     `,
 		traits: {
-			strengths: [
-				'Gives a sense of stability',
-				'Shows love through presence, not words',
-				'Becomes a place of rest'
+			strengths: ['Stability', 'Trust', 'Calmness'],
+			inLove: [
+				'Cares through actions rather than words',
+				'Becomes a quiet resting place when things are hard',
+				'Stays by your side unchangingly'
 			],
 			shadows: ['Too much silence may frustrate the other person']
 		}

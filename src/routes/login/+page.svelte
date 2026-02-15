@@ -7,6 +7,7 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import { socialLogin } from '$lib/api/auth';
+	import { trackEvent } from '$lib/utils/analytics';
 
 	let email = $state('');
 	let password = $state('');
@@ -51,6 +52,7 @@
 				});
 			}
 
+			trackEvent('login', { method: 'google' });
 			handleLoginSuccess();
 		} catch (error: any) {
 			console.error('Error logging in:', error);
