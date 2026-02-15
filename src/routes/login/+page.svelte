@@ -5,17 +5,28 @@
 	import { auth } from '$lib/firebase';
 	import { GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword } from 'firebase/auth';
 	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
+	import { socialLogin } from '$lib/api/auth';
 
 	let email = $state('');
 	let password = $state('');
 	let isLoading = $state(false);
+
+	async function handleLoginSuccess() {
+		const redirect = page.url.searchParams.get('redirect');
+		if (redirect) {
+			goto(redirect);
+		} else {
+			goto('/');
+		}
+	}
 
 	async function handleSubmit(e: Event) {
 		e.preventDefault();
 		isLoading = true;
 		try {
 			await signInWithEmailAndPassword(auth, email, password);
-			goto('/');
+			handleLoginSuccess();
 		} catch (error: any) {
 			console.error('Error logging in:', error);
 			alert(error.message);
@@ -28,8 +39,19 @@
 		isLoading = true;
 		const provider = new GoogleAuthProvider();
 		try {
-			await signInWithPopup(auth, provider);
-			goto('/');
+			const res = await signInWithPopup(auth, provider);
+			const user = res.user;
+
+			if (user.email) {
+				// 백엔드 소셜 로그인 API 호출 (자동 가입 또는 로그인)
+				await socialLogin({
+					socialId: user.uid,
+					provider: 'GOOGLE',
+					email: user.email
+				});
+			}
+
+			handleLoginSuccess();
 		} catch (error: any) {
 			console.error('Error logging in:', error);
 			alert(error.message);
@@ -79,35 +101,6 @@
 				</svg>
 				<span>Google로 계속하기</span>
 			</button>
-		</div>
-
-		<div class="divider">
-			<span>or</span>
-		</div>
-
-		<form onsubmit={handleSubmit} class="auth-form">
-			<div class="input-group">
-				<label for="email">{t('auth.email')}</label>
-				<input type="email" id="email" bind:value={email} required placeholder="sky@example.com" />
-			</div>
-
-			<div class="input-group">
-				<label for="password">{t('auth.password')}</label>
-				<input type="password" id="password" bind:value={password} required />
-			</div>
-
-			<button type="submit" class="auth-submit" disabled={isLoading}>
-				{#if isLoading}
-					<span class="loading-dots">...</span>
-				{:else}
-					{t('auth.loginAction')}
-				{/if}
-			</button>
-		</form>
-
-		<div class="auth-footer">
-			<span>{t('auth.noAccount')}</span>
-			<a href="/signup">{t('auth.signup')}</a>
 		</div>
 	</div>
 </main>

@@ -1,0 +1,575 @@
+{
+	"meta": {
+		"title": "Cloud Between Us - Love Type Test",
+		"description": "What kind of cloud are you in love?",
+		"totalSteps": 12,
+		"totalQuestions": 48,
+		"estimatedTime": "2-3 minutes"
+	},
+	"steps": [
+		{
+			"id": 1,
+			"title": "The Beginning of Love",
+			"emoji": "🌅",
+			"questions": [
+				{
+					"id": "1-1",
+					"text": "When you start to like someone, what do you do?",
+					"options": [
+						{ "text": "I approach them and start a conversation", "cloudType": "sunlit" },
+						{ "text": "I watch from afar, waiting for them to come to me", "cloudType": "mist" },
+						{ "text": "I express my feelings directly", "cloudType": "storm" },
+						{ "text": "I naturally become friends with them first", "cloudType": "dawn" }
+					]
+				},
+				{
+					"id": "1-2",
+					"text": "When you meet someone for the first time, you tend to:",
+					"options": [
+						{ "text": "Lead the conversation actively", "cloudType": "sunlit" },
+						{ "text": "Listen more, but empathize well", "cloudType": "mist" },
+						{ "text": "Leave a strong impression", "cloudType": "storm" },
+						{ "text": "Create a comfortable atmosphere", "cloudType": "dawn" }
+					]
+				},
+				{
+					"id": "1-3",
+					"text": "What matters most to you in a relationship?",
+					"options": [
+						{ "text": "Trust and future plans", "cloudType": "sunlit" },
+						{ "text": "Emotional connection and understanding", "cloudType": "mist" },
+						{ "text": "Passion and chemistry", "cloudType": "storm" },
+						{ "text": "Comfort and stability", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "1-4",
+					"text": "How fast do you fall in love?",
+					"options": [
+						{ "text": "Slowly, once I feel certain", "cloudType": "sunlit" },
+						{ "text": "It deepens over time", "cloudType": "mist" },
+						{ "text": "Quickly and intensely", "cloudType": "storm" },
+						{ "text": "So naturally, I barely notice", "cloudType": "dawn" }
+					]
+				}
+			]
+		},
+		{
+			"id": 2,
+			"title": "Expressing Feelings",
+			"emoji": "💬",
+			"questions": [
+				{
+					"id": "2-1",
+					"text": "When do you say \"I love you\"?",
+					"options": [
+						{ "text": "I say it first, once I'm sure", "cloudType": "sunlit" },
+						{ "text": "After they say it first", "cloudType": "mist" },
+						{ "text": "When the feeling hits me", "cloudType": "storm" },
+						{ "text": "I show it through actions instead", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "2-2",
+					"text": "When you're feeling down, you tend to:",
+					"options": [
+						{ "text": "Talk it out and find a solution", "cloudType": "sunlit" },
+						{ "text": "Want to be alone", "cloudType": "mist" },
+						{ "text": "Not hide my emotions", "cloudType": "storm" },
+						{ "text": "Pretend I'm fine and move on", "cloudType": "dawn" }
+					]
+				},
+				{
+					"id": "2-3",
+					"text": "How do you show affection to your partner?",
+					"options": [
+						{ "text": "Words like \"I love you\" and \"us\"", "cloudType": "sunlit" },
+						{ "text": "Small gifts or sweet messages", "cloudType": "mist" },
+						{ "text": "Physical touch and bold expressions", "cloudType": "storm" },
+						{ "text": "Simply being there", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "2-4",
+					"text": "When your partner is going through a hard time, you:",
+					"options": [
+						{ "text": "Offer advice and direction", "cloudType": "sunlit" },
+						{ "text": "Listen and empathize", "cloudType": "mist" },
+						{ "text": "Get angry alongside them or comfort them", "cloudType": "storm" },
+						{ "text": "Quietly stay by their side", "cloudType": "shade" }
+					]
+				}
+			]
+		},
+		{
+			"id": 3,
+			"title": "Handling Conflict",
+			"emoji": "⚡",
+			"questions": [
+				{
+					"id": "3-1",
+					"text": "When you fight with your partner, you:",
+					"options": [
+						{ "text": "Try to resolve it through conversation", "cloudType": "sunlit" },
+						{ "text": "Take some time to think", "cloudType": "mist" },
+						{ "text": "Express my emotions right away", "cloudType": "storm" },
+						{ "text": "Avoid conflict as much as possible", "cloudType": "dawn" }
+					]
+				},
+				{
+					"id": "3-2",
+					"text": "When a conflict arises, your first reaction is:",
+					"options": [
+						{ "text": "\"Let's talk about this\"", "cloudType": "sunlit" },
+						{ "text": "Replay it in my head over and over", "cloudType": "mist" },
+						{ "text": "Confront them directly", "cloudType": "storm" },
+						{ "text": "\"It's fine,\" and move on", "cloudType": "dawn" }
+					]
+				},
+				{
+					"id": "3-3",
+					"text": "How do you make up?",
+					"options": [
+						{ "text": "I initiate reconciliation first", "cloudType": "sunlit" },
+						{ "text": "I accept when they come to me", "cloudType": "mist" },
+						{ "text": "As fast as the fight started", "cloudType": "storm" },
+						{ "text": "Naturally, with time", "cloudType": "dawn" }
+					]
+				},
+				{
+					"id": "3-4",
+					"text": "When your partner is in the wrong, you:",
+					"options": [
+						{ "text": "Point it out clearly", "cloudType": "sunlit" },
+						{ "text": "Feel hurt but stay quiet", "cloudType": "mist" },
+						{ "text": "Express it immediately", "cloudType": "storm" },
+						{ "text": "Try to let it go", "cloudType": "shade" }
+					]
+				}
+			]
+		},
+		{
+			"id": 4,
+			"title": "Love in Daily Life",
+			"emoji": "☕",
+			"questions": [
+				{
+					"id": "4-1",
+					"text": "On a weekend with your partner, you:",
+					"options": [
+						{ "text": "Plan things ahead of time", "cloudType": "sunlit" },
+						{ "text": "Prefer staying home quietly", "cloudType": "mist" },
+						{ "text": "Do something spontaneous", "cloudType": "wild" },
+						{ "text": "Just want to feel at ease", "cloudType": "dawn" }
+					]
+				},
+				{
+					"id": "4-2",
+					"text": "Do you notice small changes in your partner?",
+					"options": [
+						{ "text": "I catch the important things", "cloudType": "sunlit" },
+						{ "text": "I notice even the tiniest details", "cloudType": "mist" },
+						{ "text": "Only the big changes", "cloudType": "storm" },
+						{ "text": "Only when they tell me", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "4-3",
+					"text": "When a routine forms with your partner:",
+					"options": [
+						{ "text": "I like it — it feels stable", "cloudType": "sunlit" },
+						{ "text": "Comfortable, but sometimes stifling", "cloudType": "mist" },
+						{ "text": "Boring — I need change", "cloudType": "wild" },
+						{ "text": "I love it", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "4-4",
+					"text": "How do you feel about anniversaries?",
+					"options": [
+						{ "text": "Important — I always celebrate", "cloudType": "sunlit" },
+						{ "text": "I want to make it meaningful", "cloudType": "mist" },
+						{ "text": "I want to make it special", "cloudType": "storm" },
+						{ "text": "Being together is enough", "cloudType": "shade" }
+					]
+				}
+			]
+		},
+		{
+			"id": 5,
+			"title": "Freedom & Space",
+			"emoji": "🕊️",
+			"questions": [
+				{
+					"id": "5-1",
+					"text": "What do you need in a relationship?",
+					"options": [
+						{ "text": "A clear definition of us", "cloudType": "sunlit" },
+						{ "text": "Emotional security", "cloudType": "mist" },
+						{ "text": "Excitement and spark", "cloudType": "storm" },
+						{ "text": "Personal time", "cloudType": "wild" }
+					]
+				},
+				{
+					"id": "5-2",
+					"text": "When your partner wants alone time:",
+					"options": [
+						{ "text": "I ask why", "cloudType": "sunlit" },
+						{ "text": "I want alone time too", "cloudType": "mist" },
+						{ "text": "I feel a bit hurt", "cloudType": "wild" },
+						{ "text": "Of course — I respect that", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "5-3",
+					"text": "If someone says \"Let's travel spontaneously!\":",
+					"options": [
+						{ "text": "I check my schedule and plan it", "cloudType": "sunlit" },
+						{ "text": "That sounds overwhelming", "cloudType": "mist" },
+						{ "text": "Yes! Let's go right now", "cloudType": "storm" },
+						{ "text": "Let me think about it", "cloudType": "wild" }
+					]
+				},
+				{
+					"id": "5-4",
+					"text": "How do you feel about being together all the time?",
+					"options": [
+						{ "text": "I love it — togetherness is great", "cloudType": "sunlit" },
+						{ "text": "Sometimes it feels suffocating", "cloudType": "mist" },
+						{ "text": "It depends on the situation", "cloudType": "wild" },
+						{ "text": "We each need our own time too", "cloudType": "shade" }
+					]
+				}
+			]
+		},
+		{
+			"id": 6,
+			"title": "Future & Plans",
+			"emoji": "🔮",
+			"questions": [
+				{
+					"id": "6-1",
+					"text": "How much do you think about the future of your relationship?",
+					"options": [
+						{ "text": "Often, in specific detail", "cloudType": "sunlit" },
+						{ "text": "Vaguely", "cloudType": "mist" },
+						{ "text": "The present matters more", "cloudType": "storm" },
+						{ "text": "Sometimes", "cloudType": "dawn" }
+					]
+				},
+				{
+					"id": "6-2",
+					"text": "\"Where do you think this is going?\" — your answer:",
+					"options": [
+						{ "text": "I have a clear picture", "cloudType": "sunlit" },
+						{ "text": "I'm not sure", "cloudType": "mist" },
+						{ "text": "I'm happy now, that's enough", "cloudType": "wild" },
+						{ "text": "Let's take it slow", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "6-3",
+					"text": "How do you feel about talking about marriage?",
+					"options": [
+						{ "text": "Important — things should be clear", "cloudType": "sunlit" },
+						{ "text": "It makes me cautious", "cloudType": "mist" },
+						{ "text": "Too early for that", "cloudType": "wild" },
+						{ "text": "When the time comes", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "6-4",
+					"text": "Could you do a long-distance relationship?",
+					"options": [
+						{ "text": "If there's a plan, yes", "cloudType": "sunlit" },
+						{ "text": "It would be hard", "cloudType": "mist" },
+						{ "text": "I think feelings would fade", "cloudType": "storm" },
+						{ "text": "With trust, yes", "cloudType": "shade" }
+					]
+				}
+			]
+		},
+		{
+			"id": 7,
+			"title": "Jealousy & Possessiveness",
+			"emoji": "👀",
+			"questions": [
+				{
+					"id": "7-1",
+					"text": "When your partner meets a friend of the opposite sex:",
+					"options": [
+						{ "text": "Fine, but I'd like to know", "cloudType": "sunlit" },
+						{ "text": "I feel uneasy", "cloudType": "mist" },
+						{ "text": "I get jealous", "cloudType": "storm" },
+						{ "text": "I don't mind at all", "cloudType": "wild" }
+					]
+				},
+				{
+					"id": "7-2",
+					"text": "About your partner's past relationships:",
+					"options": [
+						{ "text": "Curious, but I won't ask", "cloudType": "sunlit" },
+						{ "text": "I'd rather not know", "cloudType": "mist" },
+						{ "text": "I'm curious", "cloudType": "storm" },
+						{ "text": "The past is the past", "cloudType": "dawn" }
+					]
+				},
+				{
+					"id": "7-3",
+					"text": "If your partner doesn't introduce you to others:",
+					"options": [
+						{ "text": "I ask why", "cloudType": "sunlit" },
+						{ "text": "I feel hurt", "cloudType": "mist" },
+						{ "text": "I get upset", "cloudType": "storm" },
+						{ "text": "I understand", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "7-4",
+					"text": "How possessive are you?",
+					"options": [
+						{ "text": "Moderately", "cloudType": "sunlit" },
+						{ "text": "Quite a lot", "cloudType": "mist" },
+						{ "text": "Very much", "cloudType": "storm" },
+						{ "text": "Hardly at all", "cloudType": "wild" }
+					]
+				}
+			]
+		},
+		{
+			"id": 8,
+			"title": "Intimacy",
+			"emoji": "💫",
+			"questions": [
+				{
+					"id": "8-1",
+					"text": "How do you feel about physical affection?",
+					"options": [
+						{ "text": "It's important", "cloudType": "sunlit" },
+						{ "text": "Only when I'm comfortable", "cloudType": "mist" },
+						{ "text": "It's very important", "cloudType": "storm" },
+						{ "text": "I can take it or leave it", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "8-2",
+					"text": "How do you feel about deep conversations with your partner?",
+					"options": [
+						{ "text": "Often — it's necessary for the relationship", "cloudType": "sunlit" },
+						{ "text": "I want to, but it's hard", "cloudType": "mist" },
+						{ "text": "When emotions run high", "cloudType": "shade" },
+						{ "text": "Occasionally, when needed", "cloudType": "wild" }
+					]
+				},
+				{
+					"id": "8-3",
+					"text": "In front of your partner, you are:",
+					"options": [
+						{ "text": "Completely myself", "cloudType": "sunlit" },
+						{ "text": "A bit cautious", "cloudType": "mist" },
+						{ "text": "Even more honest", "cloudType": "storm" },
+						{ "text": "At ease", "cloudType": "dawn" }
+					]
+				},
+				{
+					"id": "8-4",
+					"text": "Texting before bed:",
+					"options": [
+						{ "text": "I want to do it every day", "cloudType": "sunlit" },
+						{ "text": "Nice, but not a must", "cloudType": "mist" },
+						{ "text": "Obviously", "cloudType": "storm" },
+						{ "text": "It's okay to skip if busy", "cloudType": "shade" }
+					]
+				}
+			]
+		},
+		{
+			"id": 9,
+			"title": "Facing a Crisis",
+			"emoji": "🌊",
+			"questions": [
+				{
+					"id": "9-1",
+					"text": "When your relationship is shaken, you:",
+					"options": [
+						{ "text": "Actively try to fix it", "cloudType": "sunlit" },
+						{ "text": "Worry about it alone", "cloudType": "mist" },
+						{ "text": "React emotionally", "cloudType": "storm" },
+						{ "text": "Give it time", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "9-2",
+					"text": "When a breakup seems near:",
+					"options": [
+						{ "text": "I fight to the end", "cloudType": "sunlit" },
+						{ "text": "I retreat, feeling hurt", "cloudType": "mist" },
+						{ "text": "I either hold on tight or leave fast", "cloudType": "storm" },
+						{ "text": "I accept it calmly", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "9-3",
+					"text": "When you feel your partner has changed:",
+					"options": [
+						{ "text": "I try to have a conversation", "cloudType": "sunlit" },
+						{ "text": "I just observe quietly", "cloudType": "mist" },
+						{ "text": "I ask them directly", "cloudType": "wild" },
+						{ "text": "I keep watching", "cloudType": "storm" }
+					]
+				},
+				{
+					"id": "9-4",
+					"text": "When trust is broken:",
+					"options": [
+						{ "text": "I try to rebuild it", "cloudType": "sunlit" },
+						{ "text": "I'm deeply hurt", "cloudType": "mist" },
+						{ "text": "It's over", "cloudType": "wild" },
+						{ "text": "I need time", "cloudType": "shade" }
+					]
+				}
+			]
+		},
+		{
+			"id": 10,
+			"title": "Love Language",
+			"emoji": "💝",
+			"questions": [
+				{
+					"id": "10-1",
+					"text": "When do you feel most loved?",
+					"options": [
+						{ "text": "When we plan a future together", "cloudType": "sunlit" },
+						{ "text": "When they truly understand me", "cloudType": "mist" },
+						{ "text": "When they show intense passion", "cloudType": "storm" },
+						{ "text": "When they're simply there for me", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "10-2",
+					"text": "How do you express love?",
+					"options": [
+						{ "text": "Words and plans", "cloudType": "sunlit" },
+						{ "text": "Empathy and care", "cloudType": "mist" },
+						{ "text": "Actions and emotion", "cloudType": "storm" },
+						{ "text": "Presence and trust", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "10-3",
+					"text": "How do you feel about receiving gifts?",
+					"options": [
+						{ "text": "The meaning matters most", "cloudType": "sunlit" },
+						{ "text": "I love it when I can feel the heart behind it", "cloudType": "mist" },
+						{ "text": "I love surprises", "cloudType": "wild" },
+						{ "text": "It makes me a bit uncomfortable", "cloudType": "dawn" }
+					]
+				},
+				{
+					"id": "10-4",
+					"text": "What do you most want to say to your partner?",
+					"options": [
+						{ "text": "\"Let's build our future together\"", "cloudType": "sunlit" },
+						{ "text": "\"I understand you\"", "cloudType": "mist" },
+						{ "text": "\"I can't live without you\"", "cloudType": "storm" },
+						{ "text": "\"I'm right here\"", "cloudType": "shade" }
+					]
+				}
+			]
+		},
+		{
+			"id": 11,
+			"title": "Alone vs. Together",
+			"emoji": "🎭",
+			"questions": [
+				{
+					"id": "11-1",
+					"text": "When you want to be alone on a weekend:",
+					"options": [
+						{ "text": "Only if I planned for it", "cloudType": "sunlit" },
+						{ "text": "It happens often", "cloudType": "mist" },
+						{ "text": "Almost never", "cloudType": "wild" },
+						{ "text": "Whenever I need to", "cloudType": "dawn" }
+					]
+				},
+				{
+					"id": "11-2",
+					"text": "Sharing hobbies with your partner:",
+					"options": [
+						{ "text": "Great — we can do things together", "cloudType": "sunlit" },
+						{ "text": "It feels like pressure", "cloudType": "mist" },
+						{ "text": "It's fun", "cloudType": "wild" },
+						{ "text": "We can each do our own thing", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "11-3",
+					"text": "Should you always be reachable?",
+					"options": [
+						{ "text": "To some extent, yes", "cloudType": "sunlit" },
+						{ "text": "That feels like pressure", "cloudType": "mist" },
+						{ "text": "Of course", "cloudType": "wild" },
+						{ "text": "No", "cloudType": "dawn" }
+					]
+				},
+				{
+					"id": "11-4",
+					"text": "Do you want to know everything about your partner?",
+					"options": [
+						{ "text": "The important things, yes", "cloudType": "sunlit" },
+						{ "text": "Knowing too much feels heavy", "cloudType": "mist" },
+						{ "text": "I want to know everything", "cloudType": "wild" },
+						{ "text": "I'll listen when they share", "cloudType": "shade" }
+					]
+				}
+			]
+		},
+		{
+			"id": 12,
+			"title": "The Temperature of Love",
+			"emoji": "🌡️",
+			"questions": [
+				{
+					"id": "12-1",
+					"text": "Your love is:",
+					"options": [
+						{ "text": "Warm and steady", "cloudType": "sunlit" },
+						{ "text": "Deep and delicate", "cloudType": "mist" },
+						{ "text": "Hot and intense", "cloudType": "storm" },
+						{ "text": "Quiet and solid", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "12-2",
+					"text": "With a long-term partner:",
+					"options": [
+						{ "text": "I feel more secure", "cloudType": "sunlit" },
+						{ "text": "I feel more at ease", "cloudType": "mist" },
+						{ "text": "Sometimes it gets boring", "cloudType": "wild" },
+						{ "text": "The bond deepens", "cloudType": "shade" }
+					]
+				},
+				{
+					"id": "12-3",
+					"text": "Your perfect date:",
+					"options": [
+						{ "text": "A carefully planned special day", "cloudType": "sunlit" },
+						{ "text": "Quiet time, just the two of us", "cloudType": "mist" },
+						{ "text": "An unexpected adventure", "cloudType": "wild" },
+						{ "text": "An ordinary day, together", "cloudType": "dawn" }
+					]
+				},
+				{
+					"id": "12-4",
+					"text": "The most important thing in love:",
+					"options": [
+						{ "text": "Trust and direction", "cloudType": "sunlit" },
+						{ "text": "Understanding and empathy", "cloudType": "mist" },
+						{ "text": "Passion and attraction", "cloudType": "storm" },
+						{ "text": "Comfort and consistency", "cloudType": "shade" }
+					]
+				}
+			]
+		}
+	]
+}

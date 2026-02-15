@@ -1,7 +1,7 @@
 export const translations = {
 	en: {
 		home: {
-			pageTitle: 'Cloud Between Us — Every love has a sky.',
+			pageTitle: 'Cloud Between Us — Our sky.',
 			hero: {
 				headline: 'Love moves like weather.',
 				headline2: 'What’s forming between you?',
@@ -29,7 +29,7 @@ export const translations = {
 			}
 		},
 		test: {
-			pageTitle: 'Cloud Record — Cloud Between Us',
+			pageTitle: 'Our Sky — Cloud Between Us',
 			back: 'Back',
 			next: 'Next',
 			seeResult: 'See My Result'
@@ -119,12 +119,13 @@ export const translations = {
 			signupAction: 'Join Us',
 			logout: 'Logout',
 			welcome: 'Welcome back',
-			createAccount: 'Create your sky account'
+			createAccount: 'Create your sky account',
+			loginToUnlock: 'Log in to unlock full sky'
 		}
 	},
 	ko: {
 		home: {
-			pageTitle: 'Cloud Between Us — 우리 사랑의 기후',
+			pageTitle: 'Cloud Between Us — 우리 사이의 하늘',
 			hero: {
 				headline: '사랑은, 날씨처럼 변해.',
 				headline2: '지금 너희 사이엔 어떤 공기가 흐르고 있어?',
@@ -152,7 +153,7 @@ export const translations = {
 			}
 		},
 		test: {
-			pageTitle: '구름 기록 — Cloud Between Us',
+			pageTitle: '우리 사이의 하늘 — Cloud Between Us',
 			back: '이전으로',
 			next: '다음으로',
 			seeResult: '나의 구름 확인하기'
@@ -242,7 +243,8 @@ export const translations = {
 			signupAction: '가입하기',
 			logout: '로그아웃',
 			welcome: '반가워요!',
-			createAccount: '하늘 계정 만들기'
+			createAccount: '하늘 계정 만들기',
+			loginToUnlock: '로그인하고 전체 하늘 열기'
 		}
 	}
 } as const;

@@ -102,7 +102,8 @@ export type TranslationKey =
 	| 'auth.signupAction'
 	| 'auth.logout'
 	| 'auth.welcome'
-	| 'auth.createAccount';
+	| 'auth.createAccount'
+	| 'auth.loginToUnlock';
 
 function getNested(obj: Record<string, unknown>, path: string): unknown {
 	return path

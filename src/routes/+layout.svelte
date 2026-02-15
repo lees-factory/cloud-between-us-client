@@ -6,6 +6,8 @@
 	import { page } from '$app/stores';
 	import { auth } from '$lib/firebase';
 	import { onAuthStateChanged, signOut } from 'firebase/auth';
+	import { goto } from '$app/navigation';
+	import { removeToken } from '$lib/utils/token';
 
 	let { children, data } = $props();
 	let user = $state(data.user);
@@ -14,6 +16,8 @@
 
 	async function handleLogout() {
 		await signOut(auth);
+		removeToken();
+		await goto('/', { invalidateAll: true });
 	}
 
 	$effect(() => {

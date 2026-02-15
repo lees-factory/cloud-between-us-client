@@ -1,7 +1,6 @@
 import type { PageServerLoad } from './$types';
 import { error } from '@sveltejs/kit';
 import { getCloudProfiles } from '$lib/data/cloudProfiles';
-import testData from '$lib/data/test-questions.json';
 import type { CloudType } from '$lib/types/cloud';
 import { getLocaleFromEvent } from '$lib/i18n';
 
@@ -18,24 +17,12 @@ export const load: PageServerLoad = async (event) => {
 	}
 
 	try {
-		const answers = JSON.parse(decodeURIComponent(answersParam)) as Record<string, number>;
-
-		// Build a lookup: questionId → options (with cloudType)
-		const questionMap = new Map<string, { options: { cloudType: string }[] }>();
-		for (const step of testData.steps) {
-			for (const q of step.questions) {
-				questionMap.set(q.id, q);
-			}
-		}
+		const answers = JSON.parse(decodeURIComponent(answersParam)) as Record<string, string>;
 
 		// Tally cloud types from answers
 		const counts: Partial<Record<CloudType, number>> = {};
-		for (const [questionId, optionIndex] of Object.entries(answers)) {
-			const question = questionMap.get(questionId);
-			if (!question) continue;
-			const option = question.options[optionIndex];
-			if (!option) continue;
-			const ct = option.cloudType as CloudType;
+		for (const cloudType of Object.values(answers)) {
+			const ct = cloudType as CloudType;
 			counts[ct] = (counts[ct] ?? 0) + 1;
 		}
 

@@ -8,7 +8,7 @@
 	let { data } = $props();
 
 	let currentStep = $state(0);
-	let answers = $state<Record<string, number>>({});
+	let answers = $state<Record<string, string>>({});
 	let direction = $state<1 | -1>(1);
 
 	const step = $derived(data.steps[currentStep]);
@@ -17,9 +17,9 @@
 	const isLastStep = $derived(currentStep === data.steps.length - 1);
 	const hasAnswer = $derived(step !== undefined && answers[step.question.id] !== undefined);
 
-	function handleAnswer(optionIndex: number) {
+	function handleAnswer(option: { text: string; cloudType: string }) {
 		if (!step) return;
-		answers = { ...answers, [step.question.id]: optionIndex };
+		answers = { ...answers, [step.question.id]: option.cloudType };
 	}
 
 	function handleNext() {
@@ -77,8 +77,8 @@
 							<button
 								type="button"
 								class="option-btn"
-								class:selected={answers[step.question.id] === index}
-								onclick={() => handleAnswer(index)}
+								class:selected={answers[step.question.id] === option.cloudType}
+								onclick={() => handleAnswer(option)}
 							>
 								{option.text}
 							</button>

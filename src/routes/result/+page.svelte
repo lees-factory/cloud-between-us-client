@@ -109,6 +109,11 @@
 		isPremium = true;
 	}
 
+	function goToLogin() {
+		const returnUrl = encodeURIComponent(page.url.pathname + page.url.search);
+		goto(`/login?redirect=${returnUrl}`);
+	}
+
 	/** 현재 결과 페이지 전체 URL = 내 결과로 바로 열리는 공유 링크 (answers + partner 포함) */
 	function getShareUrl(): string {
 		if (typeof window === 'undefined') return '';
@@ -463,7 +468,13 @@
 								<Lock size={40} aria-hidden="true" />
 							</div>
 							<h3 class="premium-cta-title">{t('result.paywallHeadline')}</h3>
-							<PayPalButton onApprove={handleUnlock} />
+							{#if user}
+								<PayPalButton onApprove={handleUnlock} />
+							{:else}
+								<button class="login-unlock-btn" onclick={goToLogin}>
+									{t('auth.loginToUnlock')}
+								</button>
+							{/if}
 							{#if dev}
 								<button
 									onclick={() => (isPremium = true)}
@@ -2192,5 +2203,30 @@
 
 	.result-cta-btn:hover {
 		transform: scale(1.05);
+	}
+
+	.login-unlock-btn {
+		width: 100%;
+		max-width: 300px;
+		margin: 1.5rem auto;
+		min-height: 50px;
+		padding: 0 1.5rem;
+		border-radius: 9999px;
+		background: #0070ba; /* PayPal Blue or Brand Color */
+		color: white;
+		font-size: 1rem;
+		font-weight: 600;
+		border: none;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: transform 0.2s ease, opacity 0.2s ease;
+		box-shadow: 0 4px 12px rgba(0, 112, 186, 0.2);
+	}
+
+	.login-unlock-btn:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 16px rgba(0, 112, 186, 0.3);
 	}
 </style>
