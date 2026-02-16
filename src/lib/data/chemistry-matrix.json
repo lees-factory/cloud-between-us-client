@@ -377,12 +377,13 @@
 	},
 	"storm-dawn": {
 		"skyName": "Storm Before Dawn",
+		"skyNameKo": "아침 전의 폭풍",
 		"phenomenon": "thunder",
 		"narrative": "폭풍은 먼저 오고, 여명은 끝내 온다.\n여명의 기다림이 천둥을 내려앉히고,\n천둥의 진심이 여명을 더 선명하게 만든다.",
 		"warning": "한쪽만 견디면, 결국 지치고 만다.",
 		"phenomenonName": {
-			"en": "Thunder Before Morning",
-			"ko": "아침 전의 천둥"
+			"en": "Storm Before Dawn",
+			"ko": "아침 전의 폭풍"
 		},
 		"storyBeats": {
 			"openingImage": {
@@ -692,6 +693,8 @@
 		}
 	},
 	"mist-sunlit": {
+		"skyName": "Fog Welcoming the Sun",
+		"skyNameKo": "빛을 맞이하는 안개",
 		"phenomenonName": {
 			"en": "Fog Welcoming the Sun",
 			"ko": "빛을 맞이하는 안개"
@@ -728,6 +731,8 @@
 		"warning": "빨리 밝히려 하면, 마음은 더 말이 없어질 수 있다."
 	},
 	"storm-sunlit": {
+		"skyName": "Thunder Reaching Light",
+		"skyNameKo": "빛을 향한 천둥",
 		"phenomenonName": {
 			"en": "Thunder Reaching Light",
 			"ko": "빛을 향한 천둥"
@@ -751,6 +756,8 @@
 		"warning": "감정이 너무 커지면, 빛도 지쳐버릴 수 있다."
 	},
 	"storm-mist": {
+		"skyName": "Lightning Over the Mist",
+		"skyNameKo": "안개 위의 번개",
 		"phenomenonName": {
 			"en": "Lightning Over the Mist",
 			"ko": "안개 위의 번개"
@@ -774,6 +781,8 @@
 		"warning": "강한 말이 남긴 자국을, 그냥 ‘시간’에 맡기면 오래 간다."
 	},
 	"dawn-storm": {
+		"skyName": "Storm Before Dawn",
+		"skyNameKo": "새벽 전의 폭풍",
 		"phenomenonName": {
 			"en": "Storm Before Dawn",
 			"ko": "새벽 전의 폭풍"
@@ -810,6 +819,8 @@
 		"warning": "기다림이 ‘희생’이 되기 시작하면, 관계는 기울어진다."
 	},
 	"shade-wild": {
+		"skyName": "Shade Touched by Wind",
+		"skyNameKo": "바람이 스치는 그늘",
 		"phenomenonName": {
 			"en": "Shade Touched by Wind",
 			"ko": "바람이 스치는 그늘"
@@ -822,6 +833,8 @@
 		}
 	},
 	"dawn-mist": {
+		"skyName": "Dawn Mist",
+		"skyNameKo": "새벽 안개",
 		"phenomenonName": {
 			"en": "Dawn Mist",
 			"ko": "새벽 안개"
@@ -858,6 +871,8 @@
 		"warning": "고요가 길어질수록, 확인은 더 필요해진다."
 	},
 	"wild-sunlit": {
+		"skyName": "Sunlit Wind",
+		"skyNameKo": "햇살을 탄 바람",
 		"phenomenonName": {
 			"en": "Sunlit Wind",
 			"ko": "햇살을 탄 바람"
@@ -880,6 +895,8 @@
 		}
 	},
 	"shade-sunlit": {
+		"skyName": "Shadow Under Sunlight",
+		"skyNameKo": "햇살 아래 그늘",
 		"phenomenonName": {
 			"en": "Shadow Under Sunlight",
 			"ko": "햇살 아래 그늘"
@@ -902,6 +919,8 @@
 		}
 	},
 	"wild-mist": {
+		"skyName": "Wind Parting the Mist",
+		"skyNameKo": "안개를 가르는 바람",
 		"phenomenonName": {
 			"en": "Wind Parting the Mist",
 			"ko": "안개를 가르는 바람"
@@ -924,6 +943,8 @@
 		}
 	},
 	"shade-mist": {
+		"skyName": "Shade Embracing Mist",
+		"skyNameKo": "안개를 품은 그늘",
 		"phenomenonName": {
 			"en": "Shade Embracing Mist",
 			"ko": "안개를 품은 그늘"
@@ -946,6 +967,8 @@
 		}
 	},
 	"wild-storm": {
+		"skyName": "Wind Chasing Thunder",
+		"skyNameKo": "천둥을 쫓는 바람",
 		"phenomenonName": {
 			"en": "Wind Chasing Thunder",
 			"ko": "천둥을 쫓는 바람"
@@ -968,6 +991,8 @@
 		}
 	},
 	"shade-storm": {
+		"skyName": "Shade After Thunder",
+		"skyNameKo": "천둥 뒤의 그늘",
 		"phenomenonName": {
 			"en": "Shade After Thunder",
 			"ko": "천둥 뒤의 그늘"
@@ -990,6 +1015,8 @@
 		}
 	},
 	"dawn-sunlit": {
+		"skyName": "Morning Arriving",
+		"skyNameKo": "도착하는 아침",
 		"phenomenonName": {
 			"en": "Morning Arriving",
 			"ko": "도착하는 아침"
@@ -1012,6 +1039,8 @@
 		}
 	},
 	"wild-dawn": {
+		"skyName": "Breeze Before Sunrise",
+		"skyNameKo": "해 뜨기 전 산들바람",
 		"phenomenonName": {
 			"en": "Breeze Before Sunrise",
 			"ko": "해 뜨기 전 산들바람"
@@ -1034,6 +1063,8 @@
 		}
 	},
 	"shade-dawn": {
+		"skyName": "Shade Welcoming Dawn",
+		"skyNameKo": "여명을 맞이하는 그늘",
 		"phenomenonName": {
 			"en": "Shade Welcoming Dawn",
 			"ko": "여명을 맞이하는 그늘"
