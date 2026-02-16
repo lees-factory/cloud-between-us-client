@@ -58,11 +58,11 @@
 			"paywallHeadline": "Open the hidden horizon — $2.99",
 			"paywallSub": "One decision. The full sky.",
 			"unlockList": {
-				"story": "The Full Sky Story",
-				"fight": "Why You Fight (And How to Stop)",
-				"shelter": "What Makes Them Feel Safe",
-				"ritual": "3 Rituals to Clear the Air",
-				"card": "Premium Share Card"
+				"story": "Your Full Sky Story & Dynamics",
+				"fight": "Why You Fight & How to Resolve It",
+				"shelter": "How to Be Each Other's Shelter",
+				"ritual": "3 Actionable Rituals to Clear the Air",
+				"card": "High-Res Keepsake Card"
 			},
 			"unlockTitle": "Turn the page of your sky",
 			"unlockSub": "No subscription. Just once.",
@@ -196,11 +196,11 @@
 			"paywallHeadline": "숨겨진 하늘을 열어볼래 – $2.99",
 			"paywallSub": "한 번의 선택으로, 전체 하늘 보기",
 			"unlockList": {
-				"story": "완성된 하늘 이야기",
-				"fight": "갈등이 반복되는 진짜 이유",
-				"shelter": "그 사람이 편안함을 느끼는 순간",
-				"ritual": "관계를 맑게 하는 3가지 행동",
-				"card": "평생 소장용 프리미엄 카드"
+				"story": "두 사람의 관계 정밀 분석 (Full Story)",
+				"fight": "반복되는 갈등의 원인과 해결책",
+				"shelter": "서로에게 쉼터가 되어주는 구체적 방법",
+				"ritual": "관계를 맑게 하는 3가지 실천 가이드",
+				"card": "소장용 고화질 일러스트 카드"
 			},
 			"unlockTitle": "지금, 하늘의 다음 장을 펼쳐봐",
 			"unlockSub": "구독 없이, 한 번만.",
@@ -232,10 +232,10 @@
 			"seasonFirstMeet": "처음 만났을 때",
 			"seasonSettling": "안착하는 시기",
 			"seasonLongTerm": "긴 계절",
-			"dangerPhrasesTitle": "이 말만은 하지 마",
-			"dangerPhrasesSubtitle": "어떤 말은 공기를 흐리게 합니다. 이렇게 바꿔보세요.",
-			"dangerBad": "금지",
-			"dangerBetter": "대신 이렇게",
+			"dangerPhrasesTitle": "날씨를 흐리는 말들",
+			"dangerPhrasesSubtitle": "무심코 던진 말이 공기를 무겁게 만들 수 있습니다.",
+			"dangerBad": "피해주세요",
+			"dangerBetter": "이렇게 바꿔보세요",
 			"dangerForYou": "당신에게",
 			"dangerForThem": "그 사람에게",
 			"loveLanguageTitle": "둘의 날씨 언어",

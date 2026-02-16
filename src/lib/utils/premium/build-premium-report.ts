@@ -1,7 +1,7 @@
 import type { CloudType, PremiumContent } from '$lib/types/cloud';
 import type { Locale } from '$lib/i18n/translations';
-import { CLOUD_META } from '$lib/data/cloud-meta';
-import { PAIR_META } from '$lib/data/pair-meta';
+import { CLOUD_META } from '$lib/data/cloudProfiles';
+import { PAIR_META } from '$lib/data/chemistryMatrix';
 import {
 	OPENING_PATTERNS,
 	SOFTENING_LINES,
@@ -10,7 +10,6 @@ import {
 	CLOSING_LINES,
 	SHARE_CARD_PHRASES,
 	SHARE_CARD_CAPTIONS,
-	SHELTER_CLOSING_LINES,
 	FRICTION_PATTERNS,
 	DEFAULT_ACTIONS,
 	SEASON_FIRST_MEET,
@@ -190,7 +189,7 @@ function buildShelter(
 	// safetyNeeds에서 3개씩 추출
 	const partnerNeeds = partnerMeta.safetyNeeds[lang].slice(0, 3);
 	const userNeeds = userMeta.safetyNeeds[lang].slice(0, 3);
-	const closingLine = pick(SHELTER_CLOSING_LINES[lang], seed, 2);
+	const closingLine = pick(CLOSING_LINES[lang], seed, 2);
 
 	return { partnerNeeds, userNeeds, closingLine };
 }

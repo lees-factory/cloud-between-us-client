@@ -488,6 +488,15 @@
 								<Lock size={40} aria-hidden="true" />
 							</div>
 							<h3 class="premium-cta-title">{t('result.paywallHeadline')}</h3>
+							{#if dev}
+								<button
+									type="button"
+									onclick={() => (isPremium = true)}
+									style="margin: 0.5rem auto; background: #333; color: #0f0; border: 1px solid #0f0; padding: 0.25rem 0.5rem; border-radius: 4px; font-family: monospace; font-size: 0.75rem; cursor: pointer; display: block;"
+								>
+									[DEV] Force Unlock
+								</button>
+							{/if}
 							{#if user}
 								<PayPalButton onApprove={handleUnlock} />
 							{:else}
@@ -497,11 +506,22 @@
 							{/if}
 
 							<ul class="premium-unlock-list">
-								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.story')}</span></li>
-								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.fight')}</span></li>
-								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.shelter')}</span></li>
-								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.ritual')}</span></li>
-								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.card')}</span></li>
+								<li>
+									<Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.story')}</span>
+								</li>
+								<li>
+									<Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.fight')}</span>
+								</li>
+								<li>
+									<Check size={16} strokeWidth={2.5} />
+									<span>{t('result.unlockList.shelter')}</span>
+								</li>
+								<li>
+									<Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.ritual')}</span>
+								</li>
+								<li>
+									<Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.card')}</span>
+								</li>
 							</ul>
 
 							<p class="premium-cta-sub">{t('result.unlockSub')}</p>

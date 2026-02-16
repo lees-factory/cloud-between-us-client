@@ -2,6 +2,30 @@ import type { CloudType, CoupleChemistry, PremiumContent } from '$lib/types/clou
 import { buildPremiumReport } from '$lib/utils/premium/build-premium-report';
 import chemistryMatrixData from './chemistry-matrix.json';
 
+export interface PairMetaOverride {
+	phenomenonName?: { en: string; ko: string };
+	vibeTags?: { en: string[]; ko: string[] };
+	storyBeats?: {
+		openingImage?: { en: string; ko: string };
+		emotionalDynamic?: { en: string; ko: string };
+		hiddenStrength?: { en: string; ko: string };
+		growthArc?: { en: string; ko: string };
+	};
+	fightOverride?: {
+		frictionTruth?: { en: string; ko: string };
+		tryThisInstead?: { en: string; ko: string };
+	};
+	premium?: {
+		ko: Partial<PremiumContent>;
+		en: Partial<PremiumContent>;
+	};
+}
+
+export const PAIR_META: Record<string, PairMetaOverride> = chemistryMatrixData as unknown as Record<
+	string,
+	PairMetaOverride
+>;
+
 type ChemistryKey = `${CloudType}-${CloudType}`;
 
 /**
@@ -15,9 +39,8 @@ interface StoredCoupleChemistry extends Omit<CoupleChemistry, 'user' | 'partner'
 	};
 }
 
-export const CHEMISTRY_MATRIX: Partial<
-	Record<ChemistryKey, StoredCoupleChemistry>
-> = chemistryMatrixData as unknown as Partial<Record<ChemistryKey, StoredCoupleChemistry>>;
+export const CHEMISTRY_MATRIX: Partial<Record<ChemistryKey, StoredCoupleChemistry>> =
+	chemistryMatrixData as unknown as Partial<Record<ChemistryKey, StoredCoupleChemistry>>;
 
 export function getChemistry(user: CloudType, partner: CloudType): CoupleChemistry {
 	const key: ChemistryKey = `${user}-${partner}`;

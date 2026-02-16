@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { fly, fade } from 'svelte/transition';
 	import { t } from '$lib/i18n';
-	import { stepThemes } from '$lib/data/themes';
+	import { stepThemes } from '$lib/data/copy-pool';
 	import { ChevronLeft, ChevronRight } from 'lucide-svelte';
 	import { analyzeDiagnosis } from '$lib/api/diagnosis/analyze';
 	import { trackEvent } from '$lib/utils/analytics';

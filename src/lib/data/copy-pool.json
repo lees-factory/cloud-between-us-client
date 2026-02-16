@@ -83,20 +83,6 @@
 			"이것이 우리 사이의 공기가 흐르는 방식이야."
 		]
 	},
-	"shelterClosingLines": {
-		"en": [
-			"Safety isn't loud. It's consistent.",
-			"The best shelter is the one that doesn't ask you to change shape.",
-			"Rest doesn't always look like rest. Sometimes it looks like being seen.",
-			"The sky you return to — that's home."
-		],
-		"ko": [
-			"안전함은 요란하지 않습니다. 꾸준한 것입니다.",
-			"가장 좋은 쉼터는 모양을 바꾸라고 하지 않는 곳입니다.",
-			"쉼이 항상 쉼처럼 보이진 않습니다. 가끔은 보여지는 것처럼 보입니다.",
-			"돌아가고 싶은 하늘 — 그곳이 집입니다."
-		]
-	},
 	"shareCardCaptions": {
 		"en": [
 			"Discover the sky between you — Cloud Between Us",
@@ -240,66 +226,197 @@
 	"misreadingPatterns": {
 		"pace_mismatch": {
 			"en": [
-				{ "signal": "They need time to process.", "misread": "You read it as disinterest." },
-				{ "signal": "You move quickly to fix things.", "misread": "They read it as impatience." }
+				{
+					"signal": "They need time to process.",
+					"misread": "You read it as disinterest."
+				},
+				{
+					"signal": "You move quickly to fix things.",
+					"misread": "They read it as impatience."
+				}
 			],
 			"ko": [
-				{ "signal": "그 사람은 감정을 정리할 시간이 필요해요.", "misread": "당신은 그걸 관심 없음으로 받아들여요." },
-				{ "signal": "당신은 빠르게 해결하려고 움직여요.", "misread": "그 사람 눈에는 조급함으로 보여요." }
+				{
+					"signal": "그 사람은 감정을 정리할 시간이 필요해요.",
+					"misread": "당신은 그걸 관심 없음으로 받아들여요."
+				},
+				{
+					"signal": "당신은 빠르게 해결하려고 움직여요.",
+					"misread": "그 사람 눈에는 조급함으로 보여요."
+				}
 			]
 		},
 		"temperature_mismatch": {
 			"en": [
-				{ "signal": "Their coolness is how they stay steady.", "misread": "You read it as emotional distance." },
-				{ "signal": "Your warmth is how you connect.", "misread": "They read it as overwhelming pressure." }
+				{
+					"signal": "Their coolness is how they stay steady.",
+					"misread": "You read it as emotional distance."
+				},
+				{
+					"signal": "Your warmth is how you connect.",
+					"misread": "They read it as overwhelming pressure."
+				}
 			],
 			"ko": [
-				{ "signal": "그 사람의 차분함은 안정을 지키는 방식이에요.", "misread": "당신은 그걸 감정적 거리감으로 느껴요." },
-				{ "signal": "당신의 따뜻함은 가까워지려는 방식이에요.", "misread": "그 사람에게는 부담스러운 압박으로 느껴져요." }
+				{
+					"signal": "그 사람의 차분함은 안정을 지키는 방식이에요.",
+					"misread": "당신은 그걸 감정적 거리감으로 느껴요."
+				},
+				{
+					"signal": "당신의 따뜻함은 가까워지려는 방식이에요.",
+					"misread": "그 사람에게는 부담스러운 압박으로 느껴져요."
+				}
 			]
 		},
 		"same_pace": {
 			"en": [
-				{ "signal": "You both move at the same speed.", "misread": "Neither of you notices when the other needs a pause." },
-				{ "signal": "Your rhythms match perfectly.", "misread": "You assume agreement where there is only habit." }
+				{
+					"signal": "You both move at the same speed.",
+					"misread": "Neither of you notices when the other needs a pause."
+				},
+				{
+					"signal": "Your rhythms match perfectly.",
+					"misread": "You assume agreement where there is only habit."
+				}
 			],
 			"ko": [
-				{ "signal": "둘 다 같은 속도로 움직여요.", "misread": "상대가 잠깐 멈추고 싶을 때, 둘 다 눈치채지 못해요." },
-				{ "signal": "리듬이 딱 맞아요.", "misread": "맞는 게 아니라 습관인데, 동의라고 착각하게 돼요." }
+				{
+					"signal": "둘 다 같은 속도로 움직여요.",
+					"misread": "상대가 잠깐 멈추고 싶을 때, 둘 다 눈치채지 못해요."
+				},
+				{
+					"signal": "리듬이 딱 맞아요.",
+					"misread": "맞는 게 아니라 습관인데, 동의라고 착각하게 돼요."
+				}
 			]
 		},
 		"same_temperature": {
 			"en": [
-				{ "signal": "You both run the same temperature.", "misread": "You forget that sameness can mask unspoken differences." },
-				{ "signal": "Emotional resonance feels effortless.", "misread": "You stop checking in because it feels unnecessary." }
+				{
+					"signal": "You both run the same temperature.",
+					"misread": "You forget that sameness can mask unspoken differences."
+				},
+				{
+					"signal": "Emotional resonance feels effortless.",
+					"misread": "You stop checking in because it feels unnecessary."
+				}
 			],
 			"ko": [
-				{ "signal": "둘 다 비슷한 온도의 사람이에요.", "misread": "비슷하다 보니, 말 안 한 차이가 있다는 걸 잊어요." },
-				{ "signal": "감정의 파장이 자연스럽게 맞아요.", "misread": "다 통하는 것 같아서, 확인하는 걸 멈추게 돼요." }
+				{
+					"signal": "둘 다 비슷한 온도의 사람이에요.",
+					"misread": "비슷하다 보니, 말 안 한 차이가 있다는 걸 잊어요."
+				},
+				{
+					"signal": "감정의 파장이 자연스럽게 맞아요.",
+					"misread": "다 통하는 것 같아서, 확인하는 걸 멈추게 돼요."
+				}
 			]
 		}
 	},
 	"defaultActions": {
 		"appreciation": {
-			"title": { "en": "Say appreciation out loud", "ko": "고마움을 소리 내어 말하기" },
+			"title": {
+				"en": "Say appreciation out loud",
+				"ko": "고마움을 소리 내어 말하기"
+			},
 			"desc": {
 				"en": "Be specific about what you noticed. Small recognitions build a sky that lasts.",
 				"ko": "무엇을 알아차렸는지 구체적으로 말해주세요. 작은 인정이 오래가는 하늘을 만듭니다."
 			}
 		},
 		"pace": {
-			"title": { "en": "Slow the emotional pace", "ko": "감정의 속도 늦추기" },
+			"title": {
+				"en": "Slow the emotional pace",
+				"ko": "감정의 속도 늦추기"
+			},
 			"desc": {
 				"en": "Not every pause is distance. Sometimes it is care forming quietly. Don't rush the process.",
 				"ko": "모든 멈춤이 거리를 뜻하지 않습니다. 가끔은 조용히 돌봄이 만들어지는 시간입니다."
 			}
 		},
 		"ritual": {
-			"title": { "en": "Create a shared ritual", "ko": "둘만의 작은 의식 만들기" },
+			"title": {
+				"en": "Create a shared ritual",
+				"ko": "둘만의 작은 의식 만들기"
+			},
 			"desc": {
 				"en": "A morning walk, a weekly check-in, a small repeated act. Rituals turn weather into climate.",
 				"ko": "아침 산책, 주간 안부, 작은 반복 행동. 의식은 날씨를 기후로 바꿉니다."
 			}
+		}
+	},
+	"themes": {
+		"1": {
+			"bg": "#FFF9ED",
+			"accent": "#FFD700",
+			"sky": "linear-gradient(180deg, #FFEFBA 0%, #FFFFFF 100%)",
+			"cloudOpacity": 0.3
+		},
+		"2": {
+			"bg": "#F0F7FF",
+			"accent": "#70A1FF",
+			"sky": "linear-gradient(180deg, #D6EFFF 0%, #FFFFFF 100%)",
+			"cloudOpacity": 0.4
+		},
+		"3": {
+			"bg": "#F2F2F7",
+			"accent": "#57606f",
+			"sky": "linear-gradient(180deg, #CED6E0 0%, #F1F2F6 100%)",
+			"cloudOpacity": 0.8
+		},
+		"4": {
+			"bg": "#FAF9F6",
+			"accent": "#A4B0BE",
+			"sky": "linear-gradient(180deg, #E7E9ED 0%, #FFFFFF 100%)",
+			"cloudOpacity": 0.2
+		},
+		"5": {
+			"bg": "#F8F9FA",
+			"accent": "#747D8C",
+			"sky": "linear-gradient(180deg, #DFE4EA 0%, #FFFFFF 100%)",
+			"cloudOpacity": 0.1
+		},
+		"6": {
+			"bg": "#F5F3FF",
+			"accent": "#A29BFE",
+			"sky": "linear-gradient(180deg, #E0D7FF 0%, #FFFFFF 100%)",
+			"cloudOpacity": 0.5
+		},
+		"7": {
+			"bg": "#FFF0F0",
+			"accent": "#FF6B6B",
+			"sky": "linear-gradient(180deg, #FFDADA 0%, #FFFFFF 100%)",
+			"cloudOpacity": 0.6
+		},
+		"8": {
+			"bg": "#FFF5F8",
+			"accent": "#FF8AFA",
+			"sky": "linear-gradient(180deg, #FFDEF3 0%, #FFFFFF 100%)",
+			"cloudOpacity": 0.4
+		},
+		"9": {
+			"bg": "#F1F2F6",
+			"accent": "#2F3542",
+			"sky": "linear-gradient(180deg, #A8B2C1 0%, #F1F2F6 100%)",
+			"cloudOpacity": 0.9
+		},
+		"10": {
+			"bg": "#FFF9F0",
+			"accent": "#FFA502",
+			"sky": "linear-gradient(180deg, #FFE0B2 0%, #FFFFFF 100%)",
+			"cloudOpacity": 0.5
+		},
+		"11": {
+			"bg": "#F4F7F6",
+			"accent": "#7BED9F",
+			"sky": "linear-gradient(180deg, #D1F2EB 0%, #FFFFFF 100%)",
+			"cloudOpacity": 0.3
+		},
+		"12": {
+			"bg": "#EDF2FF",
+			"accent": "#3742FA",
+			"sky": "linear-gradient(180deg, #C7D2FE 0%, #FFFFFF 100%)",
+			"cloudOpacity": 0.2
 		}
 	}
 }
