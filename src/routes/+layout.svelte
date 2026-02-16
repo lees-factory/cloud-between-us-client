@@ -1,6 +1,6 @@
 <script lang="ts">
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/cloud-favicon.svg';
 	import { locale, t } from '$lib/i18n';
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
@@ -71,7 +71,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href={favicon} type="image/svg+xml" />
 	{#if PUBLIC_FIREBASE_MEASUREMENT_ID}
 		<script async src="https://www.googletagmanager.com/gtag/js?id={PUBLIC_FIREBASE_MEASUREMENT_ID}"></script>
 	{/if}
