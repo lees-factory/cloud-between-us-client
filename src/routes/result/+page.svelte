@@ -495,14 +495,15 @@
 									{t('auth.loginToUnlock')}
 								</button>
 							{/if}
-							{#if dev}
-								<button
-									onclick={() => (isPremium = true)}
-									style="margin-top: 0.5rem; padding: 0.5rem; background: #eee; border: 1px dashed #999; border-radius: 4px; font-size: 0.8rem; cursor: pointer;"
-								>
-									⚡ Dev Unlock (Test Only)
-								</button>
-							{/if}
+
+							<ul class="premium-unlock-list">
+								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.story')}</span></li>
+								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.fight')}</span></li>
+								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.shelter')}</span></li>
+								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.ritual')}</span></li>
+								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.card')}</span></li>
+							</ul>
+
 							<p class="premium-cta-sub">{t('result.unlockSub')}</p>
 						</div>
 					</div>
@@ -1504,6 +1505,34 @@
 		font-size: 0.875rem;
 		color: var(--text-gray);
 		margin: 0;
+	}
+
+	.premium-unlock-list {
+		list-style: none;
+		padding: 0;
+		margin: 1rem 0 0.5rem;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		align-self: center;
+		width: 100%;
+		max-width: 280px;
+	}
+
+	.premium-unlock-list li {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		font-size: 0.9rem;
+		color: var(--text-dark);
+		opacity: 0.9;
+		line-height: 1.4;
+	}
+
+	.premium-unlock-list li :global(svg) {
+		color: var(--sky-blue);
+		flex-shrink: 0;
 	}
 
 	.premium-unlocked {

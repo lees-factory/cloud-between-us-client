@@ -22,11 +22,11 @@
 		}
 	});
 
-	const step = $derived(data.steps[currentStep]);
+	const step = $derived(data?.steps?.[currentStep]);
 	const theme = $derived(step ? (stepThemes[step.id] ?? stepThemes[1]) : stepThemes[1]);
-	const progress = $derived(((currentStep + 1) / data.steps.length) * 100);
-	const isLastStep = $derived(currentStep === data.steps.length - 1);
-	const hasAnswer = $derived(step !== undefined && answers[step.question.id] !== undefined);
+	const progress = $derived(data?.steps?.length ? ((currentStep + 1) / data.steps.length) * 100 : 0);
+	const isLastStep = $derived(data?.steps?.length ? currentStep === data.steps.length - 1 : false);
+	const hasAnswer = $derived(step?.question?.id && answers[step.question.id] !== undefined);
 
 	function handleAnswer(option: { text: string; cloudType: string }) {
 		if (!step) return;
@@ -111,7 +111,7 @@
 			<div class="bar-container">
 				<div class="bar-fill" style="width: {progress}%"></div>
 			</div>
-			<p class="step-counter">STEP {currentStep + 1} / {data.steps.length}</p>
+			<p class="step-counter">STEP {currentStep + 1} / {data?.steps?.length ?? 0}</p>
 		</div>
 
 		{#if step}
@@ -210,7 +210,7 @@
 		z-index: 10;
 		width: 100%;
 		max-width: 500px;
-		padding: 2rem 1rem;
+		padding: 6rem 1rem 2rem;
 	}
 
 	.progress-section {

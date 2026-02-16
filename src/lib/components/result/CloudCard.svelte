@@ -66,7 +66,7 @@
 		<div class="cloud-card-section">
 			<h4 class="cloud-card-section-label">In Love</h4>
 			<ul class="cloud-card-list">
-				{#each cloud.traits.inLove as style}
+				{#each cloud.traits?.inLove ?? [] as style}
 					<li class="cloud-card-list-item">
 						<span class="cloud-card-bullet" style="color: {color}">•</span>
 						<span>{style}</span>
@@ -79,7 +79,7 @@
 		<div class="cloud-card-section">
 			<h4 class="cloud-card-section-label">Strengths</h4>
 			<ul class="cloud-card-list">
-				{#each cloud.traits.strengths as strength}
+				{#each cloud.traits?.strengths ?? [] as strength}
 					<li class="cloud-card-list-item">
 						<span class="cloud-card-bullet" style="color: {color}">✓</span>
 						<span>{strength}</span>
@@ -92,7 +92,7 @@
 		<div class="cloud-card-section">
 			<h4 class="cloud-card-section-label">Shadows</h4>
 			<ul class="cloud-card-list">
-				{#each cloud.traits.shadows as shadow}
+				{#each cloud.traits?.shadows ?? [] as shadow}
 					<li class="cloud-card-list-item">
 						<span class="cloud-card-bullet shadow">⚠</span>
 						<span>{shadow}</span>

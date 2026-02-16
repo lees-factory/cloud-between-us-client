@@ -20,5 +20,22 @@ export async function getPersonaProfile(typeKey: CloudType, locale: Locale = 'ko
 		);
 	}
 
-	return response.json();
+	const data = await response.json();
+
+	// Map API response to CloudProfile
+	const profile: CloudProfile = {
+		type: data.typeKey as CloudType,
+		emoji: data.emoji,
+		name: data.name,
+		subtitle: data.subtitle,
+		keywords: data.keywords as [string, string, string, string],
+		lore: data.lore,
+		traits: {
+			strengths: data.strengths || [],
+			inLove: data.inLove || [], // API might not return this yet
+			shadows: data.shadows || []
+		}
+	};
+
+	return profile;
 }
