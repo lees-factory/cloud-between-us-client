@@ -7,68 +7,73 @@
 			"The air changes. Quietly, but unmistakably."
 		],
 		"ko": [
-			"{userCloud}이(가) {partnerCloud}을(를) 만나면 공기가 달라집니다.",
-			"아무 말 없이도, 하늘은 이미 알고 있습니다.",
-			"두 구름이 만납니다 — 힘으로가 아니라, 기후로.",
-			"공기가 바뀝니다. 조용하지만 분명하게."
+			"{userCloud}이(가) {partnerCloud}을(를) 만나는 순간, 공기가 먼저 달라져요.",
+			"말이 나오기 전인데도, 하늘이 먼저 알아챕니다.",
+			"두 구름은 억지로가 아니라, 자연스럽게 서로를 향해 흐릅니다.",
+			"조용한데 분명해요. 오늘은 공기가 다릅니다."
 		]
 	},
+
 	"softeningLines": {
 		"en": [
-			"Not because it's perfect — because it's true.",
-			"Not because it's easy — because it stays.",
-			"Not from certainty — from something gentler.",
-			"The kind of weather you don't forget."
+			"Not because it's perfect — because something real touched.",
+			"Not because it's easy — because you chose to stay.",
+			"Not certainty, but something gentler.",
+			"The kind of weather that lingers in memory."
 		],
 		"ko": [
-			"완벽해서가 아니라, 진짜여서.",
-			"쉬워서가 아니라, 머물러서.",
-			"확신에서가 아니라, 더 부드러운 무언가에서.",
-			"잊히지 않는 종류의 날씨."
+			"완벽해서가 아니라, 마음이 닿아서요.",
+			"쉽지 않아도, 서로 곁에 남아줘서요.",
+			"확신보다 다정함이 먼저 오는 날이 있어요.",
+			"한 번 지나가면, 오래 기억에 남는 하늘."
 		]
 	},
+
 	"strengthLines": {
 		"en": [
-			"you create a sky that neither of you could hold alone",
-			"the air between you becomes something worth staying in",
-			"what you share becomes a climate, not just weather",
-			"your differences become the texture of the same sky"
+			"You create a sky that only exists because there are two of you.",
+			"The air between you becomes somewhere worth staying.",
+			"What you share lingers — not just a passing mood.",
+			"Your differences shape the same sky."
 		],
 		"ko": [
-			"혼자서는 만들 수 없는 하늘을 만듭니다",
-			"둘 사이의 공기가 머물고 싶은 것이 됩니다",
-			"함께 나누는 것이 날씨가 아닌 기후가 됩니다",
-			"다름이 같은 하늘의 결이 됩니다"
+			"둘이어서 가능한 하늘이 있어요.",
+			"둘 사이의 공기가, 머물고 싶어집니다.",
+			"스쳐가는 기분이 아니라, 오래 남는 분위기가 됩니다.",
+			"서로 다른 결이 한 하늘을 더 입체적으로 만들어요."
 		]
 	},
+
 	"growthLines": {
 		"en": [
-			"This sky doesn't rush. It deepens.",
-			"Some skies scatter. Yours holds.",
-			"The weather between you is still forming — and that's the beautiful part.",
-			"What grows slowly, stays."
+			"This sky doesn’t rush. It deepens.",
+			"Some skies scatter. Yours stays.",
+			"It’s not finished yet — and that’s what makes it beautiful.",
+			"What grows slowly, holds."
 		],
 		"ko": [
-			"이 하늘은 서두르지 않습니다. 깊어집니다.",
-			"어떤 하늘은 흩어지지만, 당신들의 하늘은 머무릅니다.",
-			"둘 사이의 날씨는 아직 만들어지고 있습니다 — 그것이 아름다운 부분입니다.",
-			"천천히 자라는 것이 남습니다."
+			"이 하늘은 서두르지 않아요. 천천히 깊어져요.",
+			"금세 흩어지는 하늘도 있지만, 당신들의 하늘은 오래 남습니다.",
+			"아직 다 만들어지지 않았어요. 그래서 더 예뻐요.",
+			"천천히 자란 것은 쉽게 무너지지 않아요."
 		]
 	},
+
 	"closingLines": {
 		"en": [
-			"Safety isn't loud. It's consistent.",
-			"The best shelter is the one that doesn't ask you to change shape.",
-			"Rest doesn't always look like rest. Sometimes it looks like being seen.",
-			"The sky you return to — that's home."
+			"Safety isn’t loud. It’s steady.",
+			"The best shelter doesn’t ask you to change shape.",
+			"Rest isn’t always quiet. Sometimes it looks like being seen.",
+			"The sky you return to — that’s home."
 		],
 		"ko": [
-			"안전함은 요란하지 않습니다. 꾸준한 것입니다.",
-			"가장 좋은 쉼터는 모양을 바꾸라고 하지 않는 곳입니다.",
-			"쉼이 항상 쉼처럼 보이진 않습니다. 가끔은 보여지는 것처럼 보입니다.",
-			"돌아가고 싶은 하늘 — 그곳이 집입니다."
+			"안전함은 요란하지 않아요. 계속 같은 자리에서 보여주는 거예요.",
+			"좋은 쉼터는, 너를 바꾸라고 하지 않는 곳이에요.",
+			"쉼은 늘 조용한 게 아니에요. ‘나는 여기 있어’라고 알아봐주는 것일 때도 있어요.",
+			"괜히 다시 돌아가고 싶어지는 하늘. 그게 집이에요."
 		]
 	},
+
 	"shareCardPhrases": {
 		"en": [
 			"Some skies linger.",
@@ -78,273 +83,137 @@
 		],
 		"ko": [
 			"어떤 하늘은 오래 남아.",
-			"모든 날씨가 지나가는 건 아니야.",
+			"지나간다고 다 끝나는 건 아니야.",
 			"우리가 만든 하늘을 봐.",
-			"이것이 우리 사이의 공기가 흐르는 방식이야."
+			"우리 사이 공기는 이렇게 흐른대."
 		]
 	},
+
 	"shareCardCaptions": {
 		"en": [
 			"Discover the sky between you — Cloud Between Us",
-			"What kind of weather do you make together?",
+			"What kind of air do you make together?",
 			"Your love has a sky. This is it.",
 			"Two clouds. One sky. — Cloud Between Us"
 		],
 		"ko": [
-			"둘 사이의 하늘을 발견해봐 — Cloud Between Us",
-			"너희는 어떤 날씨를 만들어?",
-			"너희 사랑에는 하늘이 있어. 이게 그 하늘이야.",
-			"두 개의 구름. 하나의 하늘. — Cloud Between Us"
+			"둘 사이의 하늘을 확인해봐 — Cloud Between Us",
+			"너희는 어떤 공기를 만들까?",
+			"우리 사이 하늘, 오늘은 이런 모양이야.",
+			"두 구름, 한 하늘 — Cloud Between Us"
 		]
 	},
+
 	"frictionPatterns": {
 		"pace_mismatch": {
-			"en": "The friction isn't about the issue — it's about the pace. One moves before the other has landed.",
-			"ko": "마찰은 문제 자체가 아니라 속도에서 옵니다. 한 사람이 착지하기도 전에 다른 사람이 움직입니다."
+			"en": "The friction isn’t about the issue — it’s about pace. One is already moving while the other is still landing.",
+			"ko": "부딪힘은 ‘무슨 일’ 때문이 아니라 ‘속도’ 때문이에요. 한 사람은 아직 마음이 착지하지 않았는데, 다른 사람은 벌써 다음으로 가요."
 		},
 		"temperature_mismatch": {
-			"en": "The friction isn't about right or wrong — it's about temperature. One runs warm while the other stays cool.",
-			"ko": "마찰은 옳고 그름이 아니라 온도에서 옵니다. 한 사람은 뜨겁고, 다른 사람은 차분합니다."
+			"en": "The tension isn’t about right or wrong — it’s about temperature. One runs warm, the other steady.",
+			"ko": "부딪힘은 옳고 그름이 아니라 ‘온도 차’에서 와요. 한 사람은 뜨겁고, 다른 사람은 차분합니다."
 		},
 		"same_pace": {
-			"en": "You move at the same speed — which means you may accelerate past the moment that needed pausing.",
-			"ko": "같은 속도로 움직입니다 — 그래서 멈춰야 할 순간을 함께 지나칠 수 있습니다."
+			"en": "You move at the same speed — which means you may pass the moment that needed a pause.",
+			"ko": "같은 속도로 잘 맞아요. 그래서 오히려 ‘잠깐 멈춰야 했던 순간’을 둘 다 지나쳐버릴 수 있어요."
 		},
 		"same_cool": {
-			"en": "You both wait. Sometimes so long that the unspoken grows louder than the spoken.",
-			"ko": "둘 다 기다립니다. 가끔은 너무 오래, 말하지 않은 것이 말한 것보다 커집니다."
+			"en": "You both wait well. But sometimes what’s unspoken grows louder than what’s said.",
+			"ko": "둘 다 기다릴 줄 아는 사람이에요. 다만 너무 오래 미루면, 말하지 않은 게 말한 것보다 커지기도 해요."
 		}
 	},
-	"seasonFirstMeet": {
-		"fast-fast": {
-			"en": [
-				"You collide like two sparks — quick, electric, impossible to ignore. The air charges before a word is spoken.",
-				"Two currents meet and the sky lights up instantly. Neither of you waits for an invitation."
-			],
-			"ko": [
-				"두 불꽃이 부딪히듯, 빠르고, 강렬하고, 외면할 수 없는 만남. 말이 시작되기도 전에 공기가 달라져요.",
-				"두 줄기 바람이 만나는 순간, 하늘이 단번에 밝아집니다. 초대 같은 건 필요 없었어요."
-			]
-		},
-		"fast-slow": {
-			"en": [
-				"One of you arrives like sunlight; the other watches from inside the fog. The pull is immediate — but the rhythm takes time.",
-				"You reach out fast. They notice slowly. Between the two speeds, something tender begins."
-			],
-			"ko": [
-				"한 사람은 햇살처럼 다가오고, 다른 사람은 안개 속에서 조용히 바라봅니다. 끌림은 한순간이지만, 리듬을 맞추는 데는 시간이 걸려요.",
-				"빠르게 손을 내미는 사람, 천천히 알아가는 사람. 서로 다른 속도 사이에서, 무언가 부드러운 것이 싹틉니다."
-			]
-		},
-		"slow-fast": {
-			"en": [
-				"They arrive like a gust; you feel the shift before seeing it. You take a breath while they take the first step.",
-				"The air changes fast around them, but you prefer to feel the temperature first. Meeting is a quiet negotiation."
-			],
-			"ko": [
-				"그 사람은 돌풍처럼 나타나고, 당신은 눈보다 먼저 피부로 그 변화를 느낍니다. 그 사람이 성큼 다가올 때, 당신은 한 호흡 고르는 중이에요.",
-				"그 사람 주변의 공기는 빠르게 바뀌지만, 당신은 온도를 먼저 느끼고 싶은 사람. 만남이란 둘 사이의 조용한 줄다리기입니다."
-			]
-		},
-		"slow-slow": {
-			"en": [
-				"Neither of you rushes. The first meeting is less a spark and more a slow shift in pressure — like weather forming before anyone names it.",
-				"You both wait. And in that shared waiting, something rare begins: a sky that was never forced."
-			],
-			"ko": [
-				"둘 다 서두르지 않아요. 첫 만남은 불꽃이라기보다, 이름 붙이기 전에 서서히 바뀌는 기압 같은 것. 누가 먼저랄 것도 없이, 날씨가 만들어지고 있었어요.",
-				"둘 다 기다리는 사람이에요. 그 느긋한 기다림 속에서, 억지로 만든 적 없는 하늘이 열립니다."
-			]
-		}
-	},
-	"seasonSettling": {
-		"warm-warm": {
-			"en": [
-				"The warmth doubles. Comfort comes easy — almost too easy. The challenge is keeping the fire from becoming background heat.",
-				"You settle into each other like two sunlit afternoons. The danger is forgetting that warmth still needs tending."
-			],
-			"ko": [
-				"온기가 두 배가 돼요. 편안함은 쉽게 찾아옵니다 — 어쩌면 너무 쉽게. 이 온기가 당연한 체온이 되지 않도록 지켜야 할 때예요.",
-				"따뜻한 오후 햇살 둘이 겹치듯, 자연스럽게 서로에게 스며듭니다. 다만 온기에도 돌봄이 필요하다는 걸, 잊기 쉬운 시기이기도 해요."
-			]
-		},
-		"warm-cool": {
-			"en": [
-				"One of you brings warmth, the other brings clarity. Settling means learning that cool is not cold — and warm is not control.",
-				"Your warmth meets their stillness. Over time, the temperature between you becomes something neither could create alone."
-			],
-			"ko": [
-				"한 사람은 온기를, 다른 사람은 명료함을 가져와요. 차분한 게 냉정한 게 아니고, 따뜻한 게 통제하려는 게 아니라는 걸 배우는 시간입니다.",
-				"당신의 온기가 그 사람의 고요함과 만나요. 시간이 흐르면, 둘 사이의 온도는 혼자서는 절대 만들 수 없는 것이 됩니다."
-			]
-		},
-		"cool-warm": {
-			"en": [
-				"Their warmth reaches for you. Your coolness holds shape. Settling means trusting that you can receive without losing form.",
-				"You stay steady; they bring the glow. In the settling phase, you learn that being warmed is not the same as being changed."
-			],
-			"ko": [
-				"그 사람의 온기가 당신에게 닿아요. 당신의 차분함은 흔들리지 않고요. 나를 잃지 않으면서도 받아들일 수 있다는 믿음이 생기는 시기입니다.",
-				"당신은 묵묵히 자리를 지키고, 그 사람은 빛을 가져옵니다. 따뜻해진다는 건 변하는 게 아니라는 걸, 이 시기에 알게 돼요."
-			]
-		},
-		"cool-cool": {
-			"en": [
-				"Two cool skies settle into a quiet understanding. Words are fewer, but the presence is steady. The risk is assuming silence means everything is fine.",
-				"Settling is seamless — almost invisible. You both find comfort in structure. But comfort needs voicing sometimes."
-			],
-			"ko": [
-				"두 사람의 차분한 하늘이 조용한 이해 속에 자리를 잡아요. 말은 적어도 존재감은 흔들리지 않습니다. 다만 침묵을 \"괜찮다\"는 뜻으로만 여기면 위험해요.",
-				"안착이 너무 매끄러워서 눈에 보이지 않을 정도예요. 둘 다 짜임새 있는 관계에서 편안함을 느끼지만, 가끔은 그 편안함을 소리 내어 확인해야 합니다."
-			]
-		},
-		"intense-any": {
-			"en": [
-				"Settling with intensity means learning when to hold the lightning and when to let it pass. The sky becomes richer — if both can weather the voltage.",
-				"The settling phase is not calm. It is the moment you decide: this storm is worth staying inside."
-			],
-			"ko": [
-				"강렬함 속에서 안착한다는 건, 번개를 붙잡을 때와 흘려보낼 때를 구분하는 법을 배우는 거예요. 그 전압을 둘 다 견딜 수 있다면 — 하늘은 더 깊어집니다.",
-				"이 시기는 고요하지 않아요. 이 폭풍 안에 머무를 가치가 있다고, 서로 결심하는 순간입니다."
-			]
-		}
-	},
-	"seasonLongTerm": {
-		"en": [
-			"Over time, your sky stops being weather and becomes climate. You stop asking \"will this last?\" and start asking \"what are we becoming?\"",
-			"The long season is not about holding on. It is about growing in the same direction — two clouds that learned to share a sky.",
-			"Years in, the air between you carries memory. Every storm survived, every sunrise shared — it's all in the atmosphere now.",
-			"What remains is not the spark that started it. It is the sky that formed around it — wider, deeper, unmistakably yours."
-		],
-		"ko": [
-			"시간이 흐르면, 둘 사이의 하늘은 날씨가 아닌 기후가 됩니다. \"이게 계속될까?\"가 \"우리는 어떤 하늘이 되어가고 있을까?\"로 바뀌는 거예요.",
-			"긴 계절은 붙잡는 게 아니에요. 같은 방향으로 자라는 것 — 하나의 하늘을 나누는 법을 배운 두 구름의 이야기입니다.",
-			"함께한 시간이 쌓이면, 둘 사이의 공기에 기억이 배어요. 같이 견딘 폭풍, 나란히 맞은 일출 — 전부 이 대기 안에 남아 있습니다.",
-			"남는 건 처음의 불꽃이 아니에요. 그 불꽃 둘레로 만들어진 하늘 — 더 넓고, 더 깊고, 분명히 둘만의 것."
-		]
-	},
+
 	"misreadingPatterns": {
 		"pace_mismatch": {
 			"en": [
 				{
 					"signal": "They need time to process.",
-					"misread": "You read it as disinterest."
+					"misread": "You may read it as disinterest."
 				},
 				{
 					"signal": "You move quickly to fix things.",
-					"misread": "They read it as impatience."
+					"misread": "They may feel rushed."
 				}
 			],
 			"ko": [
 				{
-					"signal": "그 사람은 감정을 정리할 시간이 필요해요.",
-					"misread": "당신은 그걸 관심 없음으로 받아들여요."
+					"signal": "그 사람은 마음을 정리하고 나서 말하고 싶어 해요.",
+					"misread": "당신은 그걸 무관심처럼 받아들일 수 있어요."
 				},
 				{
-					"signal": "당신은 빠르게 해결하려고 움직여요.",
-					"misread": "그 사람 눈에는 조급함으로 보여요."
+					"signal": "당신은 답부터 빨리 찾으려고 움직여요.",
+					"misread": "그 사람은 그걸 재촉이나 압박으로 느낄 수 있어요."
 				}
 			]
 		},
 		"temperature_mismatch": {
 			"en": [
 				{
-					"signal": "Their coolness is how they stay steady.",
-					"misread": "You read it as emotional distance."
+					"signal": "Their coolness keeps them steady.",
+					"misread": "You may feel emotional distance."
 				},
 				{
 					"signal": "Your warmth is how you connect.",
-					"misread": "They read it as overwhelming pressure."
+					"misread": "They may feel overwhelmed."
 				}
 			],
 			"ko": [
 				{
-					"signal": "그 사람의 차분함은 안정을 지키는 방식이에요.",
-					"misread": "당신은 그걸 감정적 거리감으로 느껴요."
+					"signal": "그 사람은 차분함으로 중심을 잡는 타입이에요.",
+					"misread": "당신은 그걸 차갑다, 멀다로 느낄 수 있어요."
 				},
 				{
-					"signal": "당신의 따뜻함은 가까워지려는 방식이에요.",
-					"misread": "그 사람에게는 부담스러운 압박으로 느껴져요."
+					"signal": "당신은 따뜻하게 다가가며 연결을 만들어요.",
+					"misread": "그 사람은 그 온기가 부담으로 느껴질 때가 있어요."
 				}
 			]
 		},
 		"same_pace": {
 			"en": [
 				{
-					"signal": "You both move at the same speed.",
-					"misread": "Neither of you notices when the other needs a pause."
+					"signal": "You move at the same speed.",
+					"misread": "Neither notices when the other needs to pause."
 				},
 				{
-					"signal": "Your rhythms match perfectly.",
-					"misread": "You assume agreement where there is only habit."
+					"signal": "Your rhythms align easily.",
+					"misread": "Habit can be mistaken for agreement."
 				}
 			],
 			"ko": [
 				{
-					"signal": "둘 다 같은 속도로 움직여요.",
-					"misread": "상대가 잠깐 멈추고 싶을 때, 둘 다 눈치채지 못해요."
+					"signal": "둘 다 비슷한 속도로 움직여요.",
+					"misread": "누군가 잠깐 멈추고 싶어도, 서로 눈치채기 어려워요."
 				},
 				{
-					"signal": "리듬이 딱 맞아요.",
-					"misread": "맞는 게 아니라 습관인데, 동의라고 착각하게 돼요."
+					"signal": "리듬이 잘 맞아서 일이 술술 풀려요.",
+					"misread": "익숙함을 ‘동의’로 착각하고 중요한 확인을 건너뛰게 돼요."
 				}
 			]
 		},
 		"same_temperature": {
 			"en": [
 				{
-					"signal": "You both run the same temperature.",
-					"misread": "You forget that sameness can mask unspoken differences."
+					"signal": "You share a similar emotional temperature.",
+					"misread": "Sameness can hide unspoken differences."
 				},
 				{
-					"signal": "Emotional resonance feels effortless.",
-					"misread": "You stop checking in because it feels unnecessary."
+					"signal": "Resonance feels effortless.",
+					"misread": "You may stop checking in."
 				}
 			],
 			"ko": [
 				{
-					"signal": "둘 다 비슷한 온도의 사람이에요.",
-					"misread": "비슷하다 보니, 말 안 한 차이가 있다는 걸 잊어요."
+					"signal": "둘 다 비슷한 온도라서 편해요.",
+					"misread": "비슷하단 이유로, 말하지 않은 차이를 놓치기 쉬워요."
 				},
 				{
-					"signal": "감정의 파장이 자연스럽게 맞아요.",
-					"misread": "다 통하는 것 같아서, 확인하는 걸 멈추게 돼요."
+					"signal": "감정이 잘 통하는 느낌이 들어요.",
+					"misread": "‘다 알겠지’가 되면서 체크인을 멈추게 돼요."
 				}
 			]
 		}
 	},
-	"defaultActions": {
-		"appreciation": {
-			"title": {
-				"en": "Say appreciation out loud",
-				"ko": "고마움을 소리 내어 말하기"
-			},
-			"desc": {
-				"en": "Be specific about what you noticed. Small recognitions build a sky that lasts.",
-				"ko": "무엇을 알아차렸는지 구체적으로 말해주세요. 작은 인정이 오래가는 하늘을 만듭니다."
-			}
-		},
-		"pace": {
-			"title": {
-				"en": "Slow the emotional pace",
-				"ko": "감정의 속도 늦추기"
-			},
-			"desc": {
-				"en": "Not every pause is distance. Sometimes it is care forming quietly. Don't rush the process.",
-				"ko": "모든 멈춤이 거리를 뜻하지 않습니다. 가끔은 조용히 돌봄이 만들어지는 시간입니다."
-			}
-		},
-		"ritual": {
-			"title": {
-				"en": "Create a shared ritual",
-				"ko": "둘만의 작은 의식 만들기"
-			},
-			"desc": {
-				"en": "A morning walk, a weekly check-in, a small repeated act. Rituals turn weather into climate.",
-				"ko": "아침 산책, 주간 안부, 작은 반복 행동. 의식은 날씨를 기후로 바꿉니다."
-			}
-		}
-	},
+
 	"themes": {
 		"1": {
 			"bg": "#FFF9ED",

@@ -35,6 +35,11 @@ function pick<T>(arr: readonly T[], seed: number, offset = 0): T {
 	return arr[(seed + offset) % arr.length];
 }
 
+/** copy-pool은 ko만 있을 수 있음. en 요청 시 ko로 폴백 */
+function L<T>(obj: Record<string, T>, lang: Locale): T {
+	return (obj[lang] ?? obj['ko']) as T;
+}
+
 /**
  * 핵심 생성 엔진.
  * PAIR_META의 storyBeats override 우선 → 없으면 규칙 기반 조합.
@@ -55,10 +60,10 @@ export function buildPremiumReport(
 	// ── 1. Full Story (4단락) ──
 
 	const openingImage = pairMeta?.storyBeats?.openingImage?.[lang]
-		?? pick(OPENING_PATTERNS[lang], seed)
+		?? pick(L(OPENING_PATTERNS, lang), seed)
 			.replace('{userCloud}', userMeta.displayName[lang])
 			.replace('{partnerCloud}', partnerMeta.displayName[lang])
-		+ ' ' + pick(SOFTENING_LINES[lang], seed);
+		+ ' ' + pick(L(SOFTENING_LINES, lang), seed);
 
 	const emotionalDynamic = pairMeta?.storyBeats?.emotionalDynamic?.[lang]
 		?? buildEmotionalDynamic(userMeta, partnerMeta, lang);
@@ -67,7 +72,7 @@ export function buildPremiumReport(
 		?? buildHiddenStrength(userMeta, partnerMeta, lang, seed);
 
 	const growthArc = pairMeta?.storyBeats?.growthArc?.[lang]
-		?? pick(GROWTH_LINES[lang], seed);
+		?? pick(L(GROWTH_LINES, lang), seed);
 
 	const fullStory = [openingImage, emotionalDynamic, hiddenStrength, growthArc].join('\n\n');
 
@@ -111,8 +116,8 @@ export function buildPremiumReport(
 	// ── 9. Share Card ──
 
 	const shareCard = {
-		phrase: pick(SHARE_CARD_PHRASES[lang], seed),
-		caption: pick(SHARE_CARD_CAPTIONS[lang], seed)
+		phrase: pick(L(SHARE_CARD_PHRASES, lang), seed),
+		caption: pick(L(SHARE_CARD_CAPTIONS, lang), seed)
 	};
 
 	return {

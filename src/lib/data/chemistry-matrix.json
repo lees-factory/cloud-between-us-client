@@ -3,8 +3,8 @@
 		"skyName": "Morning Light Through Fog",
 		"skyNameKo": "아침 안개 속의 햇살",
 		"phenomenon": "glow",
-		"narrative": "\n      햇살의 따뜻한 빛이 안개의 감정을 천천히 녹인다.\n      안개는 이해받는다고 느끼고,\n      햇살은 보호하고 싶어진다.\n    ",
-		"warning": "빛이 너무 강하면 안개는 사라진다.",
+		"narrative": "햇살은 조용히 안개 곁에 머문다.\n안개는 서서히 마음의 결을 드러내고,\n햇살은 그 결을 지켜주고 싶어진다.",
+		"warning": "빛이 서두르면, 안개는 숨을 곳을 찾는다.",
 		"premium": {
 			"ko": {
 				"fullStory": "이른 아침, 햇살이 안개를 만날 때 세상은 부드러워집니다.\n안개가 걷혀서가 아니라, 빛이 그 곁에 머물기로 선택했기 때문입니다.\n\n당신의 사랑은 방향성이 있습니다.\n온기와 확신을 향해 빠르게 나아갑니다. 마음속에 불안이나 의문이 생기면, 즉시 상황을 투명하게 만들고 싶어 합니다.\n\n반면, 그 사람의 사랑은 깊이를 가집니다.\n그들은 말을 꺼내기 전에 공기의 온도를 먼저 느낍니다. 때로는 그들의 침묵이 거리감처럼 느껴질 수 있지만, 사실 그것은 마음속에서 감정의 형태를 빚어내고 있는 시간입니다.\n\n처음에는 당신의 빠른 걸음이 안개를 몰아붙이는 것 같고, 그 사람의 고요함이 당신의 빛을 가리는 것처럼 느낄 수 있습니다. 하지만 이것이 두 사람만의 고요하고 강력한 시너지입니다.\n\n당신은 이 관계에 온기를 불어넣고, 그 사람은 이 관계의 분위기를 깊게 만듭니다.\n\n당신이 없다면 이 하늘은 차갑게 가라앉을 것이고, 그 사람이 없다면 너무 눈부셔 쉴 곳이 없었을 것입니다. 당신의 빛이 안개를 몰아붙이지 않고, 안개가 당신의 빛을 밀어내지 않을 때, 이 하늘은 가장 아름답게 빛납니다.\n\n어떤 하늘은 금세 흩어지지만, 당신들의 하늘은 오래도록 머무릅니다.",
@@ -124,27 +124,27 @@
 		"storyBeats": {
 			"openingImage": {
 				"en": "In the early morning, when sunlight meets mist, the world grows softer — not because it is simple, but because light chooses to stay.",
-				"ko": "이른 아침, 햇살이 안개를 만날 때 세상은 부드러워집니다 — 단순해서가 아니라, 빛이 머물기로 선택했기 때문입니다."
+				"ko": "이른 아침, 햇살이 안개를 만날 때 하늘은 조금 더 부드러워집니다. 걷어내서가 아니라, 곁에 머물기 때문입니다."
 			},
 			"emotionalDynamic": {
 				"en": "You move toward clarity. They feel the air before they speak. Sometimes your speed looks like pressure; sometimes their quiet looks like distance.",
-				"ko": "당신은 확신을 향해 나아갑니다. 그 사람은 말하기 전에 공기를 느낍니다. 때로 당신의 속도는 압박처럼, 그 사람의 고요함은 거리감처럼 보일 수 있습니다."
+				"ko": "당신은 분명함을 향해 걸어가고, 그 사람은 말하기 전에 공기를 느낍니다. 당신의 속도는 때로 재촉처럼, 그 사람의 고요는 때로 거리처럼 보일 수 있어요."
 			},
 			"hiddenStrength": {
 				"en": "You bring warmth. They bring atmosphere. Together, you create light that doesn't rush the fog, and fog that doesn't resist the light.",
-				"ko": "당신은 온기를 주고, 그 사람은 분위기를 만듭니다. 함께할 때, 안개를 재촉하지 않는 빛과 빛을 밀어내지 않는 안개가 됩니다."
+				"ko": "당신은 온기를 건네고, 그 사람은 분위기를 만듭니다. 함께할 때, 안개를 재촉하지 않는 빛과 빛을 밀어내지 않는 안개가 됩니다."
 			},
 			"growthArc": {
 				"en": "Some skies are fleeting. Yours lingers.",
-				"ko": "어떤 하늘은 금세 흩어지지만, 당신들의 하늘은 오래도록 머무릅니다."
+				"ko": "금세 흩어지는 하늘도 있지만, 당신들의 하늘은 오래 남습니다."
 			}
 		}
 	},
 	"sunlit-storm": {
 		"skyName": "Lightning at Noon",
 		"phenomenon": "thunder",
-		"narrative": "\n      둘 다 강하다.\n      햇살은 방향을 잡고, 천둥은 속도를 올린다.\n      케미는 강렬하다.\n      충돌도 강렬하다.\n    ",
-		"warning": null,
+		"narrative": "햇살은 방향을 세우고, 천둥은 감정을 터뜨린다.\n선명한 케미가 번쩍이고,\n그만큼 충돌도 또렷하다.",
+		"warning": "한쪽이 이기려 들면, 하늘은 더 시끄러워진다.",
 		"phenomenonName": {
 			"en": "Lightning at Noon",
 			"ko": "한낮의 번개"
@@ -164,23 +164,26 @@
 		"storyBeats": {
 			"openingImage": {
 				"en": "Two forces that refuse to dim. When sunlight meets storm, the sky cracks open — vivid, loud, unforgettable.",
-				"ko": "사그라들기를 거부하는 두 힘. 햇살이 천둥을 만나면 하늘이 열립니다 — 선명하고, 요란하고, 잊히지 않는."
+				"ko": "사그라들기를 거부하는 두 힘. 햇살이 천둥을 만나면 하늘이 한 번 크게 열립니다."
 			},
 			"emotionalDynamic": {
 				"en": "You steer. They strike. You want to hold a direction; they want to release what's been held too long. The tension is real — and so is the spark.",
-				"ko": "당신은 방향을 잡고, 그 사람은 내리칩니다. 당신은 방향을 지키고 싶고, 그 사람은 너무 오래 참아온 것을 해방하고 싶습니다."
+				"ko": "당신은 방향을 잡고 싶고, 그 사람은 눌러둔 마음을 쏟아내고 싶어 합니다. 맞물리면 짜릿하지만, 엇갈리면 금세 뜨거워져요."
 			},
 			"hiddenStrength": {
 				"en": "When you stop trying to lead the storm and they stop trying to break the calm, something rare appears — a sky that holds both light and thunder.",
-				"ko": "당신이 천둥을 이끌려 하지 않고, 그 사람이 고요를 깨려 하지 않을 때, 드문 하늘이 나타납니다 — 빛과 천둥이 공존하는 하늘."
+				"ko": "당신이 ‘붙잡기’를 잠시 내려놓고, 그 사람이 ‘부수기’를 멈출 때—빛과 천둥이 함께 있어도 무너지지 않는 하늘이 됩니다."
+			},
+			"growthArc": {
+				"ko": "강렬함이 강점이 되려면, 한 번은 숨 고를 자리가 필요합니다."
 			}
 		}
 	},
 	"sunlit-dawn": {
 		"skyName": "First Light",
 		"phenomenon": "glow",
-		"narrative": "\n      햇살이 여명에게 기다림의 보답을 준다.\n      서로의 시간을 존중할 때 하늘이 가장 아름답다.\n    ",
-		"warning": null,
+		"narrative": "햇살은 여명의 기다림에 답하고,\n여명은 햇살의 속도를 한 번 더 다정하게 만든다.\n서로의 시간을 존중할 때, 하늘은 가장 예쁘다.",
+		"warning": "너무 ‘좋은 관계’로만 남으려 하면, 중요한 말을 미루게 된다.",
 		"phenomenonName": {
 			"en": "First Light",
 			"ko": "첫 번째 빛"
@@ -200,39 +203,73 @@
 		"storyBeats": {
 			"openingImage": {
 				"en": "The sun rises, and the dawn has been waiting. This is not coincidence — it is the most natural meeting in any sky.",
-				"ko": "해가 뜨고, 여명은 기다리고 있었습니다. 우연이 아닙니다 — 어떤 하늘에서든 가장 자연스러운 만남입니다."
+				"ko": "해가 뜨고, 여명은 기다리고 있었습니다. 우연이 아니라, 가장 자연스러운 만남입니다."
 			},
 			"hiddenStrength": {
 				"en": "Your warmth rewards their patience. Their quiet faith steadies your glow.",
-				"ko": "당신의 따뜻함이 그 사람의 인내에 보답합니다. 그 사람의 고요한 믿음이 당신의 빛을 안정시킵니다."
+				"ko": "당신의 온기가 그 사람의 인내에 보답합니다. 그 사람의 고요한 믿음이 당신의 빛을 안정시킵니다."
+			},
+			"emotionalDynamic": {
+				"ko": "당신은 따뜻하게 다가가고, 그 사람은 천천히 받아들입니다. 급하지 않아서 더 오래 갑니다."
+			},
+			"growthArc": {
+				"ko": "조용히 좋아지기만 해도 되지만, 가끔은 마음을 더 또렷하게 말해주는 용기가 필요합니다."
 			}
 		}
 	},
 	"sunlit-wild": {
 		"skyName": "Wind in the Sun",
 		"phenomenon": "glow",
-		"narrative": "\n      바람이 햇살을 데리고 간다.\n      함께 움직일 때 둘 다 빛난다.\n    ",
-		"warning": "방향이 다르면 흩어질 수 있다.",
+		"narrative": "바람은 햇살을 데리고 여기저기 옮긴다.\n함께 움직일 때 둘 다 빛나지만,\n서로 다른 방향을 바라보면 금세 흩어질 수도 있다.",
+		"warning": "같이 달리기 전에, 어디로 가는지만 한 번 맞춰야 한다.",
 		"phenomenonName": {
 			"en": "Wind in the Sun",
 			"ko": "햇살 속의 바람"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "햇살이 비추는 길 위로 바람이 불어옵니다. 오늘의 하늘은 가볍고 빠릅니다."
+			},
+			"emotionalDynamic": {
+				"ko": "당신은 따뜻한 확신을 주고, 그 사람은 자유로운 추진력을 줍니다. 다만 속도만 빠르면 마음이 뒤처질 수 있어요."
+			},
+			"hiddenStrength": {
+				"ko": "함께 움직일 때 두 사람은 더 멀리 갑니다. ‘재미’가 관계를 살리고, ‘온기’가 돌아올 길을 만듭니다."
+			},
+			"growthArc": {
+				"ko": "자유를 잃지 않으면서도, 한 번은 멈춰 서서 서로를 확인해야 합니다."
+			}
 		}
 	},
 	"sunlit-shade": {
 		"skyName": "Sun and Shadow",
 		"phenomenon": "glow",
-		"narrative": "\n      햇살이 그늘에게 쉼을 주고, 그늘이 햇살에게 안정을 준다.\n      균형이 맞는 하늘.\n    ",
-		"warning": null,
+		"narrative": "햇살은 그늘에게 숨 쉴 자리를 주고,\n그늘은 햇살에게 지나치지 않은 온도를 준다.\n밝음과 쉼이 나란히 선 하늘.",
+		"warning": "밝히려는 마음이 크면, 쉼의 자리가 사라진다.",
 		"phenomenonName": {
 			"en": "Sun and Shadow",
 			"ko": "빛과 그늘"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "햇빛이 내리쬐어도, 그늘이 있는 날이 있습니다. 그늘이 있어서 더 오래 걸을 수 있는 하늘."
+			},
+			"emotionalDynamic": {
+				"ko": "당신은 분위기를 살리고, 그 사람은 속도를 낮춥니다. 따뜻함과 안정감이 동시에 필요할 때 특히 잘 맞아요."
+			},
+			"hiddenStrength": {
+				"ko": "당신은 관계를 환하게 만들고, 그 사람은 관계를 지치지 않게 만듭니다. 서로가 서로의 ‘과함’을 줄여줍니다."
+			},
+			"growthArc": {
+				"ko": "빛이 오래가려면, 그늘을 ‘문제’로 보지 않는 연습이 필요합니다."
+			}
 		}
 	},
 	"mist-storm": {
 		"skyName": "After the Thunder",
 		"phenomenon": "rain",
-		"narrative": "\n      천둥이 지나간 뒤 안개가 피어오른다.\n      감정이 터진 뒤에 오는 이해.\n    ",
-		"warning": null,
+		"narrative": "천둥이 지나간 뒤, 안개는 낮게 피어오른다.\n터진 감정 뒤에 남은 것들을 주워 담으며,\n하늘은 다시 조용해질 준비를 한다.",
+		"warning": "감정이 지나간 뒤를 돌보지 않으면, 다음 번개는 더 쉽게 온다.",
 		"phenomenonName": {
 			"en": "After the Thunder",
 			"ko": "천둥이 지나간 뒤"
@@ -252,99 +289,217 @@
 		"storyBeats": {
 			"openingImage": {
 				"en": "After the thunder passes, mist rises from the ground. The sky quiets. Something new begins to form in the damp air.",
-				"ko": "천둥이 지나간 뒤, 안개가 땅에서 피어오릅니다. 하늘이 고요해지고, 축축한 공기 속에서 무언가 새로운 것이 만들어지기 시작합니다."
+				"ko": "천둥이 지나간 뒤, 안개가 땅에서 피어오릅니다. 하늘은 조용해지고, 남은 마음들이 천천히 자리 잡습니다."
 			},
 			"hiddenStrength": {
 				"en": "They release what they feel; you hold what remains. Together, you turn every storm into a landscape.",
-				"ko": "그 사람은 느끼는 것을 쏟아내고, 당신은 남는 것을 품습니다. 함께, 모든 폭풍을 풍경으로 바꿉니다."
+				"ko": "둘은 폭풍을 ‘끝’으로 만들지 않습니다. 터진 마음을 다시 주워 담아, 결국 풍경으로 바꿉니다."
+			},
+			"emotionalDynamic": {
+				"ko": "그 사람은 감정을 밖으로 내보내고, 당신은 그 뒤를 정리합니다. 그래서 ‘폭발’과 ‘회복’이 한 관계 안에서 반복되기 쉬워요."
+			},
+			"growthArc": {
+				"ko": "폭풍이 지나간 뒤, 가장 먼저 해야 하는 건 ‘해명’이 아니라 ‘안전’입니다."
 			}
 		}
 	},
 	"mist-dawn": {
 		"skyName": "Dawn Mist",
 		"phenomenon": "glow",
-		"narrative": "\n      여명과 안개는 같은 고요함을 안다.\n      말하지 않아도 통한다.\n    ",
-		"warning": null,
+		"narrative": "여명과 안개는 같은 고요를 안다.\n말이 없어도 기류로 서로를 읽고,\n느릿한 온도로 하루를 연다.",
+		"warning": "너무 조용하면, 마음이 어디로 가는지 놓칠 수 있다.",
 		"phenomenonName": {
 			"en": "Dawn Mist",
 			"ko": "새벽 안개"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "새벽의 공기엔 말이 필요 없습니다. 고요한 감정들이 먼저 서로를 알아봅니다."
+			},
+			"emotionalDynamic": {
+				"ko": "둘 다 서두르지 않습니다. 다만 마음이 깊은 만큼, 확인 없이 지나가면 오해도 깊어질 수 있어요."
+			},
+			"hiddenStrength": {
+				"ko": "말을 줄여도 관계가 무너지지 않는 드문 하늘입니다. 조용한 신뢰가 바닥을 받칩니다."
+			},
+			"growthArc": {
+				"ko": "한 번쯤은, 고요한 마음을 ‘문장’으로 꺼내어 서로에게 건네야 합니다."
+			}
 		}
 	},
 	"mist-wild": {
 		"skyName": "Mist in the Wind",
 		"phenomenon": "rain",
-		"narrative": "\n      바람이 안개를 흩뜨린다.\n      함께하면 새로운 풍경이 된다.\n    ",
-		"warning": "안개는 흩어지길 두려워할 수 있다.",
+		"narrative": "바람은 안개를 흩뜨리고,\n안개는 바람의 궤적을 따라 모양을 바꾼다.\n새로운 풍경이 되기도, 사라지기도 한다.",
+		"warning": "가벼운 장난이 불안으로 번지기 전에, 마음을 붙잡아줘야 한다.",
 		"phenomenonName": {
 			"en": "Mist in the Wind",
 			"ko": "바람 속 안개"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "바람이 불면 안개는 모양을 바꿉니다. 오늘의 하늘은 변덕스럽지만, 이상하게 예쁩니다."
+			},
+			"emotionalDynamic": {
+				"ko": "그 사람은 가볍게 움직이고, 당신은 조심스럽게 느낍니다. 재미와 불안이 가까운 조합이에요."
+			},
+			"hiddenStrength": {
+				"ko": "바람이 안개를 ‘끌어내고’, 안개가 바람을 ‘붙잡아’ 줍니다. 둘이 함께면 풍경이 넓어집니다."
+			},
+			"growthArc": {
+				"ko": "자유를 지키면서도, 불안을 숨기지 않는 연습이 필요합니다."
+			}
 		}
 	},
 	"mist-shade": {
 		"skyName": "Quiet Sky",
 		"phenomenon": "glow",
-		"narrative": "\n      안개와 그늘. 말 없이 곁에 있는 사랑.\n      조용한 하늘이 편하다.\n    ",
-		"warning": null,
+		"narrative": "안개와 그늘은 말이 많지 않다.\n옆에 있는 것만으로 충분한 날이 있고,\n그 조용함이 두 사람을 살린다.",
+		"warning": "침묵이 편해질수록, 확인이 더 필요해질 때도 있다.",
 		"phenomenonName": {
 			"en": "Quiet Sky",
 			"ko": "고요한 하늘"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "소리가 줄어든 하늘. 서로를 재촉하지 않아도 괜찮은 관계가 있습니다."
+			},
+			"emotionalDynamic": {
+				"ko": "둘 다 조용합니다. 대신 마음이 멀어질 때도 조용히 멀어지기 쉬워요."
+			},
+			"hiddenStrength": {
+				"ko": "평온을 만들 줄 아는 조합입니다. 함께 있으면 숨이 고르게 돌아옵니다."
+			},
+			"growthArc": {
+				"ko": "고요를 지키되, ‘괜찮아’ 한 마디를 아끼지 않는 게 중요합니다."
+			}
 		}
 	},
 	"storm-dawn": {
 		"skyName": "Storm Before Dawn",
 		"phenomenon": "thunder",
-		"narrative": "\n      천둥이 치고 여명이 온다.\n      여명의 인내가 천둥을 풀어준다.\n    ",
-		"warning": null,
+		"narrative": "폭풍은 먼저 오고, 여명은 끝내 온다.\n여명의 기다림이 천둥을 내려앉히고,\n천둥의 진심이 여명을 더 선명하게 만든다.",
+		"warning": "한쪽만 견디면, 결국 지치고 만다.",
 		"phenomenonName": {
 			"en": "Thunder Before Morning",
 			"ko": "아침 전의 천둥"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "아침이 오기 전, 하늘이 먼저 흔들릴 때가 있습니다. 폭풍은 끝이 아니라, 새벽을 데려오는 과정일지도 모릅니다."
+			},
+			"emotionalDynamic": {
+				"ko": "한쪽은 감정을 크게 내보내고, 한쪽은 끝까지 버팁니다. ‘참는 사람’과 ‘터지는 사람’으로 역할이 고정되면 위험해요."
+			},
+			"hiddenStrength": {
+				"ko": "여명의 인내는 폭풍을 약하게 만드는 게 아니라, 내려앉을 자리를 줍니다. 폭풍의 진심은 새벽을 더 또렷하게 만듭니다."
+			},
+			"growthArc": {
+				"ko": "폭풍이 오기 전에, 서로가 숨을 고를 수 있는 신호를 하나 정해두세요."
+			}
 		}
 	},
 	"storm-wild": {
 		"skyName": "Thunderstorm",
 		"phenomenon": "thunder",
-		"narrative": "\n      천둥과 바람. 에너지가 폭발한다.\n      함께할 때 세상이 움직인다.\n    ",
-		"warning": "너무 세면 둘 다 지칠 수 있다.",
+		"narrative": "천둥과 바람은 서로를 부추긴다.\n세상이 흔들릴 만큼 뜨겁고,\n그 뜨거움만큼 쉽게 지치기도 한다.",
+		"warning": "속도를 낮출 줄 모르면, 둘 다 금세 바닥을 본다.",
 		"phenomenonName": {
 			"en": "Thunderstorm",
 			"ko": "뇌우"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "하늘이 바쁘게 움직입니다. 번쩍이고, 휘몰아치고, 멈추지 않습니다."
+			},
+			"emotionalDynamic": {
+				"ko": "한쪽은 폭발하고, 한쪽은 가속합니다. 재미와 위험이 가까운 조합이에요."
+			},
+			"hiddenStrength": {
+				"ko": "함께하면 세상이 움직입니다. 대담함이 관계를 앞으로 밀어줍니다."
+			},
+			"growthArc": {
+				"ko": "둘 다 쉬는 법을 배우지 않으면, 사랑이 아니라 체력이 먼저 닳습니다."
+			}
 		}
 	},
 	"storm-shade": {
 		"skyName": "Shelter from the Storm",
 		"phenomenon": "rain",
-		"narrative": "\n      그늘이 천둥에게 쉼을 준다.\n      천둥이 그늘에게 생기를 준다.\n    ",
-		"warning": null,
+		"narrative": "그늘은 폭풍에게 잠깐의 쉼을 주고,\n폭풍은 그늘에게 오래 묻어둔 생기를 준다.\n거칠고도 필요한 균형.",
+		"warning": "그늘이 모든 감정을 받아내려 하면, 무너질 수 있다.",
 		"phenomenonName": {
 			"en": "Shelter from the Storm",
 			"ko": "폭풍의 쉼터"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "폭풍이 몰아칠 때, 그늘은 한 걸음 뒤로 물러나 자리를 내줍니다. 그 자리에서야 숨이 돌아옵니다."
+			},
+			"emotionalDynamic": {
+				"ko": "한쪽은 뜨겁고, 한쪽은 조용합니다. 뜨거움이 쉼을 얻고, 고요가 생기를 얻기도 해요."
+			},
+			"hiddenStrength": {
+				"ko": "그늘은 폭풍을 ‘버리는’ 게 아니라 ‘받쳐’ 줍니다. 폭풍은 그늘을 ‘깨는’ 게 아니라 ‘살려’ 줍니다."
+			},
+			"growthArc": {
+				"ko": "감정을 맡아주는 사람에게 ‘괜찮아?’를 먼저 물어야 합니다."
+			}
 		}
 	},
 	"dawn-wild": {
 		"skyName": "Wind at Dawn",
 		"phenomenon": "glow",
-		"narrative": "\n      여명이 바람을 만나면 하늘이 열린다.\n      기다림과 움직임이 만난다.\n    ",
-		"warning": null,
+		"narrative": "여명은 기다리고, 바람은 움직인다.\n기다림과 움직임이 만나면 하늘이 열린다.\n다만 바람이 너무 앞서가면, 여명은 따라가다 지친다.",
+		"warning": "바람은 속도를, 여명은 확신을 서로에게 조금씩 건네야 한다.",
 		"phenomenonName": {
 			"en": "Wind at Dawn",
 			"ko": "새벽의 바람"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "새벽 공기 위로 바람이 먼저 지나갑니다. 아직 어둡지만, 뭔가 시작될 것 같은 하늘."
+			},
+			"emotionalDynamic": {
+				"ko": "한쪽은 ‘가보자’고 말하고, 한쪽은 ‘조금만 더’라고 말합니다. 둘 다 맞지만, 타이밍이 다릅니다."
+			},
+			"hiddenStrength": {
+				"ko": "바람은 관계에 활기를 주고, 여명은 관계에 기준을 줍니다. 함께면 흔들리지 않게 움직일 수 있어요."
+			},
+			"growthArc": {
+				"ko": "속도만 맞추면 오래 갑니다. 그게 이 조합의 핵심입니다."
+			}
 		}
 	},
 	"dawn-shade": {
 		"skyName": "Soft Morning",
 		"phenomenon": "glow",
-		"narrative": "\n      여명과 그늘. 부드러운 아침.\n      서로를 재촉하지 않는다.\n    ",
-		"warning": null,
+		"narrative": "여명과 그늘은 서로를 재촉하지 않는다.\n아침은 천천히 밝아지고,\n쉼은 자연스럽게 자리를 만든다.",
+		"warning": "너무 조심하면, 마음은 더 뒤로 물러날 수 있다.",
 		"phenomenonName": {
 			"en": "Soft Morning",
 			"ko": "부드러운 아침"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "부드러운 아침이 있습니다. 급한 일이 없어도, 함께라서 괜찮은 하늘."
+			},
+			"emotionalDynamic": {
+				"ko": "둘 다 속도를 낮춥니다. 대신 ‘말하지 않아도 알겠지’가 오해가 될 때가 있어요."
+			},
+			"hiddenStrength": {
+				"ko": "서로를 지치게 하지 않습니다. 안정감이 관계를 오래 데려갑니다."
+			},
+			"growthArc": {
+				"ko": "조용한 사람들일수록, 확인은 더 자주 필요합니다."
+			}
 		}
 	},
 	"wild-shade": {
 		"skyName": "Breeze in the Shade",
 		"phenomenon": "glow",
-		"narrative": "\n      바람이 그늘을 찾고, 그늘이 바람에게 쉼을 준다.\n      자유와 안정이 공존한다.\n    ",
-		"warning": null,
+		"narrative": "바람은 그늘을 찾아 잠깐 느려지고,\n그늘은 바람이 머물러도 되는 자리를 내준다.\n자유와 안정이 같은 하늘에 있는 관계.",
+		"warning": "그늘이 규칙이 되면 바람은 숨이 막히고, 바람이 도망이 되면 그늘은 불안해진다.",
 		"phenomenonName": {
 			"en": "Breeze in the Shade",
 			"ko": "그늘 속의 바람"
@@ -364,39 +519,73 @@
 		"storyBeats": {
 			"openingImage": {
 				"en": "The wind doesn't stop — but it slows when it finds shade. Not because it has to. Because it wants to.",
-				"ko": "바람은 멈추지 않습니다 — 하지만 그늘을 만나면 느려집니다. 그래야 해서가 아니라, 그러고 싶어서."
+				"ko": "바람은 멈추지 않지만, 그늘을 만나면 잠깐 느려집니다. 그래야 해서가 아니라, 그러고 싶어서."
 			},
 			"hiddenStrength": {
 				"en": "You bring movement; they bring rest. The world needs both — and so does this sky.",
-				"ko": "당신은 움직임을 가져오고, 그 사람은 쉼을 줍니다. 세상에는 둘 다 필요합니다 — 이 하늘도 마찬가지입니다."
+				"ko": "당신은 관계에 숨을 넣고, 그 사람은 관계에 바닥을 깔아줍니다. 함께면 균형이 생깁니다."
+			},
+			"emotionalDynamic": {
+				"ko": "당신은 움직이고, 그 사람은 붙잡아 줍니다. 다만 ‘자유’와 ‘안정’의 기준이 다르면 금세 부딪혀요."
+			},
+			"growthArc": {
+				"ko": "서로의 기준을 ‘규칙’으로 강요하지 말고, ‘합의’로 만들어야 합니다."
 			}
 		}
 	},
 	"sunlit-sunlit": {
 		"skyName": "Double Sun",
 		"phenomenon": "glow",
-		"narrative": "두 햇살이 만나면 하늘이 두 배로 밝아진다.",
-		"warning": "서로의 그림자를 보지 못할 수 있다.",
+		"narrative": "두 햇살이 만나면, 하늘이 한동안 환해진다.\n서로가 서로를 북돋우고,\n기분 좋은 확신이 빠르게 차오른다.",
+		"warning": "너무 밝아지면, 서로의 그늘을 못 본 척하게 된다.",
 		"phenomenonName": {
 			"en": "Double Sun",
 			"ko": "두 개의 태양"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "햇살이 두 겹으로 내려앉는 날이 있습니다. 괜히 마음이 가벼워지고, 말도 쉬워지는 하늘."
+			},
+			"emotionalDynamic": {
+				"ko": "둘 다 앞으로 나아가는 쪽이라 속도가 맞을 때는 시원합니다. 다만 멈추는 순간이 오면, 누가 먼저 숨을 고를지 모르기도 해요."
+			},
+			"hiddenStrength": {
+				"ko": "서로를 따뜻하게 밀어 올리는 힘이 있습니다. 함께 있으면 ‘괜찮아’가 빨리 돌아옵니다."
+			},
+			"growthArc": {
+				"ko": "밝음이 오래 가려면, 가끔은 조용히 그늘도 함께 봐야 합니다."
+			}
 		}
 	},
 	"mist-mist": {
 		"skyName": "Deep Fog",
 		"phenomenon": "glow",
-		"narrative": "두 안개. 말 없이도 깊이 통한다.",
-		"warning": "너무 흐려지면 길을 잃을 수 있다.",
+		"narrative": "두 안개는 말보다 기류로 통한다.\n서로를 깊게 읽지만,\n가끔은 길을 잃을 만큼 흐려질 수도 있다.",
+		"warning": "마음이 겹칠수록, 한 번은 ‘말’로 표지판을 세워야 한다.",
 		"phenomenonName": {
 			"en": "Deep Fog",
 			"ko": "깊은 안개"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "안개가 두 겹으로 내려앉는 날이 있습니다. 소리가 줄고, 감각이 더 예민해지는 하늘."
+			},
+			"emotionalDynamic": {
+				"ko": "둘 다 조심스럽고 깊습니다. 대신 확신을 미루다 보면, 서로가 서로를 ‘추측’하게 되기도 해요."
+			},
+			"hiddenStrength": {
+				"ko": "말보다 먼저 마음을 알아채는 힘이 있습니다. 서로가 다치지 않게 천천히 다가갑니다."
+			},
+			"growthArc": {
+				"ko": "가끔은 ‘괜찮아?’ 대신 ‘나는 이렇게 느꼈어’를 꺼내는 용기가 필요합니다."
+			}
 		}
 	},
 	"storm-storm": {
 		"skyName": "Thunder and Lightning",
 		"phenomenon": "thunder",
-		"narrative": "두 천둥. 열정이 맞닿으면 번개가 친다.",
-		"warning": "폭발이 잦으면 지칠 수 있다.",
+		"narrative": "두 폭풍은 숨길 게 없다.\n솔직함이 번개처럼 빠르고,\n진심이 우레처럼 크게 울린다.",
+		"warning": "폭발이 잦으면, 회복이 일상이 된다.",
 		"phenomenonName": {
 			"en": "Thunder and Lightning",
 			"ko": "천둥과 번개"
@@ -416,42 +605,90 @@
 		"storyBeats": {
 			"openingImage": {
 				"en": "Two storms meeting is not destruction — it's a sky that has nothing to hide. Every flash is honest. Every rumble is real.",
-				"ko": "두 폭풍의 만남은 파괴가 아닙니다 — 숨길 것이 없는 하늘입니다. 모든 섬광은 솔직하고, 모든 울림은 진짜입니다."
+				"ko": "두 폭풍의 만남은 파괴가 아닙니다. 숨길 것이 없는 하늘입니다. 모든 섬광은 솔직하고, 모든 울림은 진짜입니다."
 			},
 			"hiddenStrength": {
 				"en": "No one else can match your intensity. That's not chaos — it's a language only you two speak.",
-				"ko": "다른 누구도 당신들의 강렬함을 맞출 수 없습니다. 혼란이 아닙니다 — 당신들만 쓰는 언어입니다."
+				"ko": "다른 누구도 따라오기 힘든 강렬함입니다. 혼란이 아니라, 당신들만의 언어입니다."
+			},
+			"emotionalDynamic": {
+				"ko": "둘 다 강합니다. 그래서 사랑도 크고, 말도 큽니다. 다만 ‘큰 감정’이 ‘큰 상처’로 이어지지 않게 장치가 필요해요."
+			},
+			"growthArc": {
+				"ko": "싸움이 끝난 뒤를 ‘자연히’ 두지 말고, 회복의 규칙을 하나 만들어야 합니다."
 			}
 		}
 	},
 	"dawn-dawn": {
 		"skyName": "Eternal Dawn",
 		"phenomenon": "glow",
-		"narrative": "두 여명. 함께 기다리면 하늘이 열린다.",
-		"warning": null,
+		"narrative": "두 여명은 서두르지 않는다.\n서로가 서로에게 ‘괜찮아’를 건네며,\n조용히, 하지만 단단하게 밝아진다.",
+		"warning": "평온을 지키려다, 중요한 말을 미루게 될 수 있다.",
 		"phenomenonName": {
 			"en": "Eternal Dawn",
 			"ko": "영원한 새벽"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "새벽이 새벽을 만나는 하늘. 큰 소리 없이도 마음이 자리를 잡는 날이 있습니다."
+			},
+			"emotionalDynamic": {
+				"ko": "둘 다 조심스럽고 다정합니다. 대신 결정을 미루면 관계의 방향이 흐려질 수 있어요."
+			},
+			"hiddenStrength": {
+				"ko": "서로를 무너뜨리지 않는 방식으로 사랑합니다. 시간이 지날수록 더 단단해집니다."
+			},
+			"growthArc": {
+				"ko": "다정함 속에서도, 필요한 말은 제때 꺼내야 합니다."
+			}
 		}
 	},
 	"wild-wild": {
 		"skyName": "Hurricane",
 		"phenomenon": "thunder",
-		"narrative": "두 바람. 함께 돌면 세상이 돈다.",
-		"warning": "멈출 줄 모르면 흩어질 수 있다.",
+		"narrative": "두 바람은 서로를 더 멀리 데려간다.\n재미와 자유가 넘치지만,\n멈추는 법을 잊으면 방향이 사라진다.",
+		"warning": "둘 다 쉬는 법을 배우지 않으면, 결국 흩어진다.",
 		"phenomenonName": {
 			"en": "Hurricane",
 			"ko": "허리케인"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "바람이 바람을 만난 하늘. 가만히 있기가 어려울 만큼 가볍고 빠릅니다."
+			},
+			"emotionalDynamic": {
+				"ko": "둘 다 자유를 사랑합니다. 대신 책임과 약속이 약해지면 불안이 생겨요."
+			},
+			"hiddenStrength": {
+				"ko": "함께 있으면 삶이 커집니다. 서로가 서로를 밖으로 데려갑니다."
+			},
+			"growthArc": {
+				"ko": "자유를 지키려면, 돌아올 ‘집’도 함께 만들어야 합니다."
+			}
 		}
 	},
 	"shade-shade": {
 		"skyName": "Deep Shade",
 		"phenomenon": "glow",
-		"narrative": "두 그늘. 고요함이 깊어진다.",
-		"warning": "말이 너무 없으면 멀어질 수 있다.",
+		"narrative": "두 그늘은 조용한 깊이를 만든다.\n말이 적어도 함께 있는 시간이 많고,\n그 고요가 서로를 편하게 한다.",
+		"warning": "말이 너무 없으면, 마음이 어디로 가는지 서로 놓친다.",
 		"phenomenonName": {
 			"en": "Deep Shade",
 			"ko": "깊은 그늘"
+		},
+		"storyBeats": {
+			"openingImage": {
+				"ko": "깊은 그늘 같은 하늘. 크게 흔들리지 않고, 조용히 오래 가는 관계가 있습니다."
+			},
+			"emotionalDynamic": {
+				"ko": "둘 다 표현이 적습니다. 그래서 오해가 생겨도 오래 모를 수 있어요."
+			},
+			"hiddenStrength": {
+				"ko": "함께 있는 것만으로 안정이 됩니다. 서로를 소모시키지 않는 관계입니다."
+			},
+			"growthArc": {
+				"ko": "고요를 지키되, 마음의 방향은 말로 확인해야 합니다."
+			}
 		}
 	},
 	"mist-sunlit": {
@@ -474,13 +711,21 @@
 		"storyBeats": {
 			"openingImage": {
 				"en": "You were there first — quiet, hovering close to the ground. Then their light arrived, not to burn through you, but to stay beside you.",
-				"ko": "당신이 먼저 있었습니다 — 고요히, 낮은 곳에 머물며. 그리고 그 사람의 빛이 왔습니다. 당신을 태우러 온 것이 아니라 곁에 머물기 위해."
+				"ko": "당신은 먼저 조용히 머물러 있었습니다. 그리고 그 사람의 빛이 왔습니다. 태우러 온 게 아니라, 곁에 있으려고."
 			},
 			"hiddenStrength": {
 				"en": "You give depth to their warmth. Without you, their light would have nowhere to rest.",
-				"ko": "당신은 그 사람의 온기에 깊이를 줍니다. 당신이 없다면 그 빛은 쉴 곳이 없었을 것입니다."
+				"ko": "당신은 그 사람의 온기에 깊이를 더합니다. 당신이 없다면, 그 빛은 쉬어갈 곳을 찾기 어려웠을 거예요."
+			},
+			"emotionalDynamic": {
+				"ko": "당신은 천천히 열리고, 그 사람은 빠르게 확신을 줍니다. 다만 속도 차이가 크면 마음이 겁을 먹기도 해요."
+			},
+			"growthArc": {
+				"ko": "온기를 받는 데 익숙해지면, 당신도 조금씩 마음을 말로 옮길 수 있습니다."
 			}
-		}
+		},
+		"narrative": "안개는 먼저 조용히 머물러 있고,\n햇살은 그 곁에 다가와 자리를 지킨다.\n둘 사이에는 서서히 온기가 번진다.",
+		"warning": "빨리 밝히려 하면, 마음은 더 말이 없어질 수 있다."
 	},
 	"storm-sunlit": {
 		"phenomenonName": {
@@ -490,9 +735,20 @@
 		"storyBeats": {
 			"openingImage": {
 				"en": "You arrive like weather — sudden, honest, impossible to ignore. And they stand there, steady, bright, unshaken.",
-				"ko": "당신은 날씨처럼 옵니다 — 갑작스럽고, 솔직하고, 무시할 수 없이. 그리고 그 사람은 거기 서 있습니다, 흔들리지 않고 밝게."
+				"ko": "당신은 날씨처럼 도착합니다 — 갑작스럽고 솔직하게. 그리고 그 사람은 그 자리에 있습니다. 흔들리지 않게, 밝게."
+			},
+			"emotionalDynamic": {
+				"ko": "당신은 감정을 밖으로, 그 사람은 관계를 앞으로. 맞물리면 강하지만, 타이밍이 어긋나면 서로가 ‘이해받지 못한다’고 느껴요."
+			},
+			"hiddenStrength": {
+				"ko": "빛은 폭풍을 두려워하지 않고, 폭풍은 빛 앞에서 조금씩 가라앉는 법을 배웁니다. 함께면 더 선명해집니다."
+			},
+			"growthArc": {
+				"ko": "솔직함이 칼이 되지 않게, ‘온도’를 먼저 맞추는 습관이 필요합니다."
 			}
-		}
+		},
+		"narrative": "천둥은 솔직하게 쏟아내고,\n햇살은 흔들리지 않고 자리를 지킨다.\n뜨거운 진심이 결국 방향을 찾는다.",
+		"warning": "감정이 너무 커지면, 빛도 지쳐버릴 수 있다."
 	},
 	"storm-mist": {
 		"phenomenonName": {
@@ -502,9 +758,20 @@
 		"storyBeats": {
 			"openingImage": {
 				"en": "You flash, and they absorb. Your honesty cuts through; their quiet catches what falls.",
-				"ko": "당신이 번쩍이면, 그 사람은 흡수합니다. 당신의 솔직함이 관통하고, 그 사람의 고요함이 떨어지는 것을 받아냅니다."
+				"ko": "당신이 번쩍이면, 그 사람은 고요히 받아냅니다. 당신의 진심이 공기를 가르고, 그 사람은 남는 것을 조심히 품습니다."
+			},
+			"emotionalDynamic": {
+				"ko": "당신은 ‘지금’을 말하고, 그 사람은 ‘그 다음’을 감당합니다. 폭발과 수습이 역할처럼 고정되면 지칩니다."
+			},
+			"hiddenStrength": {
+				"ko": "당신의 솔직함이 관계를 멈추지 않게 하고, 그 사람의 고요함이 관계를 무너지지 않게 합니다."
+			},
+			"growthArc": {
+				"ko": "감정이 지나간 뒤, 한 번만이라도 ‘미안’보다 ‘괜찮아?’를 먼저 꺼내세요."
 			}
-		}
+		},
+		"narrative": "번쩍이는 진심이 지나가면,\n안개는 조용히 그 여운을 받아낸다.\n뜨거움과 고요가 같은 하늘에 남는다.",
+		"warning": "강한 말이 남긴 자국을, 그냥 ‘시간’에 맡기면 오래 간다."
 	},
 	"dawn-storm": {
 		"phenomenonName": {
@@ -526,13 +793,21 @@
 		"storyBeats": {
 			"openingImage": {
 				"en": "Before the light arrives, the sky shakes. The storm is not the end — it is what clears the path for morning.",
-				"ko": "빛이 오기 전, 하늘이 흔들립니다. 폭풍은 끝이 아닙니다 — 아침을 위해 길을 여는 것입니다."
+				"ko": "빛이 오기 전, 하늘은 흔들립니다. 폭풍은 끝이 아니라, 아침으로 가는 길을 여는 것일지도 모릅니다."
 			},
 			"hiddenStrength": {
 				"en": "Your patience doesn't weaken the storm — it gives it somewhere to land. Their intensity doesn't break your calm — it makes the dawn feel earned.",
-				"ko": "당신의 인내가 폭풍을 약하게 하는 것이 아닙니다 — 내려앉을 곳을 줍니다. 그 사람의 강렬함이 당신의 고요를 깨는 것이 아닙니다 — 새벽이 그만한 가치가 있다고 느끼게 합니다."
+				"ko": "당신의 인내는 폭풍을 약하게 만들지 않습니다. 내려앉을 자리를 줍니다. 그 사람의 강렬함도 당신의 고요를 부수지 않습니다. 여명이 ‘의미 있게’ 오게 합니다."
+			},
+			"emotionalDynamic": {
+				"ko": "한쪽은 버티고, 한쪽은 터집니다. 맞추면 변화가 되지만, 반복되면 상처가 돼요."
+			},
+			"growthArc": {
+				"ko": "폭풍이 오기 전, 서로의 한계를 확인하는 작은 규칙이 필요합니다."
 			}
-		}
+		},
+		"narrative": "여명은 폭풍을 두려워하지 않지만,\n폭풍은 여명을 쉽게 시험한다.\n그래도 결국, 하늘은 밝아질 수 있다.",
+		"warning": "기다림이 ‘희생’이 되기 시작하면, 관계는 기울어진다."
 	},
 	"shade-wild": {
 		"phenomenonName": {
@@ -542,7 +817,7 @@
 		"storyBeats": {
 			"openingImage": {
 				"en": "You were still, content in your quiet. Then they arrived — not to disrupt, but to remind you the air can move.",
-				"ko": "당신은 고요 속에 만족하며 가만히 있었습니다. 그리고 그 사람이 왔습니다 — 흐트러뜨리기 위해서가 아니라, 공기도 움직일 수 있다는 것을 알려주기 위해."
+				"ko": "당신은 고요 속에 익숙했습니다. 그리고 그 사람이 왔습니다. 흐트러뜨리기 위해서가 아니라, 공기가 다시 움직일 수 있다는 걸 알려주기 위해."
 			}
 		}
 	},
@@ -566,66 +841,218 @@
 		"storyBeats": {
 			"openingImage": {
 				"en": "Two quiet presences meeting before the world wakes. No words needed — just the shared stillness of early air.",
-				"ko": "세상이 깨기 전에 만나는 두 개의 고요한 존재. 말이 필요 없습니다 — 이른 공기의 공유된 정적만으로 충분합니다."
+				"ko": "세상이 깨어나기 전, 두 개의 고요가 만납니다. 말이 없어도 됩니다. 이른 공기만으로 충분합니다."
 			},
 			"hiddenStrength": {
 				"en": "You both understand what most people miss: that silence can be the most honest conversation.",
-				"ko": "당신들은 대부분의 사람이 놓치는 것을 압니다: 침묵이 가장 솔직한 대화가 될 수 있다는 것을."
+				"ko": "당신들은 압니다. 침묵이 때로는 가장 솔직한 대화가 될 수 있다는 걸."
+			},
+			"emotionalDynamic": {
+				"ko": "둘 다 조용합니다. 대신 ‘괜찮겠지’가 쌓이면, 서로가 서로를 미루게 될 수 있어요."
+			},
+			"growthArc": {
+				"ko": "고요 속에서도, 마음을 한 문장으로 꺼내는 습관이 관계를 지켜줍니다."
 			}
-		}
+		},
+		"narrative": "새벽은 조용히 내려앉고,\n안개는 그 조용함을 알아본다.\n둘은 말 없이도 서로를 놓치지 않는다.",
+		"warning": "고요가 길어질수록, 확인은 더 필요해진다."
 	},
 	"wild-sunlit": {
 		"phenomenonName": {
 			"en": "Sunlit Wind",
 			"ko": "햇살을 탄 바람"
+		},
+		"narrative": "바람은 햇살을 실어 나르고,\n햇살은 바람에게 돌아올 빛을 준다.\n함께면 멀리 가고, 또 다시 돌아온다.",
+		"warning": "자유가 ‘도망’이 되기 전에, 붙잡아야 할 마음이 있다.",
+		"storyBeats": {
+			"openingImage": {
+				"ko": "햇살을 탄 바람이 스쳐 갑니다. 마음이 들뜨고, 하고 싶은 게 많아지는 하늘."
+			},
+			"emotionalDynamic": {
+				"ko": "당신은 움직이고, 그 사람은 비춰줍니다. 재미와 안정이 함께 있지만, 리듬이 어긋나면 서운함이 생겨요."
+			},
+			"hiddenStrength": {
+				"ko": "바람은 관계를 살아 있게 만들고, 햇살은 관계를 따뜻하게 붙들어 줍니다."
+			},
+			"growthArc": {
+				"ko": "바람이 멈춰 서는 순간을 ‘답답함’이 아니라 ‘확인’으로 받아들이면 더 깊어집니다."
+			}
 		}
 	},
 	"shade-sunlit": {
 		"phenomenonName": {
 			"en": "Shadow Under Sunlight",
 			"ko": "햇살 아래 그늘"
+		},
+		"narrative": "그늘은 햇살 아래에서 비로소 숨을 쉰다.\n햇살은 그늘 덕분에 지나치지 않는다.\n밝음과 고요가 같은 하늘에 있다.",
+		"warning": "밝힘이 ‘압박’이 되지 않게, 쉼을 먼저 허락해야 한다.",
+		"storyBeats": {
+			"openingImage": {
+				"ko": "햇살 아래 그늘이 있습니다. 빛이 있어서 더 편해지는 고요가 있습니다."
+			},
+			"emotionalDynamic": {
+				"ko": "한쪽은 표현하고, 한쪽은 받아냅니다. 온도 차이가 크면 서로가 오해하기 쉬워요."
+			},
+			"hiddenStrength": {
+				"ko": "햇살은 그늘을 데워주고, 그늘은 햇살을 안정시킵니다. 서로의 결핍을 메웁니다."
+			},
+			"growthArc": {
+				"ko": "밝히기보다 ‘괜찮아’를 먼저 주면, 그늘은 더 쉽게 마음을 내줍니다."
+			}
 		}
 	},
 	"wild-mist": {
 		"phenomenonName": {
 			"en": "Wind Parting the Mist",
 			"ko": "안개를 가르는 바람"
+		},
+		"narrative": "바람은 안개를 가르고,\n안개는 그 뒤를 천천히 채운다.\n빠름과 느림이 같은 하늘에서 엇갈린다.",
+		"warning": "바람이 장난처럼 던진 말이, 안개에게는 오래 남을 수 있다.",
+		"storyBeats": {
+			"openingImage": {
+				"ko": "바람이 지나가면 안개는 한 번 흩어지고, 다시 모입니다. 오늘의 하늘은 변합니다."
+			},
+			"emotionalDynamic": {
+				"ko": "당신은 가볍게 넘기고, 그 사람은 깊게 남깁니다. 그래서 같은 일을 다르게 기억하기도 해요."
+			},
+			"hiddenStrength": {
+				"ko": "바람은 안개를 세상으로 끌어내고, 안개는 바람에게 ‘머물 곳’을 만들어 줍니다."
+			},
+			"growthArc": {
+				"ko": "가벼움과 깊이가 싸우지 않게, ‘농담’과 ‘진심’의 경계를 말로 맞춰야 합니다."
+			}
 		}
 	},
 	"shade-mist": {
 		"phenomenonName": {
 			"en": "Shade Embracing Mist",
 			"ko": "안개를 품은 그늘"
+		},
+		"narrative": "그늘은 안개를 품어주고,\n안개는 그늘의 고요를 더 깊게 만든다.\n조용한 마음들이 서로를 알아본다.",
+		"warning": "말이 줄수록, 마음은 더 쉽게 멀어진다.",
+		"storyBeats": {
+			"openingImage": {
+				"ko": "안개를 품은 그늘. 소리가 거의 없는 하늘인데, 이상하게 편합니다."
+			},
+			"emotionalDynamic": {
+				"ko": "둘 다 조용합니다. 다만 확인을 미루면, 오해도 조용히 쌓입니다."
+			},
+			"hiddenStrength": {
+				"ko": "서로를 지치게 하지 않습니다. 말보다 ‘태도’로 사랑을 보여줄 수 있는 관계입니다."
+			},
+			"growthArc": {
+				"ko": "한 번쯤은, 마음을 ‘말’로 꺼내어 서로에게 건네야 합니다."
+			}
 		}
 	},
 	"wild-storm": {
 		"phenomenonName": {
 			"en": "Wind Chasing Thunder",
 			"ko": "천둥을 쫓는 바람"
+		},
+		"narrative": "바람은 천둥을 쫓고,\n천둥은 바람을 더 크게 만든다.\n에너지가 넘치지만, 감당이 필요하다.",
+		"warning": "흥분이 길어지면, 어느 쪽이든 먼저 지친다.",
+		"storyBeats": {
+			"openingImage": {
+				"ko": "바람이 천둥을 쫓아갑니다. 하늘이 바쁘고, 감정도 바쁩니다."
+			},
+			"emotionalDynamic": {
+				"ko": "한쪽은 가속하고, 한쪽은 폭발합니다. 짜릿하지만 거칠어지기 쉬워요."
+			},
+			"hiddenStrength": {
+				"ko": "둘이 함께면 큰 일을 해냅니다. 추진력이 강합니다."
+			},
+			"growthArc": {
+				"ko": "속도를 ‘조절’하는 기술이 생기면, 이 조합은 무서울 게 없습니다."
+			}
 		}
 	},
 	"shade-storm": {
 		"phenomenonName": {
 			"en": "Shade After Thunder",
 			"ko": "천둥 뒤의 그늘"
+		},
+		"narrative": "그늘은 폭풍이 내려앉을 자리를 만들고,\n폭풍은 그늘에 오래 없던 생기를 준다.\n서로를 살릴 수도, 소모시킬 수도 있다.",
+		"warning": "받아내기만 하면, 그늘이 먼저 무너진다.",
+		"storyBeats": {
+			"openingImage": {
+				"ko": "천둥 뒤의 그늘. 폭풍이 지나간 자리에, 조용한 숨이 남습니다."
+			},
+			"emotionalDynamic": {
+				"ko": "한쪽은 감정을 크게 내고, 한쪽은 조용히 견딥니다. 역할이 고정되면 지칩니다."
+			},
+			"hiddenStrength": {
+				"ko": "그늘은 폭풍을 버티게 하고, 폭풍은 그늘을 살아 있게 합니다. 균형만 맞으면 강해집니다."
+			},
+			"growthArc": {
+				"ko": "폭풍이 잦다면, 그늘을 돌보는 시간이 반드시 필요합니다."
+			}
 		}
 	},
 	"dawn-sunlit": {
 		"phenomenonName": {
 			"en": "Morning Arriving",
 			"ko": "도착하는 아침"
+		},
+		"narrative": "여명은 조용히 믿고,\n햇살은 따뜻하게 답한다.\n기다림이 보상받는 하늘이다.",
+		"warning": "너무 당연해지면, 고마움을 잊기 쉽다.",
+		"storyBeats": {
+			"openingImage": {
+				"ko": "아침이 ‘도착하는’ 하늘이 있습니다. 기다림이 헛되지 않은 날의 공기."
+			},
+			"emotionalDynamic": {
+				"ko": "한쪽은 믿고, 한쪽은 보여줍니다. 확신이 자연스럽게 오가지만, 말이 줄면 서운함도 쌓일 수 있어요."
+			},
+			"hiddenStrength": {
+				"ko": "따뜻함과 신뢰가 맞물립니다. 관계가 크게 흔들리지 않는 기반이 있습니다."
+			},
+			"growthArc": {
+				"ko": "가끔은 ‘괜찮아’ 말고 ‘고마워’를 더 자주 꺼내세요."
+			}
 		}
 	},
 	"wild-dawn": {
 		"phenomenonName": {
 			"en": "Breeze Before Sunrise",
 			"ko": "해 뜨기 전 산들바람"
+		},
+		"narrative": "바람은 먼저 움직이고,\n여명은 그 뒤를 천천히 밝힌다.\n둘이 맞추면, 시작이 유난히 근사하다.",
+		"warning": "서두르다 보면, 중요한 마음을 놓친다.",
+		"storyBeats": {
+			"openingImage": {
+				"ko": "해 뜨기 전, 산들바람이 먼저 옵니다. 아직 어둡지만, 이미 움직이는 하늘."
+			},
+			"emotionalDynamic": {
+				"ko": "당신은 먼저 나아가고, 그 사람은 천천히 확신을 쌓습니다. 리듬을 맞추는 게 관건이에요."
+			},
+			"hiddenStrength": {
+				"ko": "바람은 용기를 주고, 여명은 안전을 줍니다. 함께면 시작이 덜 두렵습니다."
+			},
+			"growthArc": {
+				"ko": "속도보다 ‘확인’이 먼저일 때, 이 하늘은 더 오래 갑니다."
+			}
 		}
 	},
 	"shade-dawn": {
 		"phenomenonName": {
 			"en": "Shade Welcoming Dawn",
 			"ko": "여명을 맞이하는 그늘"
+		},
+		"narrative": "그늘은 여명의 느린 빛을 편하게 맞고,\n여명은 그늘 덕분에 더 오래 머문다.\n조용한 아침이 관계를 살린다.",
+		"warning": "평온을 지키려다, 마음을 숨기게 될 수 있다.",
+		"storyBeats": {
+			"openingImage": {
+				"ko": "여명을 맞이하는 그늘. 밝아지는 속도가 느려서, 오히려 안심이 되는 하늘."
+			},
+			"emotionalDynamic": {
+				"ko": "둘 다 조용히 천천히 갑니다. 대신 확신을 말로 주지 않으면 불안이 생길 수 있어요."
+			},
+			"hiddenStrength": {
+				"ko": "서로를 재촉하지 않습니다. ‘괜찮은 날’을 오래 만드는 재능이 있습니다."
+			},
+			"growthArc": {
+				"ko": "다정함을 유지하려면, 필요한 말은 미루지 않는 게 중요합니다."
+			}
 		}
 	}
 }
