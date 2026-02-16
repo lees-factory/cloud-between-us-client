@@ -1,323 +1,23 @@
-import type { CloudType, CoupleChemistry, WeatherPhenomenon } from '$lib/types/cloud';
+import type { CloudType, CoupleChemistry, PremiumContent } from '$lib/types/cloud';
 import { buildPremiumReport } from '$lib/utils/premium/build-premium-report';
+import chemistryMatrixData from './chemistry-matrix.json';
 
 type ChemistryKey = `${CloudType}-${CloudType}`;
 
+/**
+ * Stored chemistry data allows partial premium content (overrides).
+ * Missing sections will be filled by the rule-based generator.
+ */
+interface StoredCoupleChemistry extends Omit<CoupleChemistry, 'user' | 'partner' | 'premium'> {
+	premium?: {
+		ko: Partial<PremiumContent>;
+		en: Partial<PremiumContent>;
+	};
+}
+
 export const CHEMISTRY_MATRIX: Partial<
-	Record<ChemistryKey, Omit<CoupleChemistry, 'user' | 'partner'>>
-> = {
-	'sunlit-mist': {
-		skyName: 'Morning Light Through Fog',
-		skyNameKo: '아침 안개 속의 햇살',
-		phenomenon: 'glow',
-		narrative: `
-      햇살의 따뜻한 빛이 안개의 감정을 천천히 녹인다.
-      안개는 이해받는다고 느끼고,
-      햇살은 보호하고 싶어진다.
-    `,
-		warning: '빛이 너무 강하면 안개는 사라진다.',
-		premium: {
-			ko: {
-				fullStory: `
-이른 아침, 햇살이 안개를 만날 때 세상은 부드러워집니다.
-안개가 걷혀서가 아니라, 빛이 그 곁에 머물기로 선택했기 때문입니다.
-
-당신의 사랑은 방향성이 있습니다.
-온기와 확신을 향해 빠르게 나아갑니다. 마음속에 불안이나 의문이 생기면, 즉시 상황을 투명하게 만들고 싶어 합니다.
-
-반면, 그 사람의 사랑은 깊이를 가집니다.
-그들은 말을 꺼내기 전에 공기의 온도를 먼저 느낍니다. 때로는 그들의 침묵이 거리감처럼 느껴질 수 있지만, 사실 그것은 마음속에서 감정의 형태를 빚어내고 있는 시간입니다.
-
-처음에는 당신의 빠른 걸음이 안개를 몰아붙이는 것 같고, 그 사람의 고요함이 당신의 빛을 가리는 것처럼 느낄 수 있습니다. 하지만 이것이 두 사람만의 고요하고 강력한 시너지입니다.
-
-당신은 이 관계에 온기를 불어넣고, 그 사람은 이 관계의 분위기를 깊게 만듭니다.
-
-당신이 없다면 이 하늘은 차갑게 가라앉을 것이고, 그 사람이 없다면 너무 눈부셔 쉴 곳이 없었을 것입니다. 당신의 빛이 안개를 몰아붙이지 않고, 안개가 당신의 빛을 밀어내지 않을 때, 이 하늘은 가장 아름답게 빛납니다.
-
-어떤 하늘은 금세 흩어지지만, 당신들의 하늘은 오래도록 머무릅니다.
-        `.trim(),
-				conflict: {
-					userTendency:
-						'문제를 재빨리 해결하고 싶어 합니다. "빨리 풀자"는 생각에 해결사 모드가 켜지며, 감정이 명확하게 정리되지 않고 길어지는 것을 견디기 힘들어합니다.',
-					partnerTendency:
-						'입을 열기 전 자신의 감정을 정리할 시간이 필요합니다. 당신의 빠른 해결책과 속도에 압도당한다고 느끼며, 침묵으로 숨어버릴 수 있습니다.',
-					tip: '침묵을 대화의 일부로 두세요. 무언가를 제안하기 전에 "지금은 내 위로가 필요해, 아니면 해결 방법이 필요해?"라고 물어보며 속도를 맞춰주세요.'
-				},
-				shelter: {
-					partnerNeeds: [
-						'재촉 없이 감정을 느낄 수 있는 여유',
-						'침묵이 존중받는다는 것을 아는 것',
-						'조용히 하는 작은 행동들을 알아차려주는 것'
-					],
-					userNeeds: [
-						'관계가 앞으로 나아가고 있다는 확신',
-						'망설임 없이 "나 여기 있어"라는 말을 듣는 것',
-						'가끔은 리드해도 된다는 신뢰'
-					],
-					closingLine: '안전함은 요란하지 않습니다. 꾸준한 것입니다.'
-				},
-				shadows: {
-					userShadows: [
-						'앞으로 나아가느라 상대의 조용한 필요를 놓칠 수 있습니다',
-						'모든 것을 밝히려는 마음이 쉴 그늘을 남기지 않을 수 있습니다'
-					],
-					partnerShadows: [
-						'너무 많은 감정을 흡수해 자신의 형태를 잃을 수 있습니다',
-						'침묵이 창이 아닌 벽이 될 수 있습니다'
-					]
-				},
-				actions: [
-					{
-						title: '고마움을 소리 내어 말하기',
-						desc: '안개 구름은 관계를 깊게 느끼지만 확신이 필요할 때가 많습니다. 구체적인 순간을 짚어 소리 내어 말해주세요.'
-					},
-					{
-						title: '감정의 속도 늦추어주기',
-						desc: '모든 침묵이 거리를 뜻하는 것은 아닙니다. 상처 주지 않기 위해 마음을 정돈하는 시간임을 이해하고 기다려주세요.'
-					},
-					{
-						title: '둘만의 작은 의식 만들기',
-						desc: '함께 커피 내리기, 산책하기 등 반복되는 작은 의식들이 모여 변덕스러운 날씨를 안정적인 기후로 만들어줍니다.'
-					}
-				],
-				shareCard: {
-					phrase:
-						'당신은 온기를 주고, 그 사람은 깊이를 더합니다. 함께할 때 세상은 더 부드러워집니다.',
-					caption: '둘 사이의 하늘을 발견해봐 — Cloud Between Us'
-				}
-			},
-			en: {
-				fullStory: `
-In the early morning, when sunlight meets mist, the world feels softer — not because it is simple, but because light chooses to stay.
-
-You love with direction. You move toward clarity, warmth, momentum. When something feels uncertain, you try to steady it.
-
-They love through depth. They feel the air before they speak. Sometimes their silence isn't distance — it's emotion forming shape.
-
-At first, you may wonder why they don't move as quickly. They may wonder why you move before fully feeling. But here is your quiet strength:
-
-You bring warmth. They bring atmosphere.
-
-Without you, the sky might stay hidden. Without them, it might feel too exposed. Together, you create something rare — light that doesn't rush the fog, and fog that doesn't resist the light.
-
-Some skies are fleeting. Yours lingers.
-        `.trim(),
-				conflict: {
-					userTendency:
-						'You try to solve issues quickly and move into "fix it" mode. You feel uneasy when emotions linger without clear resolution.',
-					partnerTendency:
-						'They need time before speaking and feel overwhelmed by fast solutions. They may retreat into silence when misunderstood.',
-					tip: 'Pause before solving. Ask, "Do you want comfort or clarity?" Let silence be part of the conversation.'
-				},
-				shelter: {
-					partnerNeeds: [
-						'having space to feel without being rushed',
-						'knowing their silence is respected, not punished',
-						'being noticed for the small things they do quietly'
-					],
-					userNeeds: [
-						'knowing the relationship has direction',
-						"hearing \"I'm here\" without hesitation",
-						'being trusted to lead sometimes'
-					],
-					closingLine: "Safety isn't loud. It's consistent."
-				},
-				shadows: {
-					userShadows: [
-						"may overlook a partner's quiet needs while steering forward",
-						'the desire to brighten everything can leave no room for shade'
-					],
-					partnerShadows: [
-						'may absorb too many emotions and lose their own shape',
-						'silence can become a wall instead of a window'
-					]
-				},
-				actions: [
-					{
-						title: 'Say appreciation out loud',
-						desc: 'Mist clouds feel deeply but need to know you notice. Be specific about what you value in them.'
-					},
-					{
-						title: 'Slow the emotional pace',
-						desc: "Not every pause is distance. Sometimes it is care forming quietly. Don't rush their processing time."
-					},
-					{
-						title: 'Create a shared ritual',
-						desc: 'Rituals like morning coffee or a weekly walk turn unpredictable weather into a stable, shared climate.'
-					}
-				],
-				shareCard: {
-					phrase: 'You bring warmth. They bring depth. Together, you soften the world.',
-					caption: 'Discover the sky between you — Cloud Between Us'
-				}
-			}
-		}
-	},
-	'sunlit-storm': {
-		skyName: 'Lightning at Noon',
-		phenomenon: 'thunder',
-		narrative: `
-      둘 다 강하다.
-      햇살은 방향을 잡고, 천둥은 속도를 올린다.
-      케미는 강렬하다.
-      충돌도 강렬하다.
-    `,
-		warning: null
-	},
-	'sunlit-dawn': {
-		skyName: 'First Light',
-		phenomenon: 'glow',
-		narrative: `
-      햇살이 여명에게 기다림의 보답을 준다.
-      서로의 시간을 존중할 때 하늘이 가장 아름답다.
-    `,
-		warning: null
-	},
-	'sunlit-wild': {
-		skyName: 'Wind in the Sun',
-		phenomenon: 'glow',
-		narrative: `
-      바람이 햇살을 데리고 간다.
-      함께 움직일 때 둘 다 빛난다.
-    `,
-		warning: '방향이 다르면 흩어질 수 있다.'
-	},
-	'sunlit-shade': {
-		skyName: 'Sun and Shadow',
-		phenomenon: 'glow',
-		narrative: `
-      햇살이 그늘에게 쉼을 주고, 그늘이 햇살에게 안정을 준다.
-      균형이 맞는 하늘.
-    `,
-		warning: null
-	},
-	'mist-storm': {
-		skyName: 'After the Thunder',
-		phenomenon: 'rain',
-		narrative: `
-      천둥이 지나간 뒤 안개가 피어오른다.
-      감정이 터진 뒤에 오는 이해.
-    `,
-		warning: null
-	},
-	'mist-dawn': {
-		skyName: 'Dawn Mist',
-		phenomenon: 'glow',
-		narrative: `
-      여명과 안개는 같은 고요함을 안다.
-      말하지 않아도 통한다.
-    `,
-		warning: null
-	},
-	'mist-wild': {
-		skyName: 'Mist in the Wind',
-		phenomenon: 'rain',
-		narrative: `
-      바람이 안개를 흩뜨린다.
-      함께하면 새로운 풍경이 된다.
-    `,
-		warning: '안개는 흩어지길 두려워할 수 있다.'
-	},
-	'mist-shade': {
-		skyName: 'Quiet Sky',
-		phenomenon: 'glow',
-		narrative: `
-      안개와 그늘. 말 없이 곁에 있는 사랑.
-      조용한 하늘이 편하다.
-    `,
-		warning: null
-	},
-	'storm-dawn': {
-		skyName: 'Storm Before Dawn',
-		phenomenon: 'thunder',
-		narrative: `
-      천둥이 치고 여명이 온다.
-      여명의 인내가 천둥을 풀어준다.
-    `,
-		warning: null
-	},
-	'storm-wild': {
-		skyName: 'Thunderstorm',
-		phenomenon: 'thunder',
-		narrative: `
-      천둥과 바람. 에너지가 폭발한다.
-      함께할 때 세상이 움직인다.
-    `,
-		warning: '너무 세면 둘 다 지칠 수 있다.'
-	},
-	'storm-shade': {
-		skyName: 'Shelter from the Storm',
-		phenomenon: 'rain',
-		narrative: `
-      그늘이 천둥에게 쉼을 준다.
-      천둥이 그늘에게 생기를 준다.
-    `,
-		warning: null
-	},
-	'dawn-wild': {
-		skyName: 'Wind at Dawn',
-		phenomenon: 'glow',
-		narrative: `
-      여명이 바람을 만나면 하늘이 열린다.
-      기다림과 움직임이 만난다.
-    `,
-		warning: null
-	},
-	'dawn-shade': {
-		skyName: 'Soft Morning',
-		phenomenon: 'glow',
-		narrative: `
-      여명과 그늘. 부드러운 아침.
-      서로를 재촉하지 않는다.
-    `,
-		warning: null
-	},
-	'wild-shade': {
-		skyName: 'Breeze in the Shade',
-		phenomenon: 'glow',
-		narrative: `
-      바람이 그늘을 찾고, 그늘이 바람에게 쉼을 준다.
-      자유와 안정이 공존한다.
-    `,
-		warning: null
-	},
-	'sunlit-sunlit': {
-		skyName: 'Double Sun',
-		phenomenon: 'glow',
-		narrative: '두 햇살이 만나면 하늘이 두 배로 밝아진다.',
-		warning: '서로의 그림자를 보지 못할 수 있다.'
-	},
-	'mist-mist': {
-		skyName: 'Deep Fog',
-		phenomenon: 'glow',
-		narrative: '두 안개. 말 없이도 깊이 통한다.',
-		warning: '너무 흐려지면 길을 잃을 수 있다.'
-	},
-	'storm-storm': {
-		skyName: 'Thunder and Lightning',
-		phenomenon: 'thunder',
-		narrative: '두 천둥. 열정이 맞닿으면 번개가 친다.',
-		warning: '폭발이 잦으면 지칠 수 있다.'
-	},
-	'dawn-dawn': {
-		skyName: 'Eternal Dawn',
-		phenomenon: 'glow',
-		narrative: '두 여명. 함께 기다리면 하늘이 열린다.',
-		warning: null
-	},
-	'wild-wild': {
-		skyName: 'Hurricane',
-		phenomenon: 'thunder',
-		narrative: '두 바람. 함께 돌면 세상이 돈다.',
-		warning: '멈출 줄 모르면 흩어질 수 있다.'
-	},
-	'shade-shade': {
-		skyName: 'Deep Shade',
-		phenomenon: 'glow',
-		narrative: '두 그늘. 고요함이 깊어진다.',
-		warning: '말이 너무 없으면 멀어질 수 있다.'
-	}
-};
+	Record<ChemistryKey, StoredCoupleChemistry>
+> = chemistryMatrixData as unknown as Partial<Record<ChemistryKey, StoredCoupleChemistry>>;
 
 export function getChemistry(user: CloudType, partner: CloudType): CoupleChemistry {
 	const key: ChemistryKey = `${user}-${partner}`;
@@ -328,15 +28,19 @@ export function getChemistry(user: CloudType, partner: CloudType): CoupleChemist
 		throw new Error(`Chemistry data not found for ${user} and ${partner}`);
 	}
 
-	// 1. 기본적으로 규칙 엔진으로 생성
+	// 1. Generate full report using rules
 	const generatedKo = buildPremiumReport(user, partner, 'ko');
 	const generatedEn = buildPremiumReport(user, partner, 'en');
 
-	// 2. 수동 override가 있으면 병합 (하드코딩된 내용 우선, 없는 필드는 자동 생성값 사용)
+	// 2. Merge with manual overrides
+	// Since overrides are Partial<PremiumContent>, we merge them into the generated full content.
+	// Note: This is a shallow merge. If overrides provide a section (e.g. 'conflict'),
+	// they must provide the FULL section, or use a deep merge utility if partial section overrides are needed.
+	// Currently chemistry-matrix.json provides full sections when overriding.
 	const premium = data.premium
 		? {
-				ko: { ...generatedKo, ...data.premium.ko },
-				en: { ...generatedEn, ...data.premium.en }
+				ko: { ...generatedKo, ...data.premium.ko } as PremiumContent,
+				en: { ...generatedEn, ...data.premium.en } as PremiumContent
 			}
 		: {
 				ko: generatedKo,

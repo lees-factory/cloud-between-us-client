@@ -8,23 +8,24 @@ export const load: PageServerLoad = async (event) => {
 	const locale = getLocaleFromEvent(event);
 
 	try {
-		const apiQuestions = await getQuestions(locale);
+		const apiSteps = await getQuestions(locale);
 
-		const steps = apiQuestions.map((q, index) => {
-			// Use local metadata for decoration
-			const currentTestData = locale === 'en' ? testDataEn : testData;
-			const localStep = currentTestData.steps[index % currentTestData.steps.length];
+		// The API returns steps (themes) containing questions.
+		// We randomly pick 1 question per step to match the existing frontend logic (12 steps total).
+		const steps = apiSteps.map((theme) => {
+			const randomIndex = Math.floor(Math.random() * theme.questions.length);
+			const q = theme.questions[randomIndex];
 
 			return {
-				id: localStep.id,
-				title: localStep.title,
-				emoji: localStep.emoji,
+				id: theme.id, // Keep the theme ID for styling/backgrounds
+				title: theme.title,
+				emoji: theme.emoji,
 				question: {
 					id: q.id,
-					text: q.questionText,
+					text: q.text,
 					options: q.options.map((opt) => ({
 						text: opt.text,
-						cloudType: opt.personaType
+						cloudType: opt.cloudType
 					}))
 				}
 			};
@@ -36,7 +37,7 @@ export const load: PageServerLoad = async (event) => {
 
 		const currentTestData = locale === 'en' ? testDataEn : testData;
 
-		// Fallback: For each step, randomly pick 1 of 4 questions
+		// Fallback: Pick 1 random question per step from local data to let the app function
 		const steps = currentTestData.steps.map((step) => {
 			const randomIndex = Math.floor(Math.random() * step.questions.length);
 			const q = step.questions[randomIndex];

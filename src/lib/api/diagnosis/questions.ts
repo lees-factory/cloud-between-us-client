@@ -5,18 +5,23 @@ const API_BASE = PUBLIC_API_URL || 'https://cloud-between.duckdns.org/api/v1';
 
 export interface QuestionOption {
 	text: string;
-	personaType: string;
+	cloudType: string;
 }
 
 export interface Question {
 	id: number;
-	stepId: number;
-	questionText: string;
+	text: string;
 	options: QuestionOption[];
-	orderIndex: number;
 }
 
-export async function getQuestions(locale: Locale = 'ko'): Promise<Question[]> {
+export interface DiagnosisStep {
+	id: number;
+	title: string;
+	emoji: string;
+	questions: Question[];
+}
+
+export async function getQuestions(locale: Locale = 'ko'): Promise<DiagnosisStep[]> {
 	const params = new URLSearchParams({ locale });
 	const response = await fetch(`${API_BASE}/diagnosis/questions?${params.toString()}`, {
 		method: 'GET',
