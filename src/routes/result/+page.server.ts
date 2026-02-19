@@ -14,12 +14,14 @@ export const load: PageServerLoad = async (event) => {
 	const typeParam = event.url.searchParams.get('type');
 	const answersParam = event.url.searchParams.get('answers');
 
+	const baseUrl = event.url.origin;
+
 	// 1. If 'type' is provided (from API analysis), use it directly
 	if (typeParam) {
 		try {
 			// Fetch profile from API
 			const profile = await getPersonaProfile(typeParam as CloudType, locale);
-			return { cloudProfile: profile, locale };
+			return { cloudProfile: profile, locale, baseUrl };
 		} catch (err) {
 			console.warn(`API profile not found for '${typeParam}', using local data.`);
 			// Fallback to local data if API fails
@@ -31,7 +33,7 @@ export const load: PageServerLoad = async (event) => {
 					locale === 'ko' ? 'Cloud 프로필을 찾을 수 없습니다' : 'Cloud profile not found'
 				);
 			}
-			return { cloudProfile: profile, locale };
+			return { cloudProfile: profile, locale, baseUrl };
 		}
 	}
 
@@ -68,7 +70,7 @@ export const load: PageServerLoad = async (event) => {
 		// Try to fetch profile from API first even for calculated type
 		try {
 			const profile = await getPersonaProfile(bestType, locale);
-			return { cloudProfile: profile, locale };
+			return { cloudProfile: profile, locale, baseUrl };
 		} catch (apiErr) {
 			console.warn(`API profile not found for '${bestType}', using local data.`);
 			// Fallback to local data
@@ -80,7 +82,7 @@ export const load: PageServerLoad = async (event) => {
 					locale === 'ko' ? 'Cloud 프로필을 찾을 수 없습니다' : 'Cloud profile not found'
 				);
 			}
-			return { cloudProfile: profile, locale };
+			return { cloudProfile: profile, locale, baseUrl };
 		}
 	} catch (err) {
 		if (err && typeof err === 'object' && 'status' in err) throw err;

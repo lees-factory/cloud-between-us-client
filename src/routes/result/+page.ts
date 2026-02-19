@@ -20,9 +20,11 @@ export const load: PageLoad = async ({ url, data }) => {
 		partnerParam && CLOUD_TYPES.includes(partnerParam as CloudType)
 			? (partnerParam as CloudType)
 			: null;
+	const baseUrl = (data as { baseUrl?: string }).baseUrl ?? url.origin;
 
 	return {
 		...data,
-		initialPartner
+		initialPartner,
+		baseUrl
 	};
 };
