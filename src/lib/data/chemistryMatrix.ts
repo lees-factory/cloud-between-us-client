@@ -1,56 +1,109 @@
-import type { CloudType, CoupleChemistry, PremiumContent } from '$lib/types/cloud';
-import { buildPremiumReport } from '$lib/utils/premium/build-premium-report';
-import chemistryMatrixData from './chemistry-matrix.json';
-
-type ChemistryKey = `${CloudType}-${CloudType}`;
-
 /**
- * Stored chemistry data allows partial premium content (overrides).
- * Missing sections will be filled by the rule-based generator.
+ * pair_meta / chemistry_matrix: data.json 기반.
+ * chemistry_matrix는 locale-at-leaf (skyName: { ko, en }, premium: { fullStory: { ko, en }, ... }).
  */
-interface StoredCoupleChemistry extends Omit<CoupleChemistry, 'user' | 'partner' | 'premium'> {
-	premium?: {
-		ko: Partial<PremiumContent>;
-		en: Partial<PremiumContent>;
-	};
+import type { CloudType, CoupleChemistry, WeatherPhenomenon } from '$lib/types/cloud';
+import type { Locale } from '$lib/i18n/translations';
+import { buildPremiumReport } from '$lib/utils/premium/build-premium-report';
+import data from './data.json';
+
+/** 코드에서는 sunlit-mist 형태 사용. data는 sunlit_mist. */
+const pairMetaRaw = data.pair_meta as Record<string, unknown>;
+export const PAIR_META = Object.fromEntries(
+	Object.entries(pairMetaRaw).map(([k, v]) => [k.replace(/_/g, '-'), v])
+) as Record<string, unknown>;
+
+type ChemRow = {
+	skyName: string | { ko: string; en: string };
+	phenomenon: WeatherPhenomenon;
+	narrative: string | { ko: string; en: string };
+	warning: string | null | { ko: string; en: string };
+	premium?: unknown;
+};
+
+function pickLeaf(
+	val: string | null | { ko: string; en: string } | undefined,
+	locale: Locale
+): string | null {
+	if (val == null) return null;
+	if (typeof val === 'object' && 'ko' in val && 'en' in val) {
+		return val[locale] ?? val.ko ?? null;
+	}
+	return typeof val === 'string' ? val : null;
 }
 
-export const CHEMISTRY_MATRIX: Partial<
-	Record<ChemistryKey, StoredCoupleChemistry>
-> = chemistryMatrixData as unknown as Partial<Record<ChemistryKey, StoredCoupleChemistry>>;
+const chemistryMatrix = data.chemistry_matrix as Record<string, ChemRow>;
 
-export function getChemistry(user: CloudType, partner: CloudType): CoupleChemistry {
-	const key: ChemistryKey = `${user}-${partner}`;
-	const reverseKey: ChemistryKey = `${partner}-${user}`;
-	const data = CHEMISTRY_MATRIX[key] ?? CHEMISTRY_MATRIX[reverseKey];
+function toDataKey(pair: string): string {
+	return pair.replace(/-/g, '_');
+}
 
-	if (!data) {
+/** 리프가 { ko, en }인 트리를 해당 locale 값만 남긴 트리로 변환 */
+function pickLocale(obj: unknown, locale: Locale): unknown {
+	if (obj === null || obj === undefined) return obj;
+	if (typeof obj === 'object' && 'ko' in obj && 'en' in obj && Object.keys(obj).length === 2) {
+		const v = (obj as { ko: string; en: string })[locale];
+		return v ?? (obj as { ko: string; en: string }).ko;
+	}
+	if (Array.isArray(obj)) {
+		return (obj as unknown[]).map((item) => {
+			if (item !== null && typeof item === 'object' && 'text' in item) {
+				const t = (item as { text: { ko: string; en: string } }).text;
+				return t[locale] ?? t.ko;
+			}
+			return pickLocale(item, locale);
+		});
+	}
+	if (typeof obj === 'object') {
+		const out: Record<string, unknown> = {};
+		for (const [k, v] of Object.entries(obj)) {
+			out[k] = pickLocale(v, locale);
+		}
+		return out;
+	}
+	return obj;
+}
+
+export function getChemistry(
+	user: CloudType,
+	partner: CloudType,
+	locale: Locale = 'ko'
+): CoupleChemistry {
+	const dataKey = toDataKey(`${user}-${partner}`);
+	const reverseDataKey = toDataKey(`${partner}-${user}`);
+	const row = chemistryMatrix[dataKey] ?? chemistryMatrix[reverseDataKey];
+	if (!row) {
 		throw new Error(`Chemistry data not found for ${user} and ${partner}`);
 	}
 
-	// 1. Generate full report using rules
-	const generatedKo = buildPremiumReport(user, partner, 'ko');
-	const generatedEn = buildPremiumReport(user, partner, 'en');
+	const skyNameLeaf = row.skyName;
+	const skyName =
+		typeof skyNameLeaf === 'object' && skyNameLeaf !== null && 'en' in skyNameLeaf
+			? skyNameLeaf.en
+			: (skyNameLeaf as string);
+	const skyNameKo =
+		typeof skyNameLeaf === 'object' && skyNameLeaf !== null && 'ko' in skyNameLeaf
+			? skyNameLeaf.ko
+			: undefined;
 
-	// 2. Merge with manual overrides
-	// Since overrides are Partial<PremiumContent>, we merge them into the generated full content.
-	// Note: This is a shallow merge. If overrides provide a section (e.g. 'conflict'),
-	// they must provide the FULL section, or use a deep merge utility if partial section overrides are needed.
-	// Currently chemistry-matrix.json provides full sections when overriding.
-	const premium = data.premium
-		? {
-				ko: { ...generatedKo, ...data.premium.ko } as PremiumContent,
-				en: { ...generatedEn, ...data.premium.en } as PremiumContent
-			}
-		: {
-				ko: generatedKo,
-				en: generatedEn
-			};
+	const premium = row.premium
+		? ({
+				ko: pickLocale(row.premium, 'ko'),
+				en: pickLocale(row.premium, 'en')
+			} as CoupleChemistry['premium'])
+		: ({
+				ko: buildPremiumReport(user, partner, 'ko'),
+				en: buildPremiumReport(user, partner, 'en')
+			} as CoupleChemistry['premium']);
 
 	return {
 		user,
 		partner,
-		...data,
+		skyName,
+		skyNameKo,
+		phenomenon: row.phenomenon,
+		narrative: pickLeaf(row.narrative, locale) ?? '',
+		warning: pickLeaf(row.warning, locale),
 		premium
 	};
 }

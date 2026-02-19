@@ -1,0 +1,2677 @@
+{
+  "pair_meta": {
+    "sunlit_mist": {
+      "phenomenonName": {
+        "ko": "아침 안개 속의 햇살",
+        "en": "Morning Light Through Fog"
+      },
+      "vibeTags": [
+        {
+          "text": {
+            "ko": "부드러운",
+            "en": "tender"
+          }
+        },
+        {
+          "text": {
+            "ko": "인내하는",
+            "en": "patient"
+          }
+        },
+        {
+          "text": {
+            "ko": "빛나는",
+            "en": "luminous"
+          }
+        }
+      ],
+      "storyBeats": {
+        "openingImage": {
+          "ko": "이른 아침, 햇살이 안개를 만날 때 세상은 부드러워진다. 단순해서가 아니라, 빛이 머물기로 했기 때문이다.",
+          "en": "In the early morning, when sunlight meets mist, the world grows softer — not because it is simple, but because light chooses to stay."
+        },
+        "emotionalDynamic": {
+          "ko": "당신은 확신 쪽으로 나아간다. 그 사람은 말하기 전에 공기를 먼저 느낀다. 때로 당신의 속도는 압박처럼, 그 사람의 고요함은 거리감처럼 보일 수 있다.",
+          "en": "You move toward clarity. They feel the air before they speak. Sometimes your speed looks like pressure; sometimes their quiet looks like distance."
+        },
+        "hiddenStrength": {
+          "ko": "당신은 온기를 주고, 그 사람은 분위기를 만든다. 함께할 때, 안개를 재촉하지 않는 빛과 빛을 밀어내지 않는 안개가 된다.",
+          "en": "You bring warmth. They bring atmosphere. Together, you create light that doesn't rush the fog, and fog that doesn't resist the light."
+        },
+        "growthArc": {
+          "ko": "어떤 하늘은 금세 흩어지지만, 당신들의 하늘은 오래 머문다.",
+          "en": "Some skies are fleeting. Yours lingers."
+        }
+      }
+    },
+    "mist_sunlit": {
+      "phenomenonName": {
+        "ko": "빛을 맞이하는 안개",
+        "en": "Fog Welcoming the Sun"
+      },
+      "vibeTags": [
+        {
+          "text": {
+            "ko": "수용하는",
+            "en": "receptive"
+          }
+        },
+        {
+          "text": {
+            "ko": "따뜻해지는",
+            "en": "warming"
+          }
+        },
+        {
+          "text": {
+            "ko": "점진적",
+            "en": "gradual"
+          }
+        }
+      ],
+      "storyBeats": {
+        "openingImage": {
+          "ko": "당신이 먼저 있었다. 고요히, 낮은 곳에 머물며. 그다음 그 사람의 빛이 왔다. 당신을 태우러 온 게 아니라 곁에 머물려 왔다.",
+          "en": "You were there first — quiet, hovering close to the ground. Then their light arrived, not to burn through you, but to stay beside you."
+        },
+        "hiddenStrength": {
+          "ko": "당신은 그 사람의 온기에 깊이를 더해 준다. 당신이 없었으면 그 빛은 쉴 곳이 없었을 것이다.",
+          "en": "You give depth to their warmth. Without you, their light would have nowhere to rest."
+        }
+      }
+    },
+    "sunlit_storm": {
+      "phenomenonName": {
+        "ko": "한낮의 번개",
+        "en": "Lightning at Noon"
+      },
+      "vibeTags": [
+        {
+          "text": {
+            "ko": "전기적",
+            "en": "electric"
+          }
+        },
+        {
+          "text": {
+            "ko": "대담한",
+            "en": "bold"
+          }
+        },
+        {
+          "text": {
+            "ko": "부딪치는",
+            "en": "clashing"
+          }
+        }
+      ],
+      "storyBeats": {
+        "openingImage": {
+          "ko": "사그라들기를 거부하는 두 힘. 햇살이 천둥을 만나면 하늘이 열립니다 — 선명하고, 요란하고, 잊히지 않는.",
+          "en": "Two forces that refuse to dim. When sunlight meets storm, the sky cracks open — vivid, loud, unforgettable."
+        },
+        "emotionalDynamic": {
+          "ko": "당신은 방향을 잡고, 그 사람은 쏟아낸다. 당신은 방향을 지키고 싶고, 그 사람은 오래 참았던 걸 해방하고 싶어 한다.",
+          "en": "You steer. They strike. You want to hold a direction; they want to release what's been held too long. The tension is real — and so is the spark."
+        },
+        "hiddenStrength": {
+          "ko": "당신이 천둥을 이끌려 하지 않고, 그 사람이 고요를 깨려 하지 않을 때, 드문 하늘이 열린다. 빛과 천둥이 공존하는 하늘.",
+          "en": "When you stop trying to lead the storm and they stop trying to break the calm, something rare appears — a sky that holds both light and thunder."
+        }
+      }
+    },
+    "storm_sunlit": {
+      "phenomenonName": {
+        "ko": "빛을 향한 천둥",
+        "en": "Thunder Reaching Light"
+      },
+      "storyBeats": {
+        "openingImage": {
+          "ko": "당신은 날씨처럼 온다. 갑작스럽고, 솔직하고, 무시할 수 없이. 그 사람은 거기 서 있다. 흔들리지 않고 밝게.",
+          "en": "You arrive like weather — sudden, honest, impossible to ignore. And they stand there, steady, bright, unshaken."
+        }
+      }
+    },
+    "mist_storm": {
+      "phenomenonName": {
+        "ko": "천둥이 지나간 뒤",
+        "en": "After the Thunder"
+      },
+      "vibeTags": [
+        {
+          "text": {
+            "ko": "치유의",
+            "en": "healing"
+          }
+        },
+        {
+          "text": {
+            "ko": "대조적",
+            "en": "contrast"
+          }
+        },
+        {
+          "text": {
+            "ko": "잔향",
+            "en": "aftermath"
+          }
+        }
+      ],
+      "storyBeats": {
+        "openingImage": {
+          "ko": "천둥이 지나간 뒤, 안개가 땅에서 피어오른다. 하늘이 고요해지고, 축축한 공기 속에서 뭔가 새로운 게 만들어지기 시작한다.",
+          "en": "After the thunder passes, mist rises from the ground. The sky quiets. Something new begins to form in the damp air."
+        },
+        "hiddenStrength": {
+          "ko": "그 사람은 느끼는 걸 쏟아내고, 당신은 남는 걸 품는다. 함께하면 모든 폭풍이 풍경으로 바뀐다.",
+          "en": "They release what they feel; you hold what remains. Together, you turn every storm into a landscape."
+        }
+      }
+    },
+    "storm_mist": {
+      "phenomenonName": {
+        "ko": "안개 위의 번개",
+        "en": "Lightning Over the Mist"
+      },
+      "storyBeats": {
+        "openingImage": {
+          "ko": "당신이 번쩍이면, 그 사람은 흡수한다. 당신의 솔직함이 관통하고, 그 사람의 고요함이 떨어지는 걸 받아 낸다.",
+          "en": "You flash, and they absorb. Your honesty cuts through; their quiet catches what falls."
+        }
+      }
+    },
+    "dawn_storm": {
+      "phenomenonName": {
+        "ko": "새벽 전의 폭풍",
+        "en": "Storm Before Dawn"
+      },
+      "vibeTags": [
+        {
+          "text": {
+            "ko": "변화하는",
+            "en": "transformative"
+          }
+        },
+        {
+          "text": {
+            "ko": "날것의",
+            "en": "raw"
+          }
+        },
+        {
+          "text": {
+            "ko": "희망찬",
+            "en": "hopeful"
+          }
+        }
+      ],
+      "storyBeats": {
+        "openingImage": {
+          "ko": "빛이 오기 전, 하늘이 흔들린다. 폭풍은 끝이 아니다. 아침을 위해 길을 여는 것이다.",
+          "en": "Before the light arrives, the sky shakes. The storm is not the end — it is what clears the path for morning."
+        },
+        "hiddenStrength": {
+          "ko": "당신의 인내가 폭풍을 약하게 하는 게 아니다. 내려앉을 곳을 줄 뿐이다. 그 사람의 강렬함이 당신의 고요를 깨는 게 아니다. 새벽이 그만한 가치가 있다고 느끼게 해 준다.",
+          "en": "Your patience doesn't weaken the storm — it gives it somewhere to land. Their intensity doesn't break your calm — it makes the dawn feel earned."
+        }
+      }
+    },
+    "wild_shade": {
+      "phenomenonName": {
+        "ko": "그늘 속의 바람",
+        "en": "Breeze in the Shade"
+      },
+      "vibeTags": [
+        {
+          "text": {
+            "ko": "균형잡힌",
+            "en": "balanced"
+          }
+        },
+        {
+          "text": {
+            "ko": "장난스러운",
+            "en": "playful"
+          }
+        },
+        {
+          "text": {
+            "ko": "안정적",
+            "en": "grounding"
+          }
+        }
+      ],
+      "storyBeats": {
+        "openingImage": {
+          "ko": "바람은 멈추지 않는다. 다만 그늘을 만나면 느려진다. 그래야 해서가 아니라, 그러고 싶어서.",
+          "en": "The wind doesn't stop — but it slows when it finds shade. Not because it has to. Because it wants to."
+        },
+        "hiddenStrength": {
+          "ko": "당신은 움직임을 가져오고, 그 사람은 쉼을 준다. 세상에는 둘 다 필요하고, 이 하늘도 마찬가지다.",
+          "en": "You bring movement; they bring rest. The world needs both — and so does this sky."
+        }
+      }
+    },
+    "shade_wild": {
+      "phenomenonName": {
+        "ko": "바람이 스치는 그늘",
+        "en": "Shade Touched by Wind"
+      },
+      "storyBeats": {
+        "openingImage": {
+          "ko": "당신은 고요 속에 만족하며 가만히 있었다. 그다음 그 사람이 왔다. 흐트러뜨리려고가 아니라, 공기도 움직일 수 있다는 걸 알려 주려고.",
+          "en": "You were still, content in your quiet. Then they arrived — not to disrupt, but to remind you the air can move."
+        }
+      }
+    },
+    "sunlit_dawn": {
+      "phenomenonName": {
+        "ko": "첫 번째 빛",
+        "en": "First Light"
+      },
+      "vibeTags": [
+        {
+          "text": {
+            "ko": "부드러운",
+            "en": "gentle"
+          }
+        },
+        {
+          "text": {
+            "ko": "따뜻한",
+            "en": "warm"
+          }
+        },
+        {
+          "text": {
+            "ko": "조화로운",
+            "en": "synchronized"
+          }
+        }
+      ],
+      "storyBeats": {
+        "openingImage": {
+          "ko": "해가 뜨고, 여명은 기다리고 있었다. 우연이 아니다. 어떤 하늘에서든 가장 자연스러운 만남이다.",
+          "en": "The sun rises, and the dawn has been waiting. This is not coincidence — it is the most natural meeting in any sky."
+        },
+        "hiddenStrength": {
+          "ko": "당신의 따뜻함이 그 사람의 인내에 보답하고, 그 사람의 고요한 믿음이 당신의 빛을 잡아 준다.",
+          "en": "Your warmth rewards their patience. Their quiet faith steadies your glow."
+        }
+      }
+    },
+    "dawn_mist": {
+      "phenomenonName": {
+        "ko": "새벽 안개",
+        "en": "Dawn Mist"
+      },
+      "vibeTags": [
+        {
+          "text": {
+            "ko": "고요한",
+            "en": "silent"
+          }
+        },
+        {
+          "text": {
+            "ko": "직관적",
+            "en": "intuitive"
+          }
+        },
+        {
+          "text": {
+            "ko": "다정한",
+            "en": "tender"
+          }
+        }
+      ],
+      "storyBeats": {
+        "openingImage": {
+          "ko": "세상이 깨기 전에 만나는 두 개의 고요한 존재. 말이 필요 없다. 이른 공기의 정적만으로 충분하다.",
+          "en": "Two quiet presences meeting before the world wakes. No words needed — just the shared stillness of early air."
+        },
+        "hiddenStrength": {
+          "ko": "당신들은 대부분이 놓치는 걸 안다. 침묵이 가장 솔직한 대화가 될 수 있다는 걸.",
+          "en": "You both understand what most people miss: that silence can be the most honest conversation."
+        }
+      }
+    },
+    "storm_storm": {
+      "phenomenonName": {
+        "ko": "천둥과 번개",
+        "en": "Thunder and Lightning"
+      },
+      "vibeTags": [
+        {
+          "text": {
+            "ko": "폭발적",
+            "en": "explosive"
+          }
+        },
+        {
+          "text": {
+            "ko": "날것의",
+            "en": "raw"
+          }
+        },
+        {
+          "text": {
+            "ko": "무필터",
+            "en": "unfiltered"
+          }
+        }
+      ],
+      "storyBeats": {
+        "openingImage": {
+          "ko": "두 폭풍의 만남은 파괴가 아니다. 숨길 게 없는 하늘이다. 모든 섬광은 솔직하고, 모든 울림은 진짜다.",
+          "en": "Two storms meeting is not destruction — it's a sky that has nothing to hide. Every flash is honest. Every rumble is real."
+        },
+        "hiddenStrength": {
+          "ko": "다른 누구도 당신들의 강렬함을 맞출 수 없다. 혼란이 아니다. 당신들만 쓰는 언어다.",
+          "en": "No one else can match your intensity. That's not chaos — it's a language only you two speak."
+        }
+      }
+    },
+    "sunlit_wild": {
+      "phenomenonName": {
+        "ko": "햇살 속의 바람",
+        "en": "Wind in the Sun"
+      }
+    },
+    "wild_sunlit": {
+      "phenomenonName": {
+        "ko": "햇살을 탄 바람",
+        "en": "Sunlit Wind"
+      }
+    },
+    "sunlit_shade": {
+      "phenomenonName": {
+        "ko": "빛과 그늘",
+        "en": "Sun and Shadow"
+      }
+    },
+    "shade_sunlit": {
+      "phenomenonName": {
+        "ko": "햇살 아래 그늘",
+        "en": "Shadow Under Sunlight"
+      }
+    },
+    "mist_dawn": {
+      "phenomenonName": {
+        "ko": "새벽 안개",
+        "en": "Dawn Mist"
+      }
+    },
+    "mist_wild": {
+      "phenomenonName": {
+        "ko": "바람 속 안개",
+        "en": "Mist in the Wind"
+      }
+    },
+    "wild_mist": {
+      "phenomenonName": {
+        "ko": "안개를 가르는 바람",
+        "en": "Wind Parting the Mist"
+      }
+    },
+    "mist_shade": {
+      "phenomenonName": {
+        "ko": "고요한 하늘",
+        "en": "Quiet Sky"
+      }
+    },
+    "shade_mist": {
+      "phenomenonName": {
+        "ko": "안개를 품은 그늘",
+        "en": "Shade Embracing Mist"
+      }
+    },
+    "mist_mist": {
+      "phenomenonName": {
+        "ko": "깊은 안개",
+        "en": "Deep Fog"
+      }
+    },
+    "storm_dawn": {
+      "phenomenonName": {
+        "ko": "아침 전의 천둥",
+        "en": "Thunder Before Morning"
+      }
+    },
+    "storm_wild": {
+      "phenomenonName": {
+        "ko": "뇌우",
+        "en": "Thunderstorm"
+      }
+    },
+    "wild_storm": {
+      "phenomenonName": {
+        "ko": "천둥을 쫓는 바람",
+        "en": "Wind Chasing Thunder"
+      }
+    },
+    "storm_shade": {
+      "phenomenonName": {
+        "ko": "폭풍의 쉼터",
+        "en": "Shelter from the Storm"
+      }
+    },
+    "shade_storm": {
+      "phenomenonName": {
+        "ko": "천둥 뒤의 그늘",
+        "en": "Shade After Thunder"
+      }
+    },
+    "dawn_sunlit": {
+      "phenomenonName": {
+        "ko": "도착하는 아침",
+        "en": "Morning Arriving"
+      }
+    },
+    "dawn_wild": {
+      "phenomenonName": {
+        "ko": "새벽의 바람",
+        "en": "Wind at Dawn"
+      }
+    },
+    "wild_dawn": {
+      "phenomenonName": {
+        "ko": "해 뜨기 전 산들바람",
+        "en": "Breeze Before Sunrise"
+      }
+    },
+    "dawn_shade": {
+      "phenomenonName": {
+        "ko": "부드러운 아침",
+        "en": "Soft Morning"
+      }
+    },
+    "shade_dawn": {
+      "phenomenonName": {
+        "ko": "여명을 맞이하는 그늘",
+        "en": "Shade Welcoming Dawn"
+      }
+    },
+    "dawn_dawn": {
+      "phenomenonName": {
+        "ko": "영원한 새벽",
+        "en": "Eternal Dawn"
+      }
+    },
+    "sunlit_sunlit": {
+      "phenomenonName": {
+        "ko": "두 개의 태양",
+        "en": "Double Sun"
+      }
+    },
+    "wild_wild": {
+      "phenomenonName": {
+        "ko": "허리케인",
+        "en": "Hurricane"
+      }
+    },
+    "shade_shade": {
+      "phenomenonName": {
+        "ko": "깊은 그늘",
+        "en": "Deep Shade"
+      }
+    }
+  },
+  "copy_pool": {
+    "openingPatterns": [
+      {
+        "text": {
+          "ko": "{userCloud}이(가) {partnerCloud}을(를) 만나면 공기가 달라진다.",
+          "en": "Something shifts in the air when {userCloud} meets {partnerCloud}."
+        }
+      },
+      {
+        "text": {
+          "ko": "아무 말 없이도 하늘은 이미 안다.",
+          "en": "Before anything is said, the sky already knows."
+        }
+      },
+      {
+        "text": {
+          "ko": "두 구름이 만난다. 힘으로가 아니라 기후로.",
+          "en": "Two clouds find each other — not by force, but by weather."
+        }
+      },
+      {
+        "text": {
+          "ko": "공기가 바뀐다. 조용하지만 분명하게.",
+          "en": "The air changes. Quietly, but unmistakably."
+        }
+      }
+    ],
+    "softeningLines": [
+      {
+        "text": {
+          "ko": "완벽해서가 아니라, 진짜여서.",
+          "en": "Not because it's perfect — because it's true."
+        }
+      },
+      {
+        "text": {
+          "ko": "쉬워서가 아니라, 머물러서.",
+          "en": "Not because it's easy — because it stays."
+        }
+      },
+      {
+        "text": {
+          "ko": "확신에서가 아니라, 더 부드러운 무언가에서.",
+          "en": "Not from certainty — from something gentler."
+        }
+      },
+      {
+        "text": {
+          "ko": "잊히지 않는 종류의 날씨.",
+          "en": "The kind of weather you don't forget."
+        }
+      }
+    ],
+    "strengthLines": [
+      {
+        "text": {
+          "ko": "혼자선 만들 수 없는 하늘을 함께 만든다",
+          "en": "you create a sky that neither of you could hold alone"
+        }
+      },
+      {
+        "text": {
+          "ko": "둘 사이 공기가 머물고 싶어지는 게 된다",
+          "en": "the air between you becomes something worth staying in"
+        }
+      },
+      {
+        "text": {
+          "ko": "함께 나누는 게 날씨가 아니라 기후가 된다",
+          "en": "what you share becomes a climate, not just weather"
+        }
+      },
+      {
+        "text": {
+          "ko": "다름이 같은 하늘의 결이 된다",
+          "en": "your differences become the texture of the same sky"
+        }
+      }
+    ],
+    "growthLines": [
+      {
+        "text": {
+          "ko": "이 하늘은 서두르지 않는다. 깊어질 뿐이다.",
+          "en": "This sky doesn't rush. It deepens."
+        }
+      },
+      {
+        "text": {
+          "ko": "어떤 하늘은 흩어지지만, 당신들의 하늘은 머무릅니다.",
+          "en": "Some skies scatter. Yours holds."
+        }
+      },
+      {
+        "text": {
+          "ko": "둘 사이의 날씨는 아직 만들어지고 있다. 그게 아름다운 부분이다.",
+          "en": "The weather between you is still forming — and that's the beautiful part."
+        }
+      },
+      {
+        "text": {
+          "ko": "천천히 자라는 것이 남습니다.",
+          "en": "What grows slowly, stays."
+        }
+      }
+    ],
+    "closingLines": [
+      {
+        "text": {
+          "ko": "안전함은 요란하지 않다. 꾸준한 것이다.",
+          "en": "Safety isn't loud. It's consistent."
+        }
+      },
+      {
+        "text": {
+          "ko": "가장 좋은 쉼터는 모양을 바꾸라고 하지 않는 곳이다.",
+          "en": "The best shelter is the one that doesn't ask you to change shape."
+        }
+      },
+      {
+        "text": {
+          "ko": "쉼이 항상 쉼처럼 보이진 않는다. 가끔은 '보여진다'는 느낌으로 다가온다.",
+          "en": "Rest doesn't always look like rest. Sometimes it looks like being seen."
+        }
+      },
+      {
+        "text": {
+          "ko": "돌아가고 싶은 하늘 — 그곳이 집입니다.",
+          "en": "The sky you return to — that's home."
+        }
+      }
+    ],
+    "shareCardPhrases": [
+      {
+        "text": {
+          "ko": "어떤 하늘은 오래 남아.",
+          "en": "Some skies linger."
+        }
+      },
+      {
+        "text": {
+          "ko": "모든 날씨가 지나가는 건 아니야.",
+          "en": "Not all weather passes."
+        }
+      },
+      {
+        "text": {
+          "ko": "우리가 만든 하늘을 봐.",
+          "en": "Look at the sky we made."
+        }
+      },
+      {
+        "text": {
+          "ko": "이것이 우리 사이의 공기가 흐르는 방식이야.",
+          "en": "This is how our air moves."
+        }
+      }
+    ],
+    "shareCardCaptions": [
+      {
+        "text": {
+          "ko": "둘 사이의 하늘을 발견해봐 — Cloud Between Us",
+          "en": "Discover the sky between you — Cloud Between Us"
+        }
+      },
+      {
+        "text": {
+          "ko": "너희는 어떤 날씨를 만들어?",
+          "en": "What kind of weather do you make together?"
+        }
+      },
+      {
+        "text": {
+          "ko": "너희 사랑에는 하늘이 있어. 이게 그 하늘이야.",
+          "en": "Your love has a sky. This is it."
+        }
+      },
+      {
+        "text": {
+          "ko": "두 개의 구름. 하나의 하늘. — Cloud Between Us",
+          "en": "Two clouds. One sky. — Cloud Between Us"
+        }
+      }
+    ],
+    "frictionPatterns": {
+      "pace_mismatch": {
+        "ko": "마찰은 문제가 아니라 속도 차이에서 온다. 한쪽이 숨 돌리기도 전에 다른 쪽이 다음으로 넘어간다.",
+        "en": "The friction isn't about the issue — it's about the pace. One moves before the other has landed."
+      },
+      "temperature_mismatch": {
+        "ko": "마찰은 옳고 그름이 아니라 온도 차이에서 온다. 한쪽은 뜨겁고, 다른 쪽은 차분하다.",
+        "en": "The friction isn't about right or wrong — it's about temperature. One runs warm while the other stays cool."
+      },
+      "same_pace": {
+        "ko": "같은 속도로 움직이다 보면, 멈춰야 할 순간을 둘 다 지나치기 쉽다.",
+        "en": "You move at the same speed — which means you may accelerate past the moment that needed pausing."
+      },
+      "same_cool": {
+        "ko": "둘 다 기다리다 보면, 말하지 않은 게 말한 것보다 커질 때가 있다.",
+        "en": "You both wait. Sometimes so long that the unspoken grows louder than the spoken."
+      }
+    },
+    "seasonFirstMeet": {
+      "fast_fast": [
+        {
+          "text": {
+            "ko": "두 불꽃이 부딪히듯, 빠르고, 강렬하고, 외면할 수 없는 만남. 말이 시작되기도 전에 공기가 달라져요.",
+            "en": "You collide like two sparks — quick, electric, impossible to ignore. The air charges before a word is spoken."
+          }
+        },
+        {
+          "text": {
+            "ko": "두 줄기 바람이 만나는 순간, 하늘이 단번에 밝아집니다. 초대 같은 건 필요 없었어요.",
+            "en": "Two currents meet and the sky lights up instantly. Neither of you waits for an invitation."
+          }
+        }
+      ],
+      "fast_slow": [
+        {
+          "text": {
+            "ko": "한 사람은 햇살처럼 다가오고, 다른 사람은 안개 속에서 조용히 바라봅니다. 끌림은 한순간이지만, 리듬을 맞추는 데는 시간이 걸려요.",
+            "en": "One of you arrives like sunlight; the other watches from inside the fog. The pull is immediate — but the rhythm takes time."
+          }
+        },
+        {
+          "text": {
+            "ko": "빠르게 손을 내미는 사람, 천천히 알아가는 사람. 서로 다른 속도 사이에서, 무언가 부드러운 것이 싹틉니다.",
+            "en": "You reach out fast. They notice slowly. Between the two speeds, something tender begins."
+          }
+        }
+      ],
+      "slow_fast": [
+        {
+          "text": {
+            "ko": "그 사람은 돌풍처럼 나타나고, 당신은 눈보다 먼저 피부로 그 변화를 느낍니다. 그 사람이 성큼 다가올 때, 당신은 한 호흡 고르는 중이에요.",
+            "en": "They arrive like a gust; you feel the shift before seeing it. You take a breath while they take the first step."
+          }
+        },
+        {
+          "text": {
+            "ko": "그 사람 주변의 공기는 빠르게 바뀌지만, 당신은 온도를 먼저 느끼고 싶은 사람. 만남이란 둘 사이의 조용한 줄다리기입니다.",
+            "en": "The air changes fast around them, but you prefer to feel the temperature first. Meeting is a quiet negotiation."
+          }
+        }
+      ],
+      "slow_slow": [
+        {
+          "text": {
+            "ko": "둘 다 서두르지 않아요. 첫 만남은 불꽃이라기보다, 이름 붙이기 전에 서서히 바뀌는 기압 같은 것. 누가 먼저랄 것도 없이, 날씨가 만들어지고 있었어요.",
+            "en": "Neither of you rushes. The first meeting is less a spark and more a slow shift in pressure — like weather forming before anyone names it."
+          }
+        },
+        {
+          "text": {
+            "ko": "둘 다 기다리는 사람이에요. 그 느긋한 기다림 속에서, 억지로 만든 적 없는 하늘이 열립니다.",
+            "en": "You both wait. And in that shared waiting, something rare begins: a sky that was never forced."
+          }
+        }
+      ]
+    },
+    "seasonSettling": {
+      "warm_warm": [
+        {
+          "text": {
+            "ko": "온기가 두 배가 돼요. 편안함은 쉽게 찾아옵니다 — 어쩌면 너무 쉽게. 이 온기가 당연한 체온이 되지 않도록 지켜야 할 때예요.",
+            "en": "The warmth doubles. Comfort comes easy — almost too easy. The challenge is keeping the fire from becoming background heat."
+          }
+        },
+        {
+          "text": {
+            "ko": "따뜻한 오후 햇살 둘이 겹치듯, 자연스럽게 서로에게 스며듭니다. 다만 온기에도 돌봄이 필요하다는 걸, 잊기 쉬운 시기이기도 해요.",
+            "en": "You settle into each other like two sunlit afternoons. The danger is forgetting that warmth still needs tending."
+          }
+        }
+      ],
+      "warm_cool": [
+        {
+          "text": {
+            "ko": "한 사람은 온기를, 다른 사람은 명료함을 가져와요. 차분한 게 냉정한 게 아니고, 따뜻한 게 통제하려는 게 아니라는 걸 배우는 시간입니다.",
+            "en": "One of you brings warmth, the other brings clarity. Settling means learning that cool is not cold — and warm is not control."
+          }
+        },
+        {
+          "text": {
+            "ko": "당신의 온기가 그 사람의 고요함과 만나요. 시간이 흐르면, 둘 사이의 온도는 혼자서는 절대 만들 수 없는 것이 됩니다.",
+            "en": "Your warmth meets their stillness. Over time, the temperature between you becomes something neither could create alone."
+          }
+        }
+      ],
+      "cool_warm": [
+        {
+          "text": {
+            "ko": "그 사람의 온기가 당신에게 닿아요. 당신의 차분함은 흔들리지 않고요. 나를 잃지 않으면서도 받아들일 수 있다는 믿음이 생기는 시기입니다.",
+            "en": "Their warmth reaches for you. Your coolness holds shape. Settling means trusting that you can receive without losing form."
+          }
+        },
+        {
+          "text": {
+            "ko": "당신은 묵묵히 자리를 지키고, 그 사람은 빛을 가져옵니다. 따뜻해진다는 건 변하는 게 아니라는 걸, 이 시기에 알게 돼요.",
+            "en": "You stay steady; they bring the glow. In the settling phase, you learn that being warmed is not the same as being changed."
+          }
+        }
+      ],
+      "cool_cool": [
+        {
+          "text": {
+            "ko": "두 사람의 차분한 하늘이 조용한 이해 속에 자리를 잡아요. 말은 적어도 존재감은 흔들리지 않습니다. 다만 침묵을 \"괜찮다\"는 뜻으로만 여기면 위험해요.",
+            "en": "Two cool skies settle into a quiet understanding. Words are fewer, but the presence is steady. The risk is assuming silence means everything is fine."
+          }
+        },
+        {
+          "text": {
+            "ko": "안착이 너무 매끄러워서 눈에 보이지 않을 정도예요. 둘 다 짜임새 있는 관계에서 편안함을 느끼지만, 가끔은 그 편안함을 소리 내어 확인해야 합니다.",
+            "en": "Settling is seamless — almost invisible. You both find comfort in structure. But comfort needs voicing sometimes."
+          }
+        }
+      ],
+      "intense_any": [
+        {
+          "text": {
+            "ko": "강렬함 속에서 안착한다는 건, 번개를 붙잡을 때와 흘려보낼 때를 구분하는 법을 배우는 거예요. 그 전압을 둘 다 견딜 수 있다면 — 하늘은 더 깊어집니다.",
+            "en": "Settling with intensity means learning when to hold the lightning and when to let it pass. The sky becomes richer — if both can weather the voltage."
+          }
+        },
+        {
+          "text": {
+            "ko": "이 시기는 고요하지 않아요. 이 폭풍 안에 머무를 가치가 있다고, 서로 결심하는 순간입니다.",
+            "en": "The settling phase is not calm. It is the moment you decide: this storm is worth staying inside."
+          }
+        }
+      ]
+    },
+    "seasonLongTerm": [
+      {
+        "text": {
+          "ko": "시간이 흐르면, 둘 사이의 하늘은 날씨가 아닌 기후가 됩니다. \"이게 계속될까?\"가 \"우리는 어떤 하늘이 되어가고 있을까?\"로 바뀌는 거예요.",
+          "en": "Over time, your sky stops being weather and becomes climate. You stop asking \"will this last?\" and start asking \"what are we becoming?\""
+        }
+      },
+      {
+        "text": {
+          "ko": "긴 계절은 붙잡는 게 아니에요. 같은 방향으로 자라는 것 — 하나의 하늘을 나누는 법을 배운 두 구름의 이야기입니다.",
+          "en": "The long season is not about holding on. It is about growing in the same direction — two clouds that learned to share a sky."
+        }
+      },
+      {
+        "text": {
+          "ko": "함께한 시간이 쌓이면, 둘 사이의 공기에 기억이 배어요. 같이 견딘 폭풍, 나란히 맞은 일출 — 전부 이 대기 안에 남아 있습니다.",
+          "en": "Years in, the air between you carries memory. Every storm survived, every sunrise shared — it's all in the atmosphere now."
+        }
+      },
+      {
+        "text": {
+          "ko": "남는 건 처음의 불꽃이 아니에요. 그 불꽃 둘레로 만들어진 하늘 — 더 넓고, 더 깊고, 분명히 둘만의 것.",
+          "en": "What remains is not the spark that started it. It is the sky that formed around it — wider, deeper, unmistakably yours."
+        }
+      }
+    ],
+    "misreadingPatterns": {
+      "pace_mismatch": [
+        {
+          "signal": {
+            "ko": "그 사람은 감정을 정리할 시간이 필요해요.",
+            "en": "They need time to process."
+          },
+          "misread": {
+            "ko": "당신은 그걸 관심 없음으로 받아들여요.",
+            "en": "You read it as disinterest."
+          }
+        },
+        {
+          "signal": {
+            "ko": "당신은 빠르게 해결하려고 움직여요.",
+            "en": "You move quickly to fix things."
+          },
+          "misread": {
+            "ko": "그 사람 눈에는 조급함으로 보여요.",
+            "en": "They read it as impatience."
+          }
+        }
+      ],
+      "temperature_mismatch": [
+        {
+          "signal": {
+            "ko": "그 사람의 차분함은 안정을 지키는 방식이에요.",
+            "en": "Their coolness is how they stay steady."
+          },
+          "misread": {
+            "ko": "당신은 그걸 감정적 거리감으로 느껴요.",
+            "en": "You read it as emotional distance."
+          }
+        },
+        {
+          "signal": {
+            "ko": "당신의 따뜻함은 가까워지려는 방식이에요.",
+            "en": "Your warmth is how you connect."
+          },
+          "misread": {
+            "ko": "그 사람에게는 부담스러운 압박으로 느껴져요.",
+            "en": "They read it as overwhelming pressure."
+          }
+        }
+      ],
+      "same_pace": [
+        {
+          "signal": {
+            "ko": "둘 다 같은 속도로 움직여요.",
+            "en": "You both move at the same speed."
+          },
+          "misread": {
+            "ko": "상대가 잠깐 멈추고 싶을 때, 둘 다 눈치채지 못해요.",
+            "en": "Neither of you notices when the other needs a pause."
+          }
+        },
+        {
+          "signal": {
+            "ko": "리듬이 딱 맞아요.",
+            "en": "Your rhythms match perfectly."
+          },
+          "misread": {
+            "ko": "맞는 게 아니라 습관인데, 동의라고 착각하게 돼요.",
+            "en": "You assume agreement where there is only habit."
+          }
+        }
+      ],
+      "same_temperature": [
+        {
+          "signal": {
+            "ko": "둘 다 비슷한 온도의 사람이에요.",
+            "en": "You both run the same temperature."
+          },
+          "misread": {
+            "ko": "비슷하다 보니, 말 안 한 차이가 있다는 걸 잊어요.",
+            "en": "You forget that sameness can mask unspoken differences."
+          }
+        },
+        {
+          "signal": {
+            "ko": "감정의 파장이 자연스럽게 맞아요.",
+            "en": "Emotional resonance feels effortless."
+          },
+          "misread": {
+            "ko": "다 통하는 것 같아서, 확인하는 걸 멈추게 돼요.",
+            "en": "You stop checking in because it feels unnecessary."
+          }
+        }
+      ]
+    },
+    "defaultActions": {
+      "appreciation": {
+        "title": {
+          "ko": "고마움을 말로 표현하기",
+          "en": "Say appreciation out loud"
+        },
+        "desc": {
+          "ko": "무엇을 알아챘는지 구체적으로 말해 주자. 작은 인정이 오래가는 하늘을 만든다.",
+          "en": "Be specific about what you noticed. Small recognitions build a sky that lasts."
+        }
+      },
+      "pace": {
+        "title": {
+          "ko": "감정의 속도 늦춰 주기",
+          "en": "Slow the emotional pace"
+        },
+        "desc": {
+          "ko": "멈춤이 다 거리가 아니다. 조용히 돌봄이 잡히는 시간일 때도 있다.",
+          "en": "Not every pause is distance. Sometimes it is care forming quietly. Don't rush the process."
+        }
+      },
+      "ritual": {
+        "title": {
+          "ko": "둘만의 작은 의식 만들기",
+          "en": "Create a shared ritual"
+        },
+        "desc": {
+          "ko": "아침 산책, 주간 안부, 작은 반복. 의식이 쌓이면 날씨가 기후로 잡힌다.",
+          "en": "A morning walk, a weekly check-in, a small repeated act. Rituals turn weather into climate."
+        }
+      }
+    }
+  },
+  "cloud_profiles": {
+    "sunlit": {
+      "type": {
+        "ko": "sunlit",
+        "en": "sunlit"
+      },
+      "emoji": {
+        "ko": "☀️",
+        "en": "☀️"
+      },
+      "name": {
+        "ko": "햇살",
+        "en": "Sunlit"
+      },
+      "subtitle": {
+        "ko": "따뜻한 리더",
+        "en": "The Warm Leader"
+      },
+      "keywords": [
+        {
+          "text": {
+            "ko": "따뜻함",
+            "en": "Warmth"
+          }
+        },
+        {
+          "text": {
+            "ko": "방향",
+            "en": "Direction"
+          }
+        },
+        {
+          "text": {
+            "ko": "충성",
+            "en": "Loyalty"
+          }
+        },
+        {
+          "text": {
+            "ko": "빛남",
+            "en": "Radiance"
+          }
+        }
+      ],
+      "lore": {
+        "ko": "햇살은 해를 가장 오래 품는 구름이다.<br> 빛을 통과시키지 않고 머금어, 주변을 밝힌다.<br> 사랑에 빠지면 길을 잃지 않게 하려 하고,<br> 관계를 앞으로 이끌려 한다.",
+        "en": "Sunlit is the cloud that holds the sun the longest.<br> It doesn't let light pass through.<br> It absorbs it and brightens everything around.<br> In love, it tries to keep you from losing your way.<br> It makes the relationship move forward."
+      },
+      "traits": {
+        "strengths": [
+          {
+            "text": {
+              "ko": "솔직함",
+              "en": "Honesty"
+            }
+          },
+          {
+            "text": {
+              "ko": "추진력",
+              "en": "Drive"
+            }
+          },
+          {
+            "text": {
+              "ko": "밝은 에너지",
+              "en": "Bright Energy"
+            }
+          }
+        ],
+        "inLove": [
+          {
+            "text": {
+              "ko": "재지 않고 직진한다",
+              "en": "Straightforward in love, no games"
+            }
+          },
+          {
+            "text": {
+              "ko": "우리의 미래를 자주 이야기한다",
+              "en": "Talks often about \"our\" future"
+            }
+          },
+          {
+            "text": {
+              "ko": "사랑하는 사람을 자랑하고 싶어한다",
+              "en": "Loves to show off their partner"
+            }
+          }
+        ],
+        "shadows": [
+          {
+            "text": {
+              "ko": "빛이 강해질수록 상대의 그림자를 보지 못할 수 있다",
+              "en": "The stronger the light, the harder it is to see your partner's shadow"
+            }
+          },
+          {
+            "text": {
+              "ko": "리드하려는 마음이 통제가 될 위험",
+              "en": "The desire to lead may become a need to control"
+            }
+          }
+        ]
+      }
+    },
+    "mist": {
+      "type": {
+        "ko": "mist",
+        "en": "mist"
+      },
+      "emoji": {
+        "ko": "🌫",
+        "en": "🌫"
+      },
+      "name": {
+        "ko": "안개",
+        "en": "Mist"
+      },
+      "subtitle": {
+        "ko": "섬세한 영혼",
+        "en": "The Sensitive Soul"
+      },
+      "keywords": [
+        {
+          "text": {
+            "ko": "감수성",
+            "en": "Sensitivity"
+          }
+        },
+        {
+          "text": {
+            "ko": "직감",
+            "en": "Intuition"
+          }
+        },
+        {
+          "text": {
+            "ko": "깊이",
+            "en": "Depth"
+          }
+        },
+        {
+          "text": {
+            "ko": "연약함",
+            "en": "Fragility"
+          }
+        }
+      ],
+      "lore": {
+        "ko": "안개는 해 뜨기 전 공기를 떠다닌다.<br> 보이지 않지만 감정을 가장 많이 품고 있다.<br> 사랑은 말보다 분위기, 눈빛과 공기의 온도다.",
+        "en": "Mist drifts through the air before the sun rises.<br> Invisible, yet holding the most emotions.<br> Love is not about words — it's about the atmosphere.<br> It's in the gaze and the temperature of the air."
+      },
+      "traits": {
+        "strengths": [
+          {
+            "text": {
+              "ko": "공감 능력",
+              "en": "Empathy"
+            }
+          },
+          {
+            "text": {
+              "ko": "직관",
+              "en": "Intuition"
+            }
+          },
+          {
+            "text": {
+              "ko": "세심함",
+              "en": "Attentiveness"
+            }
+          }
+        ],
+        "inLove": [
+          {
+            "text": {
+              "ko": "상대의 기분을 누구보다 먼저 알아챈다",
+              "en": "Notices partner's mood first"
+            }
+          },
+          {
+            "text": {
+              "ko": "둘만의 깊은 세계를 만든다",
+              "en": "Creates a deep, private world"
+            }
+          },
+          {
+            "text": {
+              "ko": "섬세하게 배려한다",
+              "en": "Cares delicately for others"
+            }
+          }
+        ],
+        "shadows": [
+          {
+            "text": {
+              "ko": "감정을 너무 많이 흡수해 스스로 흐려질 수 있다",
+              "en": "May absorb too many emotions and lose clarity"
+            }
+          }
+        ]
+      }
+    },
+    "storm": {
+      "type": {
+        "ko": "storm",
+        "en": "storm"
+      },
+      "emoji": {
+        "ko": "⛈️",
+        "en": "⛈️"
+      },
+      "name": {
+        "ko": "천둥",
+        "en": "Storm"
+      },
+      "subtitle": {
+        "ko": "천둥의 심장",
+        "en": "The Thunder"
+      },
+      "keywords": [
+        {
+          "text": {
+            "ko": "강렬함",
+            "en": "Intensity"
+          }
+        },
+        {
+          "text": {
+            "ko": "열정",
+            "en": "Passion"
+          }
+        },
+        {
+          "text": {
+            "ko": "명확함",
+            "en": "Clarity"
+          }
+        },
+        {
+          "text": {
+            "ko": "해방",
+            "en": "Release"
+          }
+        }
+      ],
+      "lore": {
+        "ko": "천둥 구름은 잠잠하다가 한 번에 터진다.<br> 말하지 않아도 감정은 쌓이고,<br> 사랑도 번개처럼 한순간에 내리친다.<br> 진실은 때로 요란하게 다가온다.",
+        "en": "The storm cloud stays quiet, then erupts all at once.<br> Emotions pile up even without words.<br> Love strikes like lightning in an instant.<br> Truth is sometimes loud."
+      },
+      "traits": {
+        "strengths": [
+          {
+            "text": {
+              "ko": "솔직함",
+              "en": "Honesty"
+            }
+          },
+          {
+            "text": {
+              "ko": "열정",
+              "en": "Passion"
+            }
+          },
+          {
+            "text": {
+              "ko": "결단력",
+              "en": "Decisiveness"
+            }
+          }
+        ],
+        "inLove": [
+          {
+            "text": {
+              "ko": "한순간에 강렬하게 빠져든다",
+              "en": "Falls in love intensely"
+            }
+          },
+          {
+            "text": {
+              "ko": "밀당 없이 감정을 표현한다",
+              "en": "Expresses feelings without holding back"
+            }
+          },
+          {
+            "text": {
+              "ko": "거짓 없는 사랑을 한다",
+              "en": "Loves without lies"
+            }
+          }
+        ],
+        "shadows": [
+          {
+            "text": {
+              "ko": "감정이 폭발하면 상대를 놀라게 할 수 있다",
+              "en": "An emotional outburst may startle the other person"
+            }
+          }
+        ]
+      }
+    },
+    "dawn": {
+      "type": {
+        "ko": "dawn",
+        "en": "dawn"
+      },
+      "emoji": {
+        "ko": "🌅",
+        "en": "🌅"
+      },
+      "name": {
+        "ko": "여명",
+        "en": "Dawn"
+      },
+      "subtitle": {
+        "ko": "고요한 전환",
+        "en": "The Gentle Transition"
+      },
+      "keywords": [
+        {
+          "text": {
+            "ko": "희망",
+            "en": "Hope"
+          }
+        },
+        {
+          "text": {
+            "ko": "인내",
+            "en": "Patience"
+          }
+        },
+        {
+          "text": {
+            "ko": "변화",
+            "en": "Transformation"
+          }
+        },
+        {
+          "text": {
+            "ko": "고요",
+            "en": "Calm"
+          }
+        }
+      ],
+      "lore": {
+        "ko": "여명은 밤과 낮 사이에 선 구름이다.<br> 모든 게 바뀌기 직전의 고요함을 안다.<br> 사랑도 서서히 밝아온다고 믿고,<br> 기다리기만 해도 관계가 변한다고 여긴다.",
+        "en": "Dawn is the cloud that stands between night and day.<br> It knows the stillness just before everything changes.<br> It believes love brightens slowly.<br> Sometimes, just waiting is enough to change a relationship."
+      },
+      "traits": {
+        "strengths": [
+          {
+            "text": {
+              "ko": "인내심",
+              "en": "Patience"
+            }
+          },
+          {
+            "text": {
+              "ko": "희망",
+              "en": "Hope"
+            }
+          },
+          {
+            "text": {
+              "ko": "포용력",
+              "en": "Inclusiveness"
+            }
+          }
+        ],
+        "inLove": [
+          {
+            "text": {
+              "ko": "서두르지 않고 스며든다",
+              "en": "Permeates slowly without rushing"
+            }
+          },
+          {
+            "text": {
+              "ko": "상대가 준비될 때까지 기다려준다",
+              "en": "Waits until the partner is ready"
+            }
+          },
+          {
+            "text": {
+              "ko": "한결같은 마음을 보여준다",
+              "en": "Shows a consistent heart"
+            }
+          }
+        ],
+        "shadows": [
+          {
+            "text": {
+              "ko": "너무 기다리기만 해 타이밍을 놓칠 수 있다",
+              "en": "May wait too long and miss the moment"
+            }
+          }
+        ]
+      }
+    },
+    "wild": {
+      "type": {
+        "ko": "wild",
+        "en": "wild"
+      },
+      "emoji": {
+        "ko": "🌪️",
+        "en": "🌪️"
+      },
+      "name": {
+        "ko": "바람",
+        "en": "Wild"
+      },
+      "subtitle": {
+        "ko": "자유로운 영혼",
+        "en": "The Free Spirit"
+      },
+      "keywords": [
+        {
+          "text": {
+            "ko": "자유",
+            "en": "Freedom"
+          }
+        },
+        {
+          "text": {
+            "ko": "모험",
+            "en": "Adventure"
+          }
+        },
+        {
+          "text": {
+            "ko": "즉흥",
+            "en": "Spontaneity"
+          }
+        },
+        {
+          "text": {
+            "ko": "에너지",
+            "en": "Energy"
+          }
+        }
+      ],
+      "lore": {
+        "ko": "바람 구름은 한곳에 머물지 않는다.<br> 사랑도 함께 움직일 때 가장 빛나고,<br> 예측할 수 없음이 재미라고 여긴다.<br> 새로움을 잃지 않으려 한다.",
+        "en": "The wild cloud never stays in one place.<br> Love shines brightest when you move together.<br> The unpredictable is the fun part.<br> It never wants to lose the newness."
+      },
+      "traits": {
+        "strengths": [
+          {
+            "text": {
+              "ko": "자유로움",
+              "en": "Freedom"
+            }
+          },
+          {
+            "text": {
+              "ko": "유연성",
+              "en": "Flexibility"
+            }
+          },
+          {
+            "text": {
+              "ko": "도전 정신",
+              "en": "Adventurous Spirit"
+            }
+          }
+        ],
+        "inLove": [
+          {
+            "text": {
+              "ko": "함께 새로운 것을 경험하길 원한다",
+              "en": "Wants to experience new things together"
+            }
+          },
+          {
+            "text": {
+              "ko": "구속받지 않는 사랑을 꿈꾼다",
+              "en": "Dreams of love without restrictions"
+            }
+          },
+          {
+            "text": {
+              "ko": "지루할 틈을 주지 않는다",
+              "en": "Never leaves room for boredom"
+            }
+          }
+        ],
+        "shadows": [
+          {
+            "text": {
+              "ko": "한곳에 묶이면 숨이 막힐 수 있다",
+              "en": "May feel suffocated when tied down"
+            }
+          }
+        ]
+      }
+    },
+    "shade": {
+      "type": {
+        "ko": "shade",
+        "en": "shade"
+      },
+      "emoji": {
+        "ko": "☁️",
+        "en": "☁️"
+      },
+      "name": {
+        "ko": "그늘",
+        "en": "Shade"
+      },
+      "subtitle": {
+        "ko": "조용한 쉼터",
+        "en": "The Quiet Shelter"
+      },
+      "keywords": [
+        {
+          "text": {
+            "ko": "편안함",
+            "en": "Comfort"
+          }
+        },
+        {
+          "text": {
+            "ko": "안정",
+            "en": "Stability"
+          }
+        },
+        {
+          "text": {
+            "ko": "존재감",
+            "en": "Presence"
+          }
+        },
+        {
+          "text": {
+            "ko": "쉼",
+            "en": "Rest"
+          }
+        }
+      ],
+      "lore": {
+        "ko": "그늘은 뜨거운 햇살 아래 쉼을 준다.<br> 말없이 곁에 있는 사랑을 안다.<br> 관계는 말이 많을 때만 깊어지는 게 아니고,<br> 함께 조용히 있어도 깊어질 수 있다.",
+        "en": "Shade offers rest under the blazing sun.<br> It understands the love of simply being there.<br> A relationship doesn't only deepen with many words.<br> It's okay to be quiet together."
+      },
+      "traits": {
+        "strengths": [
+          {
+            "text": {
+              "ko": "안정감",
+              "en": "Stability"
+            }
+          },
+          {
+            "text": {
+              "ko": "신뢰",
+              "en": "Trust"
+            }
+          },
+          {
+            "text": {
+              "ko": "차분함",
+              "en": "Calmness"
+            }
+          }
+        ],
+        "inLove": [
+          {
+            "text": {
+              "ko": "말보다 행동으로 챙겨준다",
+              "en": "Cares through actions rather than words"
+            }
+          },
+          {
+            "text": {
+              "ko": "힘들 때 조용히 쉴 곳이 되어준다",
+              "en": "Becomes a quiet resting place when things are hard"
+            }
+          },
+          {
+            "text": {
+              "ko": "변함없이 그 자리에 있는다",
+              "en": "Stays by your side unchangingly"
+            }
+          }
+        ],
+        "shadows": [
+          {
+            "text": {
+              "ko": "너무 조용해 상대가 답답해할 수 있다",
+              "en": "Too much silence may frustrate the other person"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "cloud_meta": {
+    "sunlit": {
+      "displayName": {
+        "ko": "햇살",
+        "en": "Sunlit"
+      },
+      "keywords": [
+        {
+          "text": {
+            "ko": "따뜻함",
+            "en": "warmth"
+          }
+        },
+        {
+          "text": {
+            "ko": "방향",
+            "en": "direction"
+          }
+        },
+        {
+          "text": {
+            "ko": "충성",
+            "en": "loyalty"
+          }
+        }
+      ],
+      "loveDrive": {
+        "ko": "방향이 있는 사랑을 한다. 따뜻함과 확신 쪽으로 나아가고 싶어 한다.",
+        "en": "love with direction — moving toward clarity and warmth"
+      },
+      "conflictReaction": {
+        "ko": "문제를 빨리 해결하려 한다. 감정이 가라앉기 전에 어떻게 고칠지부터 생각한다.",
+        "en": "try to solve issues quickly, switching into \"fix it\" mode before feelings fully land"
+      },
+      "pace": "fast",
+      "temperature": "warm",
+      "safetyNeeds": [
+        {
+          "text": {
+            "ko": "관계가 앞으로 나아가고 있다는 확신",
+            "en": "knowing the relationship has direction"
+          }
+        },
+        {
+          "text": {
+            "ko": "망설임 없이 \"나 여기 있어\"라는 말을 듣는 것",
+            "en": "hearing \"I'm here\" without hesitation"
+          }
+        },
+        {
+          "text": {
+            "ko": "가끔은 리드해도 된다는 신뢰",
+            "en": "being trusted to lead sometimes"
+          }
+        },
+        {
+          "text": {
+            "ko": "함께 기대할 수 있는 계획이 있는 것",
+            "en": "having plans to look forward to together"
+          }
+        }
+      ],
+      "shadows": [
+        {
+          "text": {
+            "ko": "앞으로 나아가느라 상대의 조용한 필요를 놓칠 수 있다",
+            "en": "may overlook a partner's quiet needs while steering forward"
+          }
+        },
+        {
+          "text": {
+            "ko": "모든 걸 밝히려다 보면 쉴 그늘을 남기지 않을 수 있다",
+            "en": "the desire to brighten everything can leave no room for shade"
+          }
+        }
+      ],
+      "trySuggestion": {
+        "ko": "해결책을 내놓기 전에 한번 물어보자. \"지금 위로가 필요해, 아니면 방향이 필요해?\"",
+        "en": "Before offering a solution, ask: \"Do you want comfort right now, or clarity?\""
+      },
+      "dangerPhrases": [
+        {
+          "bad": {
+            "ko": "왜 결정을 못 해?",
+            "en": "Why can't you just decide?"
+          },
+          "better": {
+            "ko": "천천히 해도 돼 — 준비되면 말해줘.",
+            "en": "Take your time — I'll be here when you're ready."
+          }
+        },
+        {
+          "bad": {
+            "ko": "너 너무 복잡하게 생각해.",
+            "en": "You're overthinking this."
+          },
+          "better": {
+            "ko": "생각이 많은 거 알아. 같이 정리해볼까?",
+            "en": "I see you're processing. Want to talk it through?"
+          }
+        }
+      ],
+      "loveExpression": {
+        "ko": "미리 계획하고, 직접 실행하고, 답을 들고 나타나는 사람",
+        "en": "Plans ahead, makes things happen, shows up with solutions"
+      },
+      "loveSignal": {
+        "ko": "둘의 계획을 앞장서서 세우고, 관계가 흔들리지 않게 방향을 잡아주는 것",
+        "en": "Taking the lead on shared plans and protecting the direction of the relationship"
+      }
+    },
+    "mist": {
+      "displayName": {
+        "ko": "안개",
+        "en": "Mist"
+      },
+      "keywords": [
+        {
+          "text": {
+            "ko": "감수성",
+            "en": "sensitivity"
+          }
+        },
+        {
+          "text": {
+            "ko": "직감",
+            "en": "intuition"
+          }
+        },
+        {
+          "text": {
+            "ko": "깊이",
+            "en": "depth"
+          }
+        }
+      ],
+      "loveDrive": {
+        "ko": "깊이로 사랑한다. 말하기 전에 공기의 온도를 먼저 느낀다.",
+        "en": "love through depth — feeling the air before speaking"
+      },
+      "conflictReaction": {
+        "ko": "감정을 정리하려 조용히 물러난다. 말이 나오기 전에 시간이 필요하다.",
+        "en": "withdraw into silence to process emotions, needing space before words form"
+      },
+      "pace": "slow",
+      "temperature": "cool",
+      "safetyNeeds": [
+        {
+          "text": {
+            "ko": "재촉 없이 감정을 느낄 여유",
+            "en": "having space to feel without being rushed"
+          }
+        },
+        {
+          "text": {
+            "ko": "침묵도 존중받는다는 걸 아는 것",
+            "en": "knowing their silence is respected, not punished"
+          }
+        },
+        {
+          "text": {
+            "ko": "조용히 챙겨주는 걸 알아봐 주는 것",
+            "en": "being noticed for the small things they do quietly"
+          }
+        },
+        {
+          "text": {
+            "ko": "큰 제스처보다 꾸준한 존재감",
+            "en": "consistent presence rather than grand gestures"
+          }
+        }
+      ],
+      "shadows": [
+        {
+          "text": {
+            "ko": "너무 많은 감정을 흡수해 자신의 형태를 잃을 수 있다",
+            "en": "may absorb too many emotions and lose their own shape"
+          }
+        },
+        {
+          "text": {
+            "ko": "침묵이 창이 아니라 벽이 될 수 있다",
+            "en": "silence can become a wall instead of a window"
+          }
+        }
+      ],
+      "trySuggestion": {
+        "ko": "감정이 흐려지기 전에 이름을 붙여 보자. 한 문장이면 충분하다.",
+        "en": "Name what you feel before it fades — even one sentence keeps the air clear."
+      },
+      "dangerPhrases": [
+        {
+          "bad": {
+            "ko": "넌 맨날 아무 말도 안 하잖아.",
+            "en": "You never tell me what's wrong."
+          },
+          "better": {
+            "ko": "가끔 조용해질 때가 있더라. 이해하고 싶어.",
+            "en": "I notice you go quiet sometimes. I want to understand."
+          }
+        },
+        {
+          "bad": {
+            "ko": "너무 예민한 거 아니야?",
+            "en": "Stop being so sensitive."
+          },
+          "better": {
+            "ko": "네 감정이 중요해. 네가 느끼는 걸 알려줘.",
+            "en": "Your feelings matter. Help me see what you see."
+          }
+        }
+      ],
+      "loveExpression": {
+        "ko": "작은 변화를 먼저 알아채고, 사소한 것까지 기억하고, 말없이 편안함을 만드는 사람",
+        "en": "Notices small changes, remembers details, creates quiet comfort"
+      },
+      "loveSignal": {
+        "ko": "몇 주 전에 한 말을 기억해두었다가, 조용히 행동으로 옮기는 것",
+        "en": "Remembering what you said weeks ago and quietly acting on it"
+      }
+    },
+    "storm": {
+      "displayName": {
+        "ko": "천둥",
+        "en": "Storm"
+      },
+      "keywords": [
+        {
+          "text": {
+            "ko": "강렬함",
+            "en": "intensity"
+          }
+        },
+        {
+          "text": {
+            "ko": "열정",
+            "en": "passion"
+          }
+        },
+        {
+          "text": {
+            "ko": "솔직함",
+            "en": "honesty"
+          }
+        }
+      ],
+      "loveDrive": {
+        "ko": "강렬하게 사랑한다. 번개처럼 한 번에 도착한다.",
+        "en": "love through intensity — arriving like lightning, all at once"
+      },
+      "conflictReaction": {
+        "ko": "한꺼번에 쏟아낸 다음, 터진 만큼 빠르게 가라앉는다.",
+        "en": "express everything at once, then calm as quickly as the outburst began"
+      },
+      "pace": "fast",
+      "temperature": "intense",
+      "safetyNeeds": [
+        {
+          "text": {
+            "ko": "같은 솔직함으로 맞아주는 것",
+            "en": "being met with equal honesty"
+          }
+        },
+        {
+          "text": {
+            "ko": "한 번의 폭발이 관계를 끝내지 않는다는 것을 아는 것",
+            "en": "knowing an outburst won't end the relationship"
+          }
+        },
+        {
+          "text": {
+            "ko": "판단 없이 가라앉을 수 있는 공간",
+            "en": "space to cool down without judgment"
+          }
+        },
+        {
+          "text": {
+            "ko": "천둥이 지나가도 곁에 남아주는 사람",
+            "en": "a partner who stays after the thunder passes"
+          }
+        }
+      ],
+      "shadows": [
+        {
+          "text": {
+            "ko": "감정의 크기가 조용히 말하는 사람을 놀라게 할 수 있다",
+            "en": "the volume of emotion can startle those who speak softly"
+          }
+        },
+        {
+          "text": {
+            "ko": "강렬함을 친밀함으로 착각할 수 있다",
+            "en": "may mistake intensity for intimacy"
+          }
+        }
+      ],
+      "trySuggestion": {
+        "ko": "두 번째 문장 넘어가기 전에 셋을 세 보자. 첫 마디는 이미 도착했다.",
+        "en": "Count to three before the second sentence — the first already landed."
+      },
+      "dangerPhrases": [
+        {
+          "bad": {
+            "ko": "진짜 신경 쓰면 티가 나야지.",
+            "en": "If you really cared, you'd show it."
+          },
+          "better": {
+            "ko": "네 존재감이 필요해. 같이 방법을 찾아보자.",
+            "en": "I need to feel your presence. Can we find a way?"
+          }
+        },
+        {
+          "bad": {
+            "ko": "넌 항상 너무 과해.",
+            "en": "You're always too much."
+          },
+          "better": {
+            "ko": "네 감정은 진짜야. 우리 둘의 리듬을 찾아보자.",
+            "en": "Your intensity is real. Let's find a rhythm together."
+          }
+        }
+      ],
+      "loveExpression": {
+        "ko": "온 힘을 다해 달려오고, 거칠게라도 지키고, 가감 없이 진실을 말하는 사람",
+        "en": "Shows up with full intensity, protects fiercely, says the raw truth"
+      },
+      "loveSignal": {
+        "ko": "떠나는 게 더 편할 때도, 이 관계를 위해 버티는 것",
+        "en": "Fighting for the relationship even when it would be easier to walk away"
+      }
+    },
+    "dawn": {
+      "displayName": {
+        "ko": "여명",
+        "en": "Dawn"
+      },
+      "keywords": [
+        {
+          "text": {
+            "ko": "인내",
+            "en": "patience"
+          }
+        },
+        {
+          "text": {
+            "ko": "희망",
+            "en": "hope"
+          }
+        },
+        {
+          "text": {
+            "ko": "부드러움",
+            "en": "gentleness"
+          }
+        }
+      ],
+      "loveDrive": {
+        "ko": "인내로 사랑한다. 천천히 밝아진다고 믿는다.",
+        "en": "love through patience — believing things brighten slowly"
+      },
+      "conflictReaction": {
+        "ko": "기다리며 지켜본다. 때로는 너무 오래 기다리며, 긴장이 저절로 풀리길 바란다.",
+        "en": "wait and observe, sometimes too long, hoping the tension will dissolve on its own"
+      },
+      "pace": "slow",
+      "temperature": "warm",
+      "safetyNeeds": [
+        {
+          "text": {
+            "ko": "같은 인내심으로 돌아오는 것",
+            "en": "patience returned in kind"
+          }
+        },
+        {
+          "text": {
+            "ko": "결정을 재촉당하지 않는 것",
+            "en": "not being rushed into decisions"
+          }
+        },
+        {
+          "text": {
+            "ko": "대면보다 부드러운 안부",
+            "en": "gentle check-ins rather than confrontations"
+          }
+        },
+        {
+          "text": {
+            "ko": "항상 다음 날 아침이 있다는 것을 아는 것",
+            "en": "knowing there is always a next morning"
+          }
+        }
+      ],
+      "shadows": [
+        {
+          "text": {
+            "ko": "너무 오래 기다리면 적절한 순간을 놓칠 수 있다",
+            "en": "waiting too long may let the right moment pass"
+          }
+        },
+        {
+          "text": {
+            "ko": "부드러움이 말하지 못한 필요를 가릴 수 있다",
+            "en": "gentleness can mask unspoken needs"
+          }
+        }
+      ],
+      "trySuggestion": {
+        "ko": "오늘 하루만, 상대가 묻기 전에 먼저 말해 보자.",
+        "en": "Set one small moment today where you speak before the other person asks."
+      },
+      "dangerPhrases": [
+        {
+          "bad": {
+            "ko": "너무 느려. 계속 기다릴 수 없어.",
+            "en": "You're too slow. I can't wait forever."
+          },
+          "better": {
+            "ko": "같이 나아가고 싶어. 어떤 속도가 좋아?",
+            "en": "I want to move forward with you. What pace feels right?"
+          }
+        },
+        {
+          "bad": {
+            "ko": "왜 맨날 나한테만 맡겨?",
+            "en": "Why don't you ever take charge?"
+          },
+          "better": {
+            "ko": "네 방식으로 이끌어줄 때 좋아. 보여줘.",
+            "en": "I love when you lead in your way. Show me."
+          }
+        }
+      ],
+      "loveExpression": {
+        "ko": "투정 없이 기다리고, 묵묵히 곁에 있고, 자리를 부드럽게 지켜주는 사람",
+        "en": "Waits without complaint, keeps showing up, holds space gently"
+      },
+      "loveSignal": {
+        "ko": "힘든 순간이 지나도 달라지지 않고, 여전히 같은 자리에 있는 것",
+        "en": "Still being there after the difficult moments, unchanged and steady"
+      }
+    },
+    "wild": {
+      "displayName": {
+        "ko": "바람",
+        "en": "Wild"
+      },
+      "keywords": [
+        {
+          "text": {
+            "ko": "자유",
+            "en": "freedom"
+          }
+        },
+        {
+          "text": {
+            "ko": "모험",
+            "en": "adventure"
+          }
+        },
+        {
+          "text": {
+            "ko": "에너지",
+            "en": "energy"
+          }
+        }
+      ],
+      "loveDrive": {
+        "ko": "움직이며 사랑한다. 함께 탐험할 때 가장 빛난다.",
+        "en": "love through movement — shining brightest when exploring together"
+      },
+      "conflictReaction": {
+        "ko": "방향을 돌리거나 화제를 바꾼다. 긴장 속에 있기보다 빠져나가고 싶어 한다.",
+        "en": "shift direction or change the topic, preferring to move past tension rather than sit in it"
+      },
+      "pace": "fast",
+      "temperature": "warm",
+      "safetyNeeds": [
+        {
+          "text": {
+            "ko": "죄책감 없이 움직일 수 있는 자유",
+            "en": "freedom to move without guilt"
+          }
+        },
+        {
+          "text": {
+            "ko": "즉흥이 저항이 아닌 환영을 받는 것",
+            "en": "spontaneity welcomed, not resisted"
+          }
+        },
+        {
+          "text": {
+            "ko": "따라올 수 있거나 돌아옴을 믿어주는 상대",
+            "en": "a partner who can keep up — or trust the return"
+          }
+        },
+        {
+          "text": {
+            "ko": "안정만이 아닌 함께하는 모험",
+            "en": "adventures shared, not just stability"
+          }
+        }
+      ],
+      "shadows": [
+        {
+          "text": {
+            "ko": "고요함을 피하는 게 느껴야 할 것을 피하는 것일 수 있다",
+            "en": "avoiding stillness can mean avoiding what needs to be felt"
+          }
+        },
+        {
+          "text": {
+            "ko": "끊임없는 움직임이 무관심으로 읽힐 수 있다",
+            "en": "restlessness may be read as disinterest"
+          }
+        }
+      ],
+      "trySuggestion": {
+        "ko": "편한 것보다 5분만 더 머물러 보자. 뿌리는 거기서 자란다.",
+        "en": "Stay five minutes longer than feels comfortable — that's where the roots grow."
+      },
+      "dangerPhrases": [
+        {
+          "bad": {
+            "ko": "넌 한 자리에 가만히 있질 못해.",
+            "en": "You never stay still."
+          },
+          "better": {
+            "ko": "네 에너지가 좋아. 쉬는 시간도 같이 만들어볼까?",
+            "en": "I love your energy. Can we also make space to rest?"
+          }
+        },
+        {
+          "bad": {
+            "ko": "이거 진지하게 생각하는 거야?",
+            "en": "Do you even take this seriously?"
+          },
+          "better": {
+            "ko": "네 방식으로 신경 쓰는 거 알아. 보여줘.",
+            "en": "I know you care in your way. Help me see it."
+          }
+        }
+      ],
+      "loveExpression": {
+        "ko": "모험을 만들어내고, 즉흥으로 설레게 하고, 공기를 에너지로 가득 채우는 사람",
+        "en": "Creates adventures, brings spontaneity, fills the air with energy"
+      },
+      "loveSignal": {
+        "ko": "어디를 가든 결국 돌아오는 것 — 자유롭게 날아도, 늘 당신에게로",
+        "en": "Coming back every time — freedom chosen, but always returning to you"
+      }
+    },
+    "shade": {
+      "displayName": {
+        "ko": "그늘",
+        "en": "Shade"
+      },
+      "keywords": [
+        {
+          "text": {
+            "ko": "편안함",
+            "en": "comfort"
+          }
+        },
+        {
+          "text": {
+            "ko": "안정",
+            "en": "stability"
+          }
+        },
+        {
+          "text": {
+            "ko": "존재감",
+            "en": "presence"
+          }
+        }
+      ],
+      "loveDrive": {
+        "ko": "존재로 사랑한다. 조용하고 꾸준히 곁에 있다.",
+        "en": "love through presence — showing up quietly and consistently"
+      },
+      "conflictReaction": {
+        "ko": "가만히 받아들인다. 목소리를 높이는 일이 드물고, 그때문에 들리지 않을 때도 있다.",
+        "en": "stay still and absorb, rarely raising their voice, sometimes at the cost of being heard"
+      },
+      "pace": "steady",
+      "temperature": "cool",
+      "safetyNeeds": [
+        {
+          "text": {
+            "ko": "침묵이 차가움이 아닌 돌봄으로 받아들여지는 것",
+            "en": "silence accepted as care, not coldness"
+          }
+        },
+        {
+          "text": {
+            "ko": "일상이 지루하다고 불리지 않는 것",
+            "en": "a routine that isn't called boring"
+          }
+        },
+        {
+          "text": {
+            "ko": "연기하지 않아도 선택받는 것",
+            "en": "being chosen without having to perform"
+          }
+        },
+        {
+          "text": {
+            "ko": "설명 없이 충전할 수 있는 공간",
+            "en": "space to recharge without explanation"
+          }
+        }
+      ],
+      "shadows": [
+        {
+          "text": {
+            "ko": "고요함이 너무 많으면 상대가 추측하게 만들 수 있다",
+            "en": "too much quiet may leave a partner guessing"
+          }
+        },
+        {
+          "text": {
+            "ko": "흔들림이 없으면 안정이 정체로 보일 수 있다",
+            "en": "stability can become stagnation if never stirred"
+          }
+        }
+      ],
+      "trySuggestion": {
+        "ko": "일주일에 한 번, 행동으로만 보여 주던 걸 말로도 꺼내 보자.",
+        "en": "Once a week, say out loud what you usually only show through action."
+      },
+      "dangerPhrases": [
+        {
+          "bad": {
+            "ko": "좀 지루하지 않아?",
+            "en": "You're so boring."
+          },
+          "better": {
+            "ko": "네 곁이 편안해. 같이 새로운 것도 해볼까?",
+            "en": "I feel safe with you. Can we also try something new together?"
+          }
+        },
+        {
+          "bad": {
+            "ko": "감정 표현을 왜 안 해?",
+            "en": "You never show how you feel."
+          },
+          "better": {
+            "ko": "행동으로 보여주는 거 알아. 가끔 말로도 들려줘.",
+            "en": "I know you show love through action. I'd love to hear it too."
+          }
+        }
+      ],
+      "loveExpression": {
+        "ko": "매일 빠짐없이 곁에 있고, 흔들리지 않는 안정감을 주고, 있는 것만으로 지켜주는 사람",
+        "en": "Shows up consistently, provides stability, protects through presence"
+      },
+      "loveSignal": {
+        "ko": "매일 바뀌지 않는 작은 의식들 — 커피를 내려놓고, 문을 잡아주고, 자리를 비워두는 것",
+        "en": "The daily rituals that never change — coffee made, door held, space kept"
+      }
+    }
+  },
+  "chemistry_matrix": {
+    "sunlit_mist": {
+      "skyName": {
+        "ko": "아침 안개 속의 햇살",
+        "en": "Morning Light Through Fog"
+      },
+      "phenomenon": "glow",
+      "narrative": {
+        "ko": "햇살의 따뜻한 빛이 안개의 감정을 천천히 녹인다. 안개는 이해받는다고 느끼고, 햇살은 보호하고 싶어진다.",
+        "en": "Warm light slowly melts the mist's emotions. The mist feels understood; the sunlit wants to protect."
+      },
+      "warning": {
+        "ko": "빛이 너무 강하면 안개는 사라진다.",
+        "en": "Too much light, and the mist disappears."
+      },
+      "premium": {
+        "fullStory": {
+          "ko": "이른 아침, 햇살이 안개를 만날 때 세상은 부드러워진다. 안개가 걷혀서가 아니라, 빛이 그 곁에 머물기로 했기 때문이다. 당신의 사랑에는 방향이 있다. 온기와 확신 쪽으로 빠르게 나아가고, 불안이나 의문이 생기면 곧바로 상황을 투명하게 만들고 싶어 한다. 반면 그 사람의 사랑은 깊이를 택한다. 말을 꺼내기 전에 공기의 온도를 먼저 느낀다. 그 침묵이 거리감처럼 느껴질 때도 있지만, 그건 마음속에서 감정의 형태를 빚어 내는 시간이다. 처음엔 당신의 빠른 걸음이 안개를 몰아붙이는 것 같고, 그 사람의 고요함이 당신의 빛을 가리는 것처럼 느껴질 수 있다. 그런데 이게 둘만의 고요하고 강한 시너지다. 당신은 이 관계에 온기를 불어넣고, 그 사람은 분위기를 깊게 만든다. 당신이 없으면 이 하늘은 차갑게 가라앉을 테고, 그 사람이 없으면 너무 눈부셔 쉴 곳이 없었을 것이다. 당신의 빛이 안개를 재촉하지 않고, 안개가 당신의 빛을 밀어내지 않을 때 이 하늘이 가장 아름답게 빛난다. 어떤 하늘은 금세 흩어지지만, 당신들의 하늘은 오래 머문다.",
+          "en": "In the early morning, when sunlight meets mist, the world feels softer — not because it is simple, but because light chooses to stay. You love with direction. You move toward clarity, warmth, momentum. When something feels uncertain, you try to steady it. They love through depth. They feel the air before they speak. Sometimes their silence isn't distance — it's emotion forming shape. At first, you may wonder why they don't move as quickly. They may wonder why you move before fully feeling. But here is your quiet strength: You bring warmth. They bring atmosphere. Without you, the sky might stay hidden. Without them, it might feel too exposed. Together, you create something rare — light that doesn't rush the fog, and fog that doesn't resist the light. Some skies are fleeting. Yours lingers."
+        },
+        "conflict": {
+          "userTendency": {
+            "ko": "문제를 재빨리 해결하고 싶어 한다. '빨리 풀자'는 생각에 어떻게 고칠지부터 궁리하고, 감정이 정리되기 전에 오래 끄는 걸 견디기 힘들어한다.",
+            "en": "You try to solve issues quickly and move into \"fix it\" mode. You feel uneasy when emotions linger without clear resolution."
+          },
+          "partnerTendency": {
+            "ko": "입을 열기 전에 감정을 정리할 시간이 필요하다. 상대의 빠른 해결책과 속도에 압도당한다고 느끼면, 침묵으로 숨을 수 있다.",
+            "en": "They need time before speaking and feel overwhelmed by fast solutions. They may retreat into silence when misunderstood."
+          },
+          "tip": {
+            "ko": "침묵도 대화의 일부로 두자. 제안하기 전에 '지금 위로가 필요해, 아니면 해결 방법이 필요해?'라고 물어보며 속도를 맞춰 보자.",
+            "en": "Pause before solving. Ask, \"Do you want comfort or clarity?\" Let silence be part of the conversation."
+          }
+        },
+        "shelter": {
+          "partnerNeeds": [
+            {
+              "text": {
+                "ko": "재촉 없이 감정을 느낄 여유",
+                "en": "having space to feel without being rushed"
+              }
+            },
+            {
+              "text": {
+                "ko": "침묵도 존중받는다는 걸 아는 것",
+                "en": "knowing their silence is respected, not punished"
+              }
+            },
+            {
+              "text": {
+                "ko": "조용히 챙겨주는 걸 알아봐 주는 것",
+                "en": "being noticed for the small things they do quietly"
+              }
+            }
+          ],
+          "userNeeds": [
+            {
+              "text": {
+                "ko": "관계가 앞으로 나아가고 있다는 확신",
+                "en": "knowing the relationship has direction"
+              }
+            },
+            {
+              "text": {
+                "ko": "망설임 없이 \"나 여기 있어\"라는 말을 듣는 것",
+                "en": "hearing \"I'm here\" without hesitation"
+              }
+            },
+            {
+              "text": {
+                "ko": "가끔은 리드해도 된다는 신뢰",
+                "en": "being trusted to lead sometimes"
+              }
+            }
+          ],
+          "closingLine": {
+            "ko": "안전함은 요란하지 않다. 꾸준한 것이다.",
+            "en": "Safety isn't loud. It's consistent."
+          }
+        },
+        "shadows": {
+          "userShadows": [
+            {
+              "text": {
+                "ko": "앞으로 나아가느라 상대의 조용한 필요를 놓칠 수 있다",
+                "en": "may overlook a partner's quiet needs while steering forward"
+              }
+            },
+            {
+              "text": {
+                "ko": "모든 걸 밝히려다 보면 쉴 그늘을 남기지 않을 수 있다",
+                "en": "the desire to brighten everything can leave no room for shade"
+              }
+            }
+          ],
+          "partnerShadows": [
+            {
+              "text": {
+                "ko": "너무 많은 감정을 흡수해 자신의 형태를 잃을 수 있다",
+                "en": "may absorb too many emotions and lose their own shape"
+              }
+            },
+            {
+              "text": {
+                "ko": "침묵이 창이 아니라 벽이 될 수 있다",
+                "en": "silence can become a wall instead of a window"
+              }
+            }
+          ]
+        },
+        "actions": [
+          {
+            "title": {
+              "ko": "고마움을 말로 표현하기",
+              "en": "Say appreciation out loud"
+            },
+            "desc": {
+              "ko": "안개 구름은 관계를 깊게 느끼지만 확신이 필요할 때가 많다. 구체적인 순간을 짚어 말로 전해 주자.",
+              "en": "Mist clouds feel deeply but need to know you notice. Be specific about what you value in them."
+            }
+          },
+          {
+            "title": {
+              "ko": "감정의 속도 늦춰 주기",
+              "en": "Slow the emotional pace"
+            },
+            "desc": {
+              "ko": "침묵이 다 거리를 뜻하는 건 아니다. 상처 주지 않으려 마음을 정돈하는 시간임을 이해하고 기다려 주자.",
+              "en": "Not every pause is distance. Sometimes it is care forming quietly. Don't rush their processing time."
+            }
+          },
+          {
+            "title": {
+              "ko": "둘만의 작은 의식 만들기",
+              "en": "Create a shared ritual"
+            },
+            "desc": {
+              "ko": "함께 커피 내리기, 산책하기처럼 반복되는 작은 의식이 쌓이면, 변덕스러운 날씨가 안정적인 기후로 잡힌다.",
+              "en": "Rituals like morning coffee or a weekly walk turn unpredictable weather into a stable, shared climate."
+            }
+          }
+        ],
+        "shareCard": {
+          "phrase": {
+            "ko": "당신은 온기를 주고, 그 사람은 깊이를 더합니다. 함께할 때 세상은 더 부드러워집니다.",
+            "en": "You bring warmth. They bring depth. Together, you soften the world."
+          },
+          "caption": {
+            "ko": "둘 사이의 하늘을 발견해봐 — Cloud Between Us",
+            "en": "Discover the sky between you — Cloud Between Us"
+          }
+        }
+      }
+    },
+    "sunlit_storm": {
+      "skyName": {
+        "ko": "한낮의 번개",
+        "en": "Lightning at Noon"
+      },
+      "phenomenon": "thunder",
+      "narrative": {
+        "ko": "둘 다 강하다. 햇살은 방향을 잡고, 천둥은 속도를 올린다. 케미는 강렬하다. 충돌도 강렬하다.",
+        "en": "Both are strong. Sunlit steers; storm accelerates. The chemistry is intense — and so are the clashes."
+      },
+      "warning": null
+    },
+    "sunlit_dawn": {
+      "skyName": {
+        "ko": "첫 번째 빛",
+        "en": "First Light"
+      },
+      "phenomenon": "glow",
+      "narrative": {
+        "ko": "햇살이 여명에게 기다림의 보답을 준다. 서로의 시간을 존중할 때 하늘이 가장 아름답다.",
+        "en": "Sunlit rewards dawn's patience. The sky is most beautiful when you honor each other's time."
+      },
+      "warning": null
+    },
+    "sunlit_wild": {
+      "skyName": {
+        "ko": "햇살 속의 바람",
+        "en": "Wind in the Sun"
+      },
+      "phenomenon": "glow",
+      "narrative": {
+        "ko": "바람이 햇살을 데리고 간다. 함께 움직일 때 둘 다 빛난다.",
+        "en": "Wind carries the sunlight. When you move together, you both shine."
+      },
+      "warning": {
+        "ko": "방향이 다르면 흩어질 수 있다.",
+        "en": "Different directions can pull you apart."
+      }
+    },
+    "sunlit_shade": {
+      "skyName": {
+        "ko": "빛과 그늘",
+        "en": "Sun and Shadow"
+      },
+      "phenomenon": "glow",
+      "narrative": {
+        "ko": "햇살이 그늘에게 쉼을 주고, 그늘이 햇살에게 안정을 준다. 균형이 맞는 하늘.",
+        "en": "Sunlit offers rest; shade offers steadiness. A sky in balance."
+      },
+      "warning": null
+    },
+    "mist_storm": {
+      "skyName": {
+        "ko": "천둥이 지나간 뒤",
+        "en": "After the Thunder"
+      },
+      "phenomenon": "rain",
+      "narrative": {
+        "ko": "천둥이 지나간 뒤 안개가 피어오른다. 감정이 터진 뒤에 오는 이해.",
+        "en": "After the thunder passes, mist rises. Understanding that comes after the release."
+      },
+      "warning": null
+    },
+    "mist_dawn": {
+      "skyName": {
+        "ko": "새벽 안개",
+        "en": "Dawn Mist"
+      },
+      "phenomenon": "glow",
+      "narrative": {
+        "ko": "여명과 안개는 같은 고요함을 안다. 말하지 않아도 통한다.",
+        "en": "Dawn and mist share the same stillness. You understand each other without words."
+      },
+      "warning": null
+    },
+    "mist_wild": {
+      "skyName": {
+        "ko": "바람 속 안개",
+        "en": "Mist in the Wind"
+      },
+      "phenomenon": "rain",
+      "narrative": {
+        "ko": "바람이 안개를 흩뜨린다. 함께하면 새로운 풍경이 된다.",
+        "en": "Wind scatters the mist. Together, you become a new landscape."
+      },
+      "warning": {
+        "ko": "안개는 흩어지길 두려워할 수 있다.",
+        "en": "The mist may fear being scattered."
+      }
+    },
+    "mist_shade": {
+      "skyName": {
+        "ko": "고요한 하늘",
+        "en": "Quiet Sky"
+      },
+      "phenomenon": "glow",
+      "narrative": {
+        "ko": "안개와 그늘. 말 없이 곁에 있는 사랑. 조용한 하늘이 편하다.",
+        "en": "Mist and shade. Love that stays without words. A sky that feels like rest."
+      },
+      "warning": null
+    },
+    "storm_dawn": {
+      "skyName": {
+        "ko": "새벽 전의 폭풍",
+        "en": "Storm Before Dawn"
+      },
+      "phenomenon": "thunder",
+      "narrative": {
+        "ko": "천둥이 치고 여명이 온다. 여명의 인내가 천둥을 풀어준다.",
+        "en": "Thunder rolls, then dawn arrives. Dawn's patience loosens the storm."
+      },
+      "warning": null
+    },
+    "storm_wild": {
+      "skyName": {
+        "ko": "뇌우",
+        "en": "Thunderstorm"
+      },
+      "phenomenon": "thunder",
+      "narrative": {
+        "ko": "천둥과 바람. 에너지가 폭발한다. 함께할 때 세상이 움직인다.",
+        "en": "Thunder and wind. Energy explodes. When you're together, the world moves."
+      },
+      "warning": {
+        "ko": "너무 세면 둘 다 지칠 수 있다.",
+        "en": "Too much intensity can wear you both out."
+      }
+    },
+    "storm_shade": {
+      "skyName": {
+        "ko": "폭풍의 쉼터",
+        "en": "Shelter from the Storm"
+      },
+      "phenomenon": "rain",
+      "narrative": {
+        "ko": "그늘이 천둥에게 쉼을 준다. 천둥이 그늘에게 생기를 준다.",
+        "en": "Shade gives the storm a place to rest. Storm gives shade a spark of life."
+      },
+      "warning": null
+    },
+    "dawn_wild": {
+      "skyName": {
+        "ko": "새벽의 바람",
+        "en": "Wind at Dawn"
+      },
+      "phenomenon": "glow",
+      "narrative": {
+        "ko": "여명이 바람을 만나면 하늘이 열린다. 기다림과 움직임이 만난다.",
+        "en": "When dawn meets wind, the sky opens. Patience and motion find each other."
+      },
+      "warning": null
+    },
+    "dawn_shade": {
+      "skyName": {
+        "ko": "부드러운 아침",
+        "en": "Soft Morning"
+      },
+      "phenomenon": "glow",
+      "narrative": {
+        "ko": "여명과 그늘. 부드러운 아침. 서로를 재촉하지 않는다.",
+        "en": "Dawn and shade. A soft morning. Neither pushes the other."
+      },
+      "warning": null
+    },
+    "wild_shade": {
+      "skyName": {
+        "ko": "그늘 속의 바람",
+        "en": "Breeze in the Shade"
+      },
+      "phenomenon": "glow",
+      "narrative": {
+        "ko": "바람이 그늘을 찾고, 그늘이 바람에게 쉼을 준다. 자유와 안정이 공존한다.",
+        "en": "Wind finds the shade; shade gives wind a place to rest. Freedom and steadiness side by side."
+      },
+      "warning": null
+    },
+    "sunlit_sunlit": {
+      "skyName": {
+        "ko": "두 개의 태양",
+        "en": "Double Sun"
+      },
+      "phenomenon": "glow",
+      "narrative": {
+        "ko": "두 햇살이 만나면 하늘이 두 배로 밝아진다.",
+        "en": "Two suns meet and the sky grows twice as bright."
+      },
+      "warning": {
+        "ko": "서로의 그림자를 보지 못할 수 있다.",
+        "en": "You may miss each other's shadows."
+      }
+    },
+    "mist_mist": {
+      "skyName": {
+        "ko": "깊은 안개",
+        "en": "Deep Fog"
+      },
+      "phenomenon": "glow",
+      "narrative": {
+        "ko": "두 안개. 말 없이도 깊이 통한다.",
+        "en": "Two mists. You understand each other deeply without a word."
+      },
+      "warning": {
+        "ko": "너무 흐려지면 길을 잃을 수 있다.",
+        "en": "Too much fog and you can lose your way."
+      }
+    },
+    "storm_storm": {
+      "skyName": {
+        "ko": "천둥과 번개",
+        "en": "Thunder and Lightning"
+      },
+      "phenomenon": "thunder",
+      "narrative": {
+        "ko": "두 천둥. 열정이 맞닿으면 번개가 친다.",
+        "en": "Two storms. When your passion meets, lightning strikes."
+      },
+      "warning": {
+        "ko": "폭발이 잦으면 지칠 수 있다.",
+        "en": "Too many outbursts can leave you both drained."
+      }
+    },
+    "dawn_dawn": {
+      "skyName": {
+        "ko": "영원한 새벽",
+        "en": "Eternal Dawn"
+      },
+      "phenomenon": "glow",
+      "narrative": {
+        "ko": "두 여명. 함께 기다리면 하늘이 열린다.",
+        "en": "Two dawns. When you wait together, the sky opens."
+      },
+      "warning": null
+    },
+    "wild_wild": {
+      "skyName": {
+        "ko": "허리케인",
+        "en": "Hurricane"
+      },
+      "phenomenon": "thunder",
+      "narrative": {
+        "ko": "두 바람. 함께 돌면 세상이 돈다.",
+        "en": "Two winds. When you spin together, the world turns with you."
+      },
+      "warning": {
+        "ko": "멈출 줄 모르면 흩어질 수 있다.",
+        "en": "If you never slow down, you can drift apart."
+      }
+    },
+    "shade_shade": {
+      "skyName": {
+        "ko": "깊은 그늘",
+        "en": "Deep Shade"
+      },
+      "phenomenon": "glow",
+      "narrative": {
+        "ko": "두 그늘. 고요함이 깊어진다.",
+        "en": "Two shades. The quiet between you deepens."
+      },
+      "warning": {
+        "ko": "말이 너무 없으면 멀어질 수 있다.",
+        "en": "Too little said, and you can grow distant."
+      }
+    }
+  }
+}

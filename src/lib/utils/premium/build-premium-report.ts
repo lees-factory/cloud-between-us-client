@@ -1,7 +1,7 @@
 import type { CloudType, PremiumContent } from '$lib/types/cloud';
 import type { Locale } from '$lib/i18n/translations';
-import { CLOUD_META } from '$lib/data/cloud-meta';
-import { PAIR_META } from '$lib/data/pair-meta';
+import { CLOUD_META } from '../../data/cloudProfiles';
+import { PAIR_META } from '../../data/chemistryMatrix';
 import {
 	OPENING_PATTERNS,
 	SOFTENING_LINES,
@@ -10,14 +10,27 @@ import {
 	CLOSING_LINES,
 	SHARE_CARD_PHRASES,
 	SHARE_CARD_CAPTIONS,
-	SHELTER_CLOSING_LINES,
 	FRICTION_PATTERNS,
 	DEFAULT_ACTIONS,
 	SEASON_FIRST_MEET,
 	SEASON_SETTLING,
 	SEASON_LONG_TERM,
-	MISREADING_PATTERNS
-} from '$lib/data/copy-pool';
+	getMisreadingsByLang
+} from '../../data/copy-pool';
+
+/** PAIR_META 항목: storyBeats, fightOverride 등 locale-at-leaf */
+type PairMetaLeaf = {
+	storyBeats?: {
+		openingImage?: Record<Locale, string>;
+		emotionalDynamic?: Record<Locale, string>;
+		hiddenStrength?: Record<Locale, string>;
+		growthArc?: Record<Locale, string>;
+	};
+	fightOverride?: {
+		frictionTruth?: Record<Locale, string>;
+		tryThisInstead?: Record<Locale, string>;
+	};
+};
 
 /**
  * 간단한 시드 해시: 동일 조합에서 일관된 문장 선택.
@@ -36,6 +49,11 @@ function pick<T>(arr: readonly T[], seed: number, offset = 0): T {
 	return arr[(seed + offset) % arr.length];
 }
 
+/** copy-pool은 ko만 있을 수 있음. en 요청 시 ko로 폴백 */
+function L<T>(obj: Record<string, T>, lang: Locale): T {
+	return (obj[lang] ?? obj['ko']) as T;
+}
+
 /**
  * 핵심 생성 엔진.
  * PAIR_META의 storyBeats override 우선 → 없으면 규칙 기반 조합.
@@ -48,27 +66,31 @@ export function buildPremiumReport(
 	const userMeta = CLOUD_META[user];
 	const partnerMeta = CLOUD_META[partner];
 	const pairKey = `${user}-${partner}` as `${CloudType}-${CloudType}`;
-	const pairMeta = PAIR_META[pairKey];
+	const pairMeta = PAIR_META[pairKey] as PairMetaLeaf | undefined;
 	const seed = seedHash(user, partner);
 
 	const lang = locale;
 
 	// ── 1. Full Story (4단락) ──
 
-	const openingImage = pairMeta?.storyBeats?.openingImage?.[lang]
-		?? pick(OPENING_PATTERNS[lang], seed)
+	const openingPattern = L(OPENING_PATTERNS, lang) as string[];
+	const openingImage =
+		pairMeta?.storyBeats?.openingImage?.[lang] ??
+		pick(openingPattern, seed)
 			.replace('{userCloud}', userMeta.displayName[lang])
-			.replace('{partnerCloud}', partnerMeta.displayName[lang])
-		+ ' ' + pick(SOFTENING_LINES[lang], seed);
+			.replace('{partnerCloud}', partnerMeta.displayName[lang]) +
+			' ' +
+			pick(L(SOFTENING_LINES, lang) as string[], seed);
 
-	const emotionalDynamic = pairMeta?.storyBeats?.emotionalDynamic?.[lang]
-		?? buildEmotionalDynamic(userMeta, partnerMeta, lang);
+	const emotionalDynamic =
+		pairMeta?.storyBeats?.emotionalDynamic?.[lang] ??
+		buildEmotionalDynamic(userMeta, partnerMeta, lang);
 
-	const hiddenStrength = pairMeta?.storyBeats?.hiddenStrength?.[lang]
-		?? buildHiddenStrength(userMeta, partnerMeta, lang, seed);
+	const hiddenStrength =
+		pairMeta?.storyBeats?.hiddenStrength?.[lang] ??
+		buildHiddenStrength(userMeta, partnerMeta, lang, seed);
 
-	const growthArc = pairMeta?.storyBeats?.growthArc?.[lang]
-		?? pick(GROWTH_LINES[lang], seed);
+	const growthArc = pairMeta?.storyBeats?.growthArc?.[lang] ?? pick(L(GROWTH_LINES, lang) as string[], seed);
 
 	const fullStory = [openingImage, emotionalDynamic, hiddenStrength, growthArc].join('\n\n');
 
@@ -77,11 +99,11 @@ export function buildPremiumReport(
 	const userTendency = userMeta.conflictReaction[lang];
 	const partnerTendency = partnerMeta.conflictReaction[lang];
 
-	const frictionTruth = pairMeta?.fightOverride?.frictionTruth?.[lang]
-		?? buildFrictionTruth(userMeta, partnerMeta, lang);
+	const frictionTruth =
+		pairMeta?.fightOverride?.frictionTruth?.[lang] ??
+		buildFrictionTruth(userMeta, partnerMeta, lang);
 
-	const tryThis = pairMeta?.fightOverride?.tryThisInstead?.[lang]
-		?? userMeta.trySuggestion[lang];
+	const tryThis = pairMeta?.fightOverride?.tryThisInstead?.[lang] ?? userMeta.trySuggestion[lang];
 
 	const tip = `${frictionTruth} ${tryThis}`;
 
@@ -112,8 +134,8 @@ export function buildPremiumReport(
 	// ── 9. Share Card ──
 
 	const shareCard = {
-		phrase: pick(SHARE_CARD_PHRASES[lang], seed),
-		caption: pick(SHARE_CARD_CAPTIONS[lang], seed)
+		phrase: pick(L(SHARE_CARD_PHRASES, lang) as string[], seed) as string,
+		caption: pick(L(SHARE_CARD_CAPTIONS, lang) as string[], seed) as string
 	};
 
 	return {
@@ -153,8 +175,8 @@ function buildHiddenStrength(
 	lang: Locale,
 	seed: number
 ): string {
-	const strengthLine = pick(STRENGTH_LINES[lang], seed);
-	const closingLine = pick(CLOSING_LINES[lang], seed, 1);
+	const strengthLine = pick(STRENGTH_LINES[lang] as string[], seed);
+	const closingLine = pick(CLOSING_LINES[lang] as string[], seed, 1);
 
 	if (lang === 'ko') {
 		return `함께할 때, ${strengthLine}. ${closingLine}`;
@@ -187,10 +209,11 @@ function buildShelter(
 	lang: Locale,
 	seed: number
 ): PremiumContent['shelter'] {
-	// safetyNeeds에서 3개씩 추출
-	const partnerNeeds = partnerMeta.safetyNeeds[lang].slice(0, 3);
-	const userNeeds = userMeta.safetyNeeds[lang].slice(0, 3);
-	const closingLine = pick(SHELTER_CLOSING_LINES[lang], seed, 2);
+	// safetyNeeds: locale-at-leaf 배열 → 해당 lang 문자열 3개
+	type SafetyNeed = { text: Record<Locale, string> };
+	const partnerNeeds = (partnerMeta.safetyNeeds as SafetyNeed[]).map((x) => x.text[lang]).slice(0, 3);
+	const userNeeds = (userMeta.safetyNeeds as SafetyNeed[]).map((x) => x.text[lang]).slice(0, 3);
+	const closingLine = pick(CLOSING_LINES[lang] as string[], seed, 2);
 
 	return { partnerNeeds, userNeeds, closingLine };
 }
@@ -200,9 +223,10 @@ function buildShadows(
 	partnerMeta: (typeof CLOUD_META)[CloudType],
 	lang: Locale
 ): PremiumContent['shadows'] {
+	type ShadowLeaf = { text: Record<Locale, string> };
 	return {
-		userShadows: [...userMeta.shadows[lang]],
-		partnerShadows: [...partnerMeta.shadows[lang]]
+		userShadows: (userMeta.shadows as ShadowLeaf[]).map((x) => x.text[lang]),
+		partnerShadows: (partnerMeta.shadows as ShadowLeaf[]).map((x) => x.text[lang])
 	};
 }
 
@@ -212,17 +236,19 @@ function buildActions(
 	lang: Locale,
 	seed: number
 ): PremiumContent['actions'] {
-	const appreciationDesc = partnerMeta.pace === 'slow'
-		? (lang === 'ko'
-			? `${partnerMeta.displayName.ko} 구름은 깊이 느끼지만 확신이 필요할 때가 많습니다. 무엇을 알아차렸는지 구체적으로 말해주세요.`
-			: `${partnerMeta.displayName.en} clouds feel deeply but need to know you notice. Be specific about what you value in them.`)
-		: DEFAULT_ACTIONS.appreciation.desc[lang];
+	const appreciationDesc =
+		partnerMeta.pace === 'slow'
+			? lang === 'ko'
+				? `${partnerMeta.displayName.ko} 구름은 깊이 느끼지만 확신이 필요할 때가 많습니다. 무엇을 알아차렸는지 구체적으로 말해주세요.`
+				: `${partnerMeta.displayName.en} clouds feel deeply but need to know you notice. Be specific about what you value in them.`
+			: DEFAULT_ACTIONS.appreciation.desc[lang];
 
-	const paceDesc = userMeta.pace === 'fast' && partnerMeta.pace !== 'fast'
-		? (lang === 'ko'
-			? '모든 침묵이 거리를 뜻하는 것은 아닙니다. 상대의 감정이 정돈되는 시간임을 이해하고 기다려주세요.'
-			: "Not every pause is distance. Sometimes it is care forming quietly. Don't rush their processing time.")
-		: DEFAULT_ACTIONS.pace.desc[lang];
+	const paceDesc =
+		userMeta.pace === 'fast' && partnerMeta.pace !== 'fast'
+			? lang === 'ko'
+				? '모든 침묵이 거리를 뜻하는 것은 아닙니다. 상대의 감정이 정돈되는 시간임을 이해하고 기다려주세요.'
+				: "Not every pause is distance. Sometimes it is care forming quietly. Don't rush their processing time."
+			: DEFAULT_ACTIONS.pace.desc[lang];
 
 	return [
 		{
@@ -270,9 +296,9 @@ function buildSeasons(
 	const pk = paceKey(userMeta, partnerMeta);
 	const tk = temperatureKey(userMeta, partnerMeta);
 
-	const firstMeet = pick(SEASON_FIRST_MEET[pk][lang], seed);
-	const settling = pick(SEASON_SETTLING[tk][lang], seed);
-	const longTerm = pick(SEASON_LONG_TERM[lang], seed, 1);
+	const firstMeet = pick(SEASON_FIRST_MEET[pk][lang] as string[], seed);
+	const settling = pick(SEASON_SETTLING[tk][lang] as string[], seed);
+	const longTerm = pick(SEASON_LONG_TERM[lang] as string[], seed, 1);
 
 	return { firstMeet, settling, longTerm };
 }
@@ -282,9 +308,19 @@ function buildDangerPhrases(
 	partnerMeta: (typeof CLOUD_META)[CloudType],
 	lang: Locale
 ): PremiumContent['dangerPhrases'] {
+	// dangerPhrases: locale-at-leaf 배열 [{ bad: { ko, en }, better: { ko, en } }]
+	type DangerPhraseLeaf = { bad: Record<Locale, string>; better: Record<Locale, string> };
+	const userPhrasesList = (userMeta.dangerPhrases as DangerPhraseLeaf[]).slice(0, 2);
+	const partnerPhrasesList = (partnerMeta.dangerPhrases as DangerPhraseLeaf[]).slice(0, 2);
 	return {
-		userPhrases: userMeta.dangerPhrases[lang].slice(0, 2),
-		partnerPhrases: partnerMeta.dangerPhrases[lang].slice(0, 2)
+		userPhrases: userPhrasesList.map((p: DangerPhraseLeaf) => ({
+			bad: p.bad[lang],
+			better: p.better[lang]
+		})),
+		partnerPhrases: partnerPhrasesList.map((p: DangerPhraseLeaf) => ({
+			bad: p.bad[lang],
+			better: p.better[lang]
+		}))
 	};
 }
 
@@ -294,20 +330,20 @@ function buildLoveLanguage(
 	lang: Locale,
 	seed: number
 ): PremiumContent['loveLanguage'] {
-	const userExpression = userMeta.loveExpression[lang];
-	const partnerExpression = partnerMeta.loveExpression[lang];
+	const userExpression = userMeta.loveExpression[lang] as string;
+	const partnerExpression = partnerMeta.loveExpression[lang] as string;
 
-	// Determine misreading pattern based on pace/temperature mismatch
+	// Determine misreading pattern based on pace/temperature mismatch (locale-at-leaf)
 	let misreadings: Array<{ signal: string; misread: string }>;
 
 	if (userMeta.pace !== partnerMeta.pace) {
-		misreadings = [...MISREADING_PATTERNS.pace_mismatch[lang]];
+		misreadings = getMisreadingsByLang('pace_mismatch', lang);
 	} else if (userMeta.temperature !== partnerMeta.temperature) {
-		misreadings = [...MISREADING_PATTERNS.temperature_mismatch[lang]];
+		misreadings = getMisreadingsByLang('temperature_mismatch', lang);
 	} else if (userMeta.pace === partnerMeta.pace) {
-		misreadings = [...MISREADING_PATTERNS.same_pace[lang]];
+		misreadings = getMisreadingsByLang('same_pace', lang);
 	} else {
-		misreadings = [...MISREADING_PATTERNS.same_temperature[lang]];
+		misreadings = getMisreadingsByLang('same_temperature', lang);
 	}
 
 	return { userExpression, partnerExpression, misreadings };

@@ -3,7 +3,7 @@
 	import { goto, invalidateAll } from '$app/navigation';
 	import { browser, dev } from '$app/environment';
 	import type { PageData } from './$types';
-	import type { CloudType } from '$lib/types/cloud';
+	import type { CloudType, CloudProfile } from '$lib/types/cloud';
 	import { CLOUD_PROFILES, CLOUD_PROFILES_EN } from '$lib/data/cloudProfiles';
 	import { getChemistry } from '$lib/data/chemistryMatrix';
 	import { toPng } from 'html-to-image';
@@ -54,9 +54,11 @@
 		return unsubscribe;
 	});
 
-	const myCloud = $derived(data.cloudProfile);
+	const myCloud = $derived(data.cloudProfile as CloudProfile);
 	const myType = $derived(myCloud.type);
-	const profiles = $derived(locale.current === 'ko' ? CLOUD_PROFILES : CLOUD_PROFILES_EN);
+	const profiles = $derived(
+		(locale.current === 'ko' ? CLOUD_PROFILES : CLOUD_PROFILES_EN) as Record<CloudType, CloudProfile>
+	);
 	const initialPartner = $derived(data.initialPartner ?? null);
 
 	$effect(() => {
@@ -82,7 +84,7 @@
 	);
 
 	const partnerCloud = $derived(partnerType ? (profiles[partnerType] ?? null) : null);
-	const skyStory = $derived(partnerType ? getChemistry(myType, partnerType) : null);
+	const skyStory = $derived(partnerType ? getChemistry(myType, partnerType, locale.current) : null);
 
 	/** 갈등 프리뷰: 프리미엄 데이터에서 나/상대 성향만 무료 공개 */
 	const conflictPreview = $derived(() => {
@@ -488,6 +490,15 @@
 								<Lock size={40} aria-hidden="true" />
 							</div>
 							<h3 class="premium-cta-title">{t('result.paywallHeadline')}</h3>
+							{#if dev}
+								<button
+									type="button"
+									onclick={() => (isPremium = true)}
+									style="margin: 0.5rem auto; background: #333; color: #0f0; border: 1px solid #0f0; padding: 0.25rem 0.5rem; border-radius: 4px; font-family: monospace; font-size: 0.75rem; cursor: pointer; display: block;"
+								>
+									[DEV] Force Unlock
+								</button>
+							{/if}
 							{#if user}
 								<PayPalButton onApprove={handleUnlock} />
 							{:else}
@@ -497,11 +508,22 @@
 							{/if}
 
 							<ul class="premium-unlock-list">
-								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.story')}</span></li>
-								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.fight')}</span></li>
-								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.shelter')}</span></li>
-								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.ritual')}</span></li>
-								<li><Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.card')}</span></li>
+								<li>
+									<Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.story')}</span>
+								</li>
+								<li>
+									<Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.fight')}</span>
+								</li>
+								<li>
+									<Check size={16} strokeWidth={2.5} />
+									<span>{t('result.unlockList.shelter')}</span>
+								</li>
+								<li>
+									<Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.ritual')}</span>
+								</li>
+								<li>
+									<Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.card')}</span>
+								</li>
 							</ul>
 
 							<p class="premium-cta-sub">{t('result.unlockSub')}</p>
