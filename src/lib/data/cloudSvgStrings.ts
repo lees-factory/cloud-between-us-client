@@ -1,5 +1,6 @@
 /**
- * CloudIcon과 동일한 구름 SVG (서버/OG 이미지용).
+ * CloudIcon.svelte와 동일한 구름 SVG (서버/OG 이미지용).
+ * OG 이미지에서 구름 하나일 때도 여기서 긁어와서 중앙에 한 개만 그린다.
  * viewBox="0 0 120 120" 내부 콘텐츠만 반환.
  */
 import type { CloudType } from '$lib/types/cloud';

@@ -107,7 +107,7 @@
 	);
 	const baseUrl = $derived((data as { baseUrl?: string }).baseUrl ?? '');
 	const ogUrl = $derived(baseUrl + page.url.pathname + page.url.search);
-	/** 상대 선택 시: 두 구름 이미지. 미선택 시: 내 구름 단독 이미지 */
+	/** OG 이미지: 상대 있으면 두 구름, 없으면 CloudIcon과 같은 SVG 한 개 중앙 배치 */
 	const ogImage = $derived(
 		partnerType
 			? `${baseUrl}/result/og-image?type=${myType}&partner=${partnerType}&locale=${ogLocale}`

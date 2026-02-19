@@ -7,7 +7,7 @@ const H = 630;
 /** 파스텔 배경: 연한 하늘·라벤더 톤 */
 const PASTEL_BG = '#e8f2f8';
 
-/** 구름 두 개 나란히 */
+/** CloudIcon.svelte와 동일한 구름 SVG(cloudSvgStrings)로 두 개 나란히 */
 function buildSvg(typeA: CloudType, typeB: CloudType): string {
 	const innerA = getCloudSvgInner(typeA);
 	const innerB = getCloudSvgInner(typeB);
@@ -26,7 +26,7 @@ function buildSvg(typeA: CloudType, typeB: CloudType): string {
 </svg>`.trim();
 }
 
-/** 구름 하나 중앙 배치 */
+/** 구름 하나 중앙 배치 — CloudIcon.svelte에서 긁어온 같은 SVG 한 개만 사용 */
 function buildSingleSvg(typeA: CloudType): string {
 	const innerA = getCloudSvgInner(typeA);
 	const scale = 3.8;
@@ -49,14 +49,19 @@ export const GET: RequestHandler = async ({ url }) => {
 
 	const svg = partner ? buildSvg(typeA, partner as CloudType) : buildSingleSvg(typeA);
 
-	let png: Buffer;
+	const headers = {
+		'Content-Type': 'image/png',
+		'Cache-Control': 'public, max-age=86400'
+	};
 	try {
 		const sharp = (await import('sharp')).default;
-		png = await sharp(Buffer.from(svg))
+		const png = await sharp(Buffer.from(svg))
 			.resize(W, H)
 			.png()
 			.toBuffer();
+		return new Response(png, { headers });
 	} catch {
+		// sharp 미사용 시 SVG 반환 (일부 플랫폼은 og:image에 SVG 미지원)
 		return new Response(svg, {
 			headers: {
 				'Content-Type': 'image/svg+xml',
@@ -64,11 +69,4 @@ export const GET: RequestHandler = async ({ url }) => {
 			}
 		});
 	}
-
-	return new Response(new Uint8Array(png), {
-		headers: {
-			'Content-Type': 'image/png',
-			'Cache-Control': 'public, max-age=86400'
-		}
-	});
 };
