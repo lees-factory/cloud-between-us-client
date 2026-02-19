@@ -2,15 +2,93 @@
 	import { goto } from '$app/navigation';
 	import { fly, fade } from 'svelte/transition';
 	import { t } from '$lib/i18n';
-	import { stepThemes } from '$lib/data/copy-pool';
 	import { ChevronLeft, ChevronRight } from 'lucide-svelte';
 	import { analyzeDiagnosis } from '$lib/api/diagnosis/analyze';
 	import { trackEvent } from '$lib/utils/analytics';
+
+	type StepTheme = { bg: string; accent: string; sky: string; cloudOpacity: number };
+	const STEP_THEMES: Record<number, StepTheme> = {
+		1: {
+			bg: '#FFF9ED',
+			accent: '#FFD700',
+			sky: 'linear-gradient(180deg, #FFEFBA 0%, #FFFFFF 100%)',
+			cloudOpacity: 0.3
+		},
+		2: {
+			bg: '#F0F7FF',
+			accent: '#70A1FF',
+			sky: 'linear-gradient(180deg, #D6EFFF 0%, #FFFFFF 100%)',
+			cloudOpacity: 0.4
+		},
+		3: {
+			bg: '#F2F2F7',
+			accent: '#57606f',
+			sky: 'linear-gradient(180deg, #CED6E0 0%, #F1F2F6 100%)',
+			cloudOpacity: 0.8
+		},
+		4: {
+			bg: '#FAF9F6',
+			accent: '#A4B0BE',
+			sky: 'linear-gradient(180deg, #E7E9ED 0%, #FFFFFF 100%)',
+			cloudOpacity: 0.2
+		},
+		5: {
+			bg: '#F8F9FA',
+			accent: '#747D8C',
+			sky: 'linear-gradient(180deg, #DFE4EA 0%, #FFFFFF 100%)',
+			cloudOpacity: 0.1
+		},
+		6: {
+			bg: '#F5F3FF',
+			accent: '#A29BFE',
+			sky: 'linear-gradient(180deg, #E0D7FF 0%, #FFFFFF 100%)',
+			cloudOpacity: 0.5
+		},
+		7: {
+			bg: '#FFF0F0',
+			accent: '#FF6B6B',
+			sky: 'linear-gradient(180deg, #FFDADA 0%, #FFFFFF 100%)',
+			cloudOpacity: 0.6
+		},
+		8: {
+			bg: '#FFF5F8',
+			accent: '#FF8AFA',
+			sky: 'linear-gradient(180deg, #FFDEF3 0%, #FFFFFF 100%)',
+			cloudOpacity: 0.4
+		},
+		9: {
+			bg: '#F1F2F6',
+			accent: '#2F3542',
+			sky: 'linear-gradient(180deg, #A8B2C1 0%, #F1F2F6 100%)',
+			cloudOpacity: 0.9
+		},
+		10: {
+			bg: '#FFF9F0',
+			accent: '#FFA502',
+			sky: 'linear-gradient(180deg, #FFE0B2 0%, #FFFFFF 100%)',
+			cloudOpacity: 0.5
+		},
+		11: {
+			bg: '#F4F7F6',
+			accent: '#7BED9F',
+			sky: 'linear-gradient(180deg, #D1F2EB 0%, #FFFFFF 100%)',
+			cloudOpacity: 0.3
+		},
+		12: {
+			bg: '#EDF2FF',
+			accent: '#3742FA',
+			sky: 'linear-gradient(180deg, #C7D2FE 0%, #FFFFFF 100%)',
+			cloudOpacity: 0.2
+		}
+	};
+	const defaultTheme = STEP_THEMES[1];
 
 	let { data } = $props();
 
 	let currentStep = $state(0);
 	let answers = $state<Record<string, string>>({});
+	/** 현재 스텝에서 선택한 값 (선택 표시·다음 버튼용, 반응성 확실히) */
+	let selectedCloudType = $state<string | null>(null);
 	let direction = $state<1 | -1>(1);
 	let isAnalyzing = $state(false);
 	let stepStartTime = $state(Date.now());
@@ -22,20 +100,30 @@
 		}
 	});
 
+	// 스텝이 바뀌면 해당 스텝에 저장된 선택값으로 동기화
+	$effect(() => {
+		const key = String(currentStep);
+		selectedCloudType = answers[key] ?? null;
+	});
+
 	const step = $derived(data?.steps?.[currentStep]);
-	const theme = $derived(step ? (stepThemes[step.id] ?? stepThemes[1]) : stepThemes[1]);
-	const progress = $derived(data?.steps?.length ? ((currentStep + 1) / data.steps.length) * 100 : 0);
+	const theme = $derived(step ? (STEP_THEMES[step.id] ?? defaultTheme) : defaultTheme);
+	const progress = $derived(
+		data?.steps?.length ? ((currentStep + 1) / data.steps.length) * 100 : 0
+	);
 	const isLastStep = $derived(data?.steps?.length ? currentStep === data.steps.length - 1 : false);
-	const hasAnswer = $derived(step?.question?.id && answers[step.question.id] !== undefined);
+	const hasAnswer = $derived(selectedCloudType != null && selectedCloudType !== '');
 
 	function handleAnswer(option: { text: string; cloudType: string }) {
 		if (!step) return;
-		answers = { ...answers, [step.question.id]: option.cloudType };
+		const key = String(currentStep);
+		selectedCloudType = option.cloudType;
+		answers = { ...answers, [key]: option.cloudType };
 	}
 
 	function trackStepCompletion() {
 		if (!step) return;
-		const answer = answers[step.question.id];
+		const answer = answers[String(currentStep)];
 		const option = step.question.options.find((o) => o.cloudType === answer);
 
 		trackEvent('question_answered', {
@@ -55,29 +143,27 @@
 		if (isLastStep) {
 			isAnalyzing = true;
 			try {
-				// Convert answers map to array for API
+				// Convert answers map to array for API (key = step index "0","1",...)
 				const payload = Object.entries(answers).map(([key, value]) => ({
-					questionId: parseInt(key) || 0,
+					questionId: parseInt(key, 10) || 0,
 					cloudType: value
 				}));
 
 				const result = await analyzeDiagnosis(payload);
-				trackEvent('test_complete', {
-					result_type: result.personaType,
-					method: 'api'
-				});
-				goto(`/result?type=${result.personaType}`);
-			} catch (error) {
-				console.error('Analysis API failed, falling back to local calculation:', error);
-				// Fallback to client-side calc using answers param
-				const answersParam = encodeURIComponent(JSON.stringify(answers));
-				trackEvent('test_complete', {
-					method: 'fallback'
-				});
-				goto(`/result?answers=${answersParam}`);
-			} finally {
-				isAnalyzing = false;
+				const personaType = result?.personaType?.trim?.();
+				if (personaType) {
+					trackEvent('test_complete', { result_type: personaType, method: 'api' });
+					goto(`/result?type=${encodeURIComponent(personaType)}`);
+					return;
+				}
+			} catch (e) {
+				console.error('Analysis API failed, falling back to local calculation:', e);
 			}
+			// API 미호출/실패/빈 결과 → answers로 결과 페이지에서 서버가 집계
+			const answersParam = encodeURIComponent(JSON.stringify(answers));
+			trackEvent('test_complete', { method: 'fallback' });
+			goto(`/result?answers=${answersParam}`);
+			isAnalyzing = false;
 		} else {
 			direction = 1;
 			currentStep += 1;
@@ -130,7 +216,7 @@
 							<button
 								type="button"
 								class="option-btn"
-								class:selected={answers[step.question.id] === option.cloudType}
+								class:selected={selectedCloudType === option.cloudType}
 								onclick={() => handleAnswer(option)}
 							>
 								{option.text}

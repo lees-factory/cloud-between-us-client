@@ -3,7 +3,7 @@
 	import { goto, invalidateAll } from '$app/navigation';
 	import { browser, dev } from '$app/environment';
 	import type { PageData } from './$types';
-	import type { CloudType } from '$lib/types/cloud';
+	import type { CloudType, CloudProfile } from '$lib/types/cloud';
 	import { CLOUD_PROFILES, CLOUD_PROFILES_EN } from '$lib/data/cloudProfiles';
 	import { getChemistry } from '$lib/data/chemistryMatrix';
 	import { toPng } from 'html-to-image';
@@ -54,9 +54,11 @@
 		return unsubscribe;
 	});
 
-	const myCloud = $derived(data.cloudProfile);
+	const myCloud = $derived(data.cloudProfile as CloudProfile);
 	const myType = $derived(myCloud.type);
-	const profiles = $derived(locale.current === 'ko' ? CLOUD_PROFILES : CLOUD_PROFILES_EN);
+	const profiles = $derived(
+		(locale.current === 'ko' ? CLOUD_PROFILES : CLOUD_PROFILES_EN) as Record<CloudType, CloudProfile>
+	);
 	const initialPartner = $derived(data.initialPartner ?? null);
 
 	$effect(() => {
@@ -82,7 +84,7 @@
 	);
 
 	const partnerCloud = $derived(partnerType ? (profiles[partnerType] ?? null) : null);
-	const skyStory = $derived(partnerType ? getChemistry(myType, partnerType) : null);
+	const skyStory = $derived(partnerType ? getChemistry(myType, partnerType, locale.current) : null);
 
 	/** 갈등 프리뷰: 프리미엄 데이터에서 나/상대 성향만 무료 공개 */
 	const conflictPreview = $derived(() => {
