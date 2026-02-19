@@ -14,79 +14,73 @@
 		{#if locale.current === 'ko'}
 			<p>
 				Cloud Between Us(이하 "서비스")는 이용자의 개인정보를 소중히 다루며, 개인정보보호법을
-				준수합니다.
+				준수합니다. 본 서비스는 회원가입 없이 이용할 수 있으며, 수집하는 정보는 서비스 제공 및
+				품질 개선에 필요한 범위로 최소화됩니다.
 			</p>
 
-			<h2>1. 수집하는 개인정보 항목</h2>
-			<p>서비스는 회원가입, 상담, 서비스 신청 등을 위해 아래와 같은 개인정보를 수집할 수 있습니다.</p>
+			<h2>1. 수집하는 정보</h2>
+			<p>서비스는 아래와 같은 정보를 수집할 수 있습니다.</p>
 			<ul>
-				<li>필수항목: 이메일 주소 (로그인 식별용)</li>
-				<li>선택항목: 닉네임 (결과 페이지 표시용)</li>
-				<li>자동수집: 접속 로그, 쿠키, 결제 기록</li>
+				<li><strong>테스트 응답 데이터</strong>: 이용자가 구름 성향 테스트에서 선택한 응답(질문별 선택값). 결과 생성 및 서비스·통계 분석 목적으로만 사용됩니다.</li>
+				<li><strong>자동 수집 정보</strong>: 서비스 운영을 위한 접속 로그, 쿠키 등. 기술적 안정성 및 이용 통계 목적으로 사용됩니다.</li>
 			</ul>
 
-			<h2>2. 개인정보의 수집 및 이용목적</h2>
-			<p>수집한 개인정보는 다음의 목적을 위해 활용합니다.</p>
+			<h2>2. 수집 및 이용 목적</h2>
+			<p>수집한 정보는 다음 목적으로만 활용됩니다.</p>
 			<ul>
-				<li>서비스 제공: 심리 테스트 결과 저장 및 조회</li>
-				<li>회원 관리: 본인 확인, 부정 이용 방지</li>
+				<li>테스트 결과 생성 및 제공</li>
+				<li>서비스 품질·안정성 개선 및 통계적 분석</li>
 			</ul>
 
-			<h2>3. 개인정보의 보유 및 이용기간</h2>
+			<h2>3. 보유 및 이용 기간</h2>
 			<p>
-				원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단,
-				관계 법령에 의하여 보존할 필요가 있는 경우 법령에서 정한 기간 동안 보관합니다.
+				수집 및 이용 목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 관계 법령에서
+				보존 기간을 정한 경우에는 해당 기간 동안 보관합니다.
 			</p>
 
 			<h2>4. 이용자의 권리</h2>
 			<p>
-				이용자는 언제든지 자신의 개인정보를 조회하거나 수정할 수 있으며, 회원 탈퇴를 통해 개인정보
-				이용 동의를 철회할 수 있습니다.
+				이용자는 언제든지 저장된 데이터의 삭제를 요청할 수 있습니다. 삭제 요청은
+				monkeysforge@gmail.com으로 보내 주시면 되며, 영업일 기준 7일 이내에 처리합니다.
 			</p>
 
 			<h2>5. 개인정보 보호책임자</h2>
-			<p>이메일: monkeysfor@gmail.com</p>
+			<p>이메일: monkeysforge@gmail.com</p>
 		{:else}
 			<p>
 				Cloud Between Us (hereinafter referred to as the "Service") values your privacy and complies
-				with applicable privacy laws.
+				with applicable privacy laws. The Service can be used without creating an account, and we
+				minimize the information we collect to what is necessary for providing and improving the service.
 			</p>
 
 			<h2>1. Information Collected</h2>
-			<p>
-				The Service may collect the following personal information for registration, consultation, and
-				service application purposes:
-			</p>
+			<p>The Service may collect the following information:</p>
 			<ul>
-				<li>Required: Email address (for login identification)</li>
-				<li>Optional: Nickname (for result page display)</li>
-				<li>Automatically collected: Access logs, cookies, payment records</li>
+				<li><strong>Test response data</strong>: The answers you select in the cloud personality test (your choices per question). Used only to generate your results and for service and statistical analysis.</li>
+				<li><strong>Automatically collected information</strong>: Access logs, cookies, and similar data for service operation. Used for technical stability and usage statistics.</li>
 			</ul>
 
 			<h2>2. Purpose of Collection and Use</h2>
-			<p>The collected personal information is used for the following purposes:</p>
+			<p>Collected information is used only for the following purposes:</p>
 			<ul>
-				<li>
-					Service Provision: Storage and retrieval of psychological test results
-				</li>
-				<li>Member Management: Identity verification, prevention of fraudulent use</li>
+				<li>Generating and providing test results</li>
+				<li>Improving service quality and stability, and for statistical analysis</li>
 			</ul>
 
 			<h2>3. Retention and Use Period</h2>
 			<p>
-				In principle, personal information is destroyed without delay after the purpose of collection
-				and use is achieved. However, if preservation is required by relevant laws, it will be kept
-				for the period specified by law.
+				Information is destroyed without delay once the purpose of collection and use has been
+				fulfilled. Where laws require a retention period, information is kept for that period.
 			</p>
 
 			<h2>4. User Rights</h2>
 			<p>
-				Users may view or modify their personal information at any time and may withdraw their consent
-				to use personal information by deleting their account.
+				You may request deletion of your stored data at any time. Send your request to
+				monkeysforge@gmail.com; we will process it within 7 business days.
 			</p>
 
 			<h2>5. Privacy Officer</h2>
-			<p>Email: monkeysfor@gmail.com</p>
+			<p>Email: monkeysforge@gmail.com</p>
 		{/if}
 	</div>
 </main>
