@@ -107,11 +107,11 @@
 	);
 	const baseUrl = $derived((data as { baseUrl?: string }).baseUrl ?? '');
 	const ogUrl = $derived(baseUrl + page.url.pathname + page.url.search);
-	/** 상대 선택 시: 중앙 구름(chemistry circle) 이미지 API. 미선택 시 기본 이미지 */
+	/** 상대 선택 시: 두 구름 이미지. 미선택 시: 내 구름 단독 이미지 */
 	const ogImage = $derived(
 		partnerType
 			? `${baseUrl}/result/og-image?type=${myType}&partner=${partnerType}&locale=${ogLocale}`
-			: baseUrl + '/og-result.png'
+			: `${baseUrl}/result/og-image?type=${myType}&locale=${ogLocale}`
 	);
 
 	/** 무료 공개용: 서사 처음 3~4줄만 (감정 최고점 후 클리프행거) */

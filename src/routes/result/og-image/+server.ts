@@ -1,54 +1,53 @@
 import type { RequestHandler } from './$types';
-import { getChemistry } from '$lib/data/chemistryMatrix';
+import { getCloudSvgInner } from '$lib/data/cloudSvgStrings';
 import type { CloudType } from '$lib/types/cloud';
-import type { Locale } from '$lib/i18n/translations';
 
 const W = 1200;
 const H = 630;
-const SKY_BLUE = '#a7d8f5';
-const TEXT_DARK = '#111827';
-const OFF_WHITE = '#fafaf8';
+/** 파스텔 배경: 연한 하늘·라벤더 톤 */
+const PASTEL_BG = '#e8f2f8';
 
-function escapeXml(s: string): string {
-	return s
-		.replace(/&/g, '&amp;')
-		.replace(/</g, '&lt;')
-		.replace(/>/g, '&gt;')
-		.replace(/"/g, '&quot;')
-		.replace(/'/g, '&apos;');
-}
-
-function buildSvg(skyName: string, label: string): string {
-	const escapedName = escapeXml(skyName);
-	const escapedLabel = escapeXml(label);
-	const cx = W / 2;
-	const cy = H / 2 - 20;
-	const r = 140;
+/** 구름 두 개 나란히 */
+function buildSvg(typeA: CloudType, typeB: CloudType): string {
+	const innerA = getCloudSvgInner(typeA);
+	const innerB = getCloudSvgInner(typeB);
+	const scale = 2.8;
+	const size = 120 * scale; // 336
+	const y = (H - size) / 2;
+	const gap = 80;
+	const leftX = (W - size * 2 - gap) / 2;
+	const rightX = leftX + size + gap;
 
 	return `
 <svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
-  <rect width="${W}" height="${H}" fill="${OFF_WHITE}"/>
-  <circle cx="${cx}" cy="${cy}" r="${r}" fill="${SKY_BLUE}"/>
-  <text x="${cx}" y="${cy - 12}" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="600" fill="${TEXT_DARK}">${escapedName}</text>
-  <text x="${cx}" y="${cy + 20}" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="${TEXT_DARK}" opacity="0.85">${escapedLabel}</text>
-  <text x="${cx}" y="${H - 48}" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="${TEXT_DARK}" opacity="0.7">Cloud Between Us</text>
+  <rect width="${W}" height="${H}" fill="${PASTEL_BG}"/>
+  <g transform="translate(${leftX}, ${y}) scale(${scale})">${innerA}</g>
+  <g transform="translate(${rightX}, ${y}) scale(${scale})">${innerB}</g>
+</svg>`.trim();
+}
+
+/** 구름 하나 중앙 배치 */
+function buildSingleSvg(typeA: CloudType): string {
+	const innerA = getCloudSvgInner(typeA);
+	const scale = 3.8;
+	const size = 120 * scale; // 456
+	const x = (W - size) / 2;
+	const y = (H - size) / 2;
+
+	return `
+<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
+  <rect width="${W}" height="${H}" fill="${PASTEL_BG}"/>
+  <g transform="translate(${x}, ${y}) scale(${scale})">${innerA}</g>
 </svg>`.trim();
 }
 
 export const GET: RequestHandler = async ({ url }) => {
 	const type = url.searchParams.get('type') as CloudType | null;
 	const partner = url.searchParams.get('partner') as CloudType | null;
-	const locale = (url.searchParams.get('locale') || 'ko') as Locale;
 
-	const skyName =
-		type && partner
-			? getChemistry(type, partner, locale).skyName
-			: locale === 'ko'
-				? '우리의 하늘'
-				: 'Our Sky';
-	const label = locale === 'ko' ? '우리 사이의 하늘' : 'The Sky Between You';
+	const typeA = type ?? 'sunlit';
 
-	const svg = buildSvg(skyName, label);
+	const svg = partner ? buildSvg(typeA, partner as CloudType) : buildSingleSvg(typeA);
 
 	let png: Buffer;
 	try {
@@ -58,7 +57,6 @@ export const GET: RequestHandler = async ({ url }) => {
 			.png()
 			.toBuffer();
 	} catch {
-		// sharp 미사용 시 SVG 그대로 반환 (일부 플랫폼은 SVG 미지원)
 		return new Response(svg, {
 			headers: {
 				'Content-Type': 'image/svg+xml',
@@ -67,7 +65,7 @@ export const GET: RequestHandler = async ({ url }) => {
 		});
 	}
 
-	return new Response(png, {
+	return new Response(new Uint8Array(png), {
 		headers: {
 			'Content-Type': 'image/png',
 			'Cache-Control': 'public, max-age=86400'
