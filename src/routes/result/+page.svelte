@@ -275,6 +275,9 @@
 	<meta property="og:description" content={ogDescription} />
 	<meta property="og:url" content={ogUrl} />
 	<meta property="og:image" content={ogImage} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:type" content="image/png" />
 	<meta property="og:site_name" content="Cloud Between Us" />
 	<meta property="og:locale" content={ogLocale === 'ko' ? 'ko_KR' : 'en_US'} />
 	<!-- Twitter Card -->
@@ -282,6 +285,7 @@
 	<meta name="twitter:title" content={ogTitle} />
 	<meta name="twitter:description" content={ogDescription} />
 	<meta name="twitter:image" content={ogImage} />
+	<meta name="twitter:image:alt" content={ogTitle} />
 </svelte:head>
 
 <div class="result-min-h" style="background-color: var(--off-white)">
@@ -334,10 +338,10 @@
 			<ArrowLeft size={20} />
 			<span class="header-link-text">{t('result.back')}</span>
 		</a>
-		<div class="header-brand">
+		<a href="/" class="header-brand" aria-label="Cloud Between Us Home">
 			<Cloud size={24} />
 			<span class="header-brand-text">Cloud Between Us</span>
-		</div>
+		</a>
 		<div class="header-actions">
 			<button
 				type="button"
@@ -794,6 +798,11 @@
 		color: var(--sky-blue);
 		justify-self: center;
 		min-width: 0;
+		text-decoration: none;
+		transition: opacity var(--transition-smooth);
+	}
+	.header-brand:hover {
+		opacity: 0.85;
 	}
 
 	.header-brand-text {
