@@ -83,13 +83,15 @@
 	const partnerCloud = $derived(partnerType ? (profiles[partnerType] ?? null) : null);
 	const skyStory = $derived(partnerType ? getChemistry(myType, partnerType, locale.current) : null);
 
+	/** 공유 시 OG: 서버 locale 기준으로 번역 (크롤러/미리보기에 맞게) */
+	const ogLocale = $derived((data as { locale?: 'ko' | 'en' }).locale ?? locale.current);
 	/** 공유 시 OG용: 결과를 살짝 보여주며 관심 유도 */
 	const ogTitle = $derived(
 		skyStory
-			? (locale.current === 'ko'
+			? (ogLocale === 'ko'
 					? `우리 하늘은 '${skyStory.skyName}' — Cloud Between Us`
 					: `Our sky: "${skyStory.skyName}" — Cloud Between Us`)
-			: (locale.current === 'ko'
+			: (ogLocale === 'ko'
 					? `${myCloud.name} 결과 — Cloud Between Us`
 					: `${myCloud.name} Result — Cloud Between Us`)
 	);
@@ -99,13 +101,18 @@
 					const plain = skyStory.narrative.trim().replace(/\n+/g, ' ').slice(0, 155);
 					return plain.length < skyStory.narrative.trim().length ? plain + '…' : plain;
 				})()
-			: locale.current === 'ko'
+			: ogLocale === 'ko'
 				? '나와 상대의 구름 궁합을 확인했어요. 우리만의 하늘 이름이 궁금하다면?'
 				: 'We checked our cloud chemistry. Curious what sky we share?'
 	);
 	const baseUrl = $derived((data as { baseUrl?: string }).baseUrl ?? '');
 	const ogUrl = $derived(baseUrl + page.url.pathname + page.url.search);
-	const ogImage = $derived(baseUrl + '/og-result.png');
+	/** 상대 선택 시: 중앙 구름(chemistry circle) 이미지 API. 미선택 시 기본 이미지 */
+	const ogImage = $derived(
+		partnerType
+			? `${baseUrl}/result/og-image?type=${myType}&partner=${partnerType}&locale=${ogLocale}`
+			: baseUrl + '/og-result.png'
+	);
 
 	/** 무료 공개용: 서사 처음 3~4줄만 (감정 최고점 후 클리프행거) */
 	const freeNarrativeLines = $derived(
@@ -269,7 +276,7 @@
 	<meta property="og:url" content={ogUrl} />
 	<meta property="og:image" content={ogImage} />
 	<meta property="og:site_name" content="Cloud Between Us" />
-	<meta property="og:locale" content={locale.current === 'ko' ? 'ko_KR' : 'en_US'} />
+	<meta property="og:locale" content={ogLocale === 'ko' ? 'ko_KR' : 'en_US'} />
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={ogTitle} />
