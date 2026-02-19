@@ -79,24 +79,6 @@
 <div class="relative min-h-screen">
 	{#if !isResultPage}
 		<nav class="absolute top-0 right-0 z-50 flex items-center gap-4 p-4">
-			{#if user}
-				<button
-					type="button"
-					onclick={handleLogout}
-					class="cursor-pointer text-sm font-medium transition-opacity hover:opacity-70"
-					style="color: #2c3e50"
-				>
-					{t('auth.logout', locale.current)}
-				</button>
-			{:else}
-				<a
-					href="/login"
-					class="text-sm font-medium transition-opacity hover:opacity-70"
-					style="color: #2c3e50"
-				>
-					{t('auth.login', locale.current)}
-				</a>
-			{/if}
 			<button
 				type="button"
 				aria-label="Language"

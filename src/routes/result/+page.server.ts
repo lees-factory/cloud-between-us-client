@@ -19,7 +19,6 @@ export const load: PageServerLoad = async (event) => {
 		try {
 			// Fetch profile from API
 			const profile = await getPersonaProfile(typeParam as CloudType, locale);
-			console.log('🚀 ~ load ~ profile:', profile);
 			return { cloudProfile: profile, locale };
 		} catch (err) {
 			console.warn(`API profile not found for '${typeParam}', using local data.`);

@@ -11,7 +11,6 @@
 	import CloudIcon from '$lib/components/result/CloudIcon.svelte';
 	import {
 		Cloud,
-		Lock,
 		ArrowLeft,
 		Share2,
 		X,
@@ -35,7 +34,6 @@
 	import { t, locale } from '$lib/i18n';
 	import { auth } from '$lib/firebase';
 	import { onAuthStateChanged, signOut, type User } from 'firebase/auth';
-	import PayPalButton from '$lib/components/payment/PayPalButton.svelte';
 	import { trackEvent } from '$lib/utils/analytics';
 
 	const CLOUD_TYPES: CloudType[] = ['sunlit', 'mist', 'storm', 'dawn', 'wild', 'shade'];
@@ -70,7 +68,6 @@
 
 	let userPartner = $state<CloudType | null>(null);
 	const partnerType = $derived(userPartner ?? initialPartner);
-	let isPremium = $state(false);
 	let isCapturing = $state(false);
 	let showToast = $state(false);
 
@@ -85,15 +82,6 @@
 
 	const partnerCloud = $derived(partnerType ? (profiles[partnerType] ?? null) : null);
 	const skyStory = $derived(partnerType ? getChemistry(myType, partnerType, locale.current) : null);
-
-	/** 갈등 프리뷰: 프리미엄 데이터에서 나/상대 성향만 무료 공개 */
-	const conflictPreview = $derived(() => {
-		if (!skyStory?.premium) return null;
-		const p = locale.current === 'ko' ? skyStory.premium.ko : skyStory.premium.en;
-		return p?.conflict
-			? { userTendency: p.conflict.userTendency, partnerTendency: p.conflict.partnerTendency }
-			: null;
-	});
 
 	/** 무료 공개용: 서사 처음 3~4줄만 (감정 최고점 후 클리프행거) */
 	const freeNarrativeLines = $derived(
@@ -113,20 +101,6 @@
 		const url = new URL(page.url);
 		url.searchParams.set('partner', type);
 		goto(url.toString(), { replaceState: true });
-	}
-
-	function handleUnlock() {
-		isPremium = true;
-		trackEvent('unlock_premium', {
-			currency: 'USD',
-			value: 2.99,
-			cloud_type: myType
-		});
-	}
-
-	function goToLogin() {
-		const returnUrl = encodeURIComponent(page.url.pathname + page.url.search);
-		goto(`/login?redirect=${returnUrl}`);
 	}
 
 	/** 현재 결과 페이지 전체 URL = 내 결과로 바로 열리는 공유 링크 (answers + partner 포함) */
@@ -321,15 +295,6 @@
 			<span class="header-brand-text">Cloud Between Us</span>
 		</div>
 		<div class="header-actions">
-			{#if user}
-				<button type="button" onclick={handleLogout} class="header-login-btn">
-					{t('auth.logout')}
-				</button>
-			{:else}
-				<a href="/login" class="header-login-btn">
-					{t('auth.login')}
-				</a>
-			{/if}
 			<button
 				type="button"
 				class="header-lang"
@@ -439,99 +404,8 @@
 				</p>
 			</section>
 
-			<!-- 갈등 프리뷰: 나/상대 성향만 무료 공개 → 팁은 잠금 -->
-			{#if !isPremium && conflictPreview()}
-				<section class="conflict-preview">
-					<div class="conflict-preview-header">
-						<Zap size={20} />
-						<h4>{t('result.conflictPreviewTitle')}</h4>
-					</div>
-					<div class="conflict-preview-cards">
-						<div class="conflict-preview-card">
-							<span class="conflict-preview-label">{locale.current === 'ko' ? '나' : 'You'}</span>
-							<p>{conflictPreview()!.userTendency}</p>
-						</div>
-						<div class="conflict-preview-card">
-							<span class="conflict-preview-label"
-								>{locale.current === 'ko' ? '상대' : 'Partner'}</span
-							>
-							<p>{conflictPreview()!.partnerTendency}</p>
-						</div>
-					</div>
-					<div class="conflict-preview-locked-tip">
-						<Lock size={14} />
-						<span>{t('result.conflictPreviewLockedTip')}</span>
-					</div>
-				</section>
-			{/if}
-
-			<!-- 블러 영역 (Soft Paywall): 나머지 섹션 + $2.99 CTA -->
-			{#if !isPremium}
-				<section class="premium-wrap">
-					<div class="premium-blurred">
-						<div class="paywall-sections">
-							<div class="paywall-section">
-								<h4 class="paywall-section-title">{t('result.paywallSafeTitle')}</h4>
-								<p class="paywall-section-preview">{t('result.paywallSafePreview')}</p>
-							</div>
-							<div class="paywall-section">
-								<h4 class="paywall-section-title">{t('result.paywallCollideTitle')}</h4>
-								<p class="paywall-section-preview">{t('result.paywallCollidePreview')}</p>
-							</div>
-							<div class="paywall-section">
-								<h4 class="paywall-section-title">{t('result.paywallBrighterTitle')}</h4>
-								<p class="paywall-section-preview">{t('result.paywallBrighterPreview')}</p>
-							</div>
-						</div>
-					</div>
-					<div class="premium-overlay">
-						<div class="premium-cta-box">
-							<div class="premium-lock">
-								<Lock size={40} aria-hidden="true" />
-							</div>
-							<h3 class="premium-cta-title">{t('result.paywallHeadline')}</h3>
-							{#if dev}
-								<button
-									type="button"
-									onclick={() => (isPremium = true)}
-									style="margin: 0.5rem auto; background: #333; color: #0f0; border: 1px solid #0f0; padding: 0.25rem 0.5rem; border-radius: 4px; font-family: monospace; font-size: 0.75rem; cursor: pointer; display: block;"
-								>
-									[DEV] Force Unlock
-								</button>
-							{/if}
-							{#if user}
-								<PayPalButton onApprove={handleUnlock} />
-							{:else}
-								<button class="login-unlock-btn" onclick={goToLogin}>
-									{t('auth.loginToUnlock')}
-								</button>
-							{/if}
-
-							<ul class="premium-unlock-list">
-								<li>
-									<Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.story')}</span>
-								</li>
-								<li>
-									<Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.fight')}</span>
-								</li>
-								<li>
-									<Check size={16} strokeWidth={2.5} />
-									<span>{t('result.unlockList.shelter')}</span>
-								</li>
-								<li>
-									<Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.ritual')}</span>
-								</li>
-								<li>
-									<Check size={16} strokeWidth={2.5} /> <span>{t('result.unlockList.card')}</span>
-								</li>
-							</ul>
-
-							<p class="premium-cta-sub">{t('result.unlockSub')}</p>
-						</div>
-					</div>
-				</section>
-			{:else}
-				<section class="premium-unlocked">
+			<!-- 프리미엄 콘텐츠: 전체 스토리·시즌·갈등·피난처 등 -->
+			<section class="premium-unlocked">
 					{#if skyStory.premium}
 						{@const p = locale.current === 'ko' ? skyStory.premium.ko : skyStory.premium.en}
 
@@ -819,7 +693,6 @@
 						</div>
 					{/if}
 				</section>
-			{/if}
 		{/if}
 
 		<!-- CTA -->
@@ -903,20 +776,6 @@
 		.header-actions {
 			gap: 0.5rem;
 		}
-	}
-
-	.header-login-btn {
-		font-size: 0.8125rem;
-		font-weight: 500;
-		color: var(--text-dark);
-		text-decoration: none;
-		padding: 0.4rem 0.5rem;
-		transition: opacity var(--transition-smooth);
-		white-space: nowrap;
-	}
-
-	.header-login-btn:hover {
-		opacity: 0.7;
 	}
 
 	.header-lang {
@@ -1340,117 +1199,6 @@
 		opacity: 0.9;
 	}
 
-	/* Conflict Preview (free teaser) */
-	.conflict-preview {
-		background: white;
-		border-radius: var(--radius-lg);
-		padding: 2.25rem;
-		box-shadow: var(--shadow-soft);
-	}
-
-	.conflict-preview-header {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		margin-bottom: 1.5rem;
-		color: var(--text-gray);
-	}
-
-	.conflict-preview-header h4 {
-		font-size: 0.875rem;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		margin: 0;
-	}
-
-	.conflict-preview-cards {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1rem;
-		margin-bottom: 1.5rem;
-	}
-
-	@media (min-width: 640px) {
-		.conflict-preview-cards {
-			grid-template-columns: 1fr 1fr;
-		}
-	}
-
-	.conflict-preview-card {
-		padding: 1.5rem;
-		border-radius: var(--radius-sm);
-		background: var(--off-white);
-		border: 1px solid var(--border-light);
-	}
-
-	.conflict-preview-label {
-		display: block;
-		font-size: 0.75rem;
-		font-weight: 700;
-		text-transform: uppercase;
-		margin-bottom: 0.75rem;
-		opacity: 0.5;
-		letter-spacing: 0.05em;
-	}
-
-	.conflict-preview-card p {
-		font-size: 0.9375rem;
-		line-height: 1.6;
-		color: var(--text-dark);
-		margin: 0;
-	}
-
-	.conflict-preview-locked-tip {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
-		padding: 1rem;
-		border-radius: var(--radius-sm);
-		background: color-mix(in srgb, var(--sky-blue) 10%, white);
-		border: 1px dashed color-mix(in srgb, var(--sky-blue) 40%, transparent);
-		color: var(--text-gray);
-		font-size: 0.875rem;
-		font-style: italic;
-	}
-
-	.paywall-sections {
-		background: white;
-		border-radius: var(--radius-lg);
-		padding: 2rem;
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-		min-height: 600px;
-		justify-content: center;
-	}
-
-	.paywall-section-title {
-		font-size: 1rem;
-		font-weight: 600;
-		color: var(--text-dark);
-		margin: 0 0 0.25rem;
-	}
-
-	.paywall-section-preview {
-		font-size: 0.9375rem;
-		color: var(--text-gray);
-		margin: 0;
-		line-height: 1.5;
-	}
-
-	.premium-wrap {
-		position: relative;
-	}
-
-	.premium-blurred {
-		filter: blur(6px);
-		pointer-events: none;
-		user-select: none;
-		opacity: 0.6;
-	}
-
 	.premium-card {
 		background: white;
 		border-radius: var(--radius-lg);
@@ -1486,75 +1234,6 @@
 		font-size: 0.875rem;
 		color: var(--text-gray);
 		margin: 0;
-	}
-
-	.premium-overlay {
-		position: absolute;
-		inset: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.premium-cta-box {
-		text-align: center;
-		background: color-mix(in srgb, white 90%, transparent);
-		backdrop-filter: blur(8px);
-		padding: 2rem;
-		border-radius: var(--radius-lg);
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		z-index: 10;
-		width: 100%;
-		max-width: 420px;
-	}
-
-	.premium-lock {
-		color: var(--sky-blue);
-		margin: 0 auto;
-		display: flex;
-		justify-content: center;
-	}
-
-	.premium-cta-title {
-		font-size: 1.5rem;
-		color: var(--text-dark);
-		margin: 0;
-	}
-
-	.premium-cta-sub {
-		font-size: 0.875rem;
-		color: var(--text-gray);
-		margin: 0;
-	}
-
-	.premium-unlock-list {
-		list-style: none;
-		padding: 0;
-		margin: 1rem 0 0.5rem;
-		text-align: left;
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		align-self: center;
-		width: 100%;
-		max-width: 280px;
-	}
-
-	.premium-unlock-list li {
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-		font-size: 0.9rem;
-		color: var(--text-dark);
-		opacity: 0.9;
-		line-height: 1.4;
-	}
-
-	.premium-unlock-list li :global(svg) {
-		color: var(--sky-blue);
-		flex-shrink: 0;
 	}
 
 	.premium-unlocked {
@@ -2279,32 +1958,5 @@
 
 	.result-cta-btn:hover {
 		transform: scale(1.05);
-	}
-
-	.login-unlock-btn {
-		width: 100%;
-		max-width: 300px;
-		margin: 1.5rem auto;
-		min-height: 50px;
-		padding: 0 1.5rem;
-		border-radius: 9999px;
-		background: #0070ba; /* PayPal Blue or Brand Color */
-		color: white;
-		font-size: 1rem;
-		font-weight: 600;
-		border: none;
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		transition:
-			transform 0.2s ease,
-			opacity 0.2s ease;
-		box-shadow: 0 4px 12px rgba(0, 112, 186, 0.2);
-	}
-
-	.login-unlock-btn:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 6px 16px rgba(0, 112, 186, 0.3);
 	}
 </style>
